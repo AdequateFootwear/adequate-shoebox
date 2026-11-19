@@ -15,7 +15,6 @@ import html
 import json
 import os
 import re
-import shutil
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOOLS = os.path.join(ROOT, 'tools')
@@ -187,15 +186,31 @@ def main():
             f.write(pg)
         made.add(t['tb'])
 
-    # pages of trackables no longer on the list (only folders this script makes)
+    # A trackable no longer on the list keeps its address, since printed QR codes may point at it,
+    # but its page says only that it isn't listed now: none of its old text stays up.
     gone = []
-    for name in os.listdir(ROOT):
+    for name in sorted(os.listdir(ROOT)):
         p = os.path.join(ROOT, name)
         if TB_DIR.fullmatch(name) and name not in made and os.path.isdir(p) and os.listdir(p) == ['index.html']:
-            shutil.rmtree(p)
+            pg = fill(tmpl, {
+                '{{TITLE}}': esc(name),
+                '{{DESCRIPTION}}': esc(f"{name} isn't listed in Adequate's Shoebox right now."),
+                '{{STYLE}}': style, '{{TOPO}}': topo,
+                '{{GROUP}}': 'Not listed',
+                '{{NAME}}': esc(name),
+                '{{SUBLINE}}': 'Not listed right now',
+                '{{GALLERY}}': '      <div class="main none"><span>Not listed right now</span></div>',
+                '{{FACTS}}': (f'      <p class="txt">This trackable isn\'t listed in Adequate\'s Shoebox right now.</p>\n'
+                              f'      <p class="log"><a class="btn primary" href="../">See all trackables</a></p>\n'
+                              f'      <p><a href="https://coord.info/{esc(name)}">Its page on geocaching.com</a></p>'),
+                '{{PREVNEXT}}': '    <a class="all" href="../">All trackables</a>',
+                '{{READ}}': read_on,
+            }, 'tools/trackable.html')
+            with open(os.path.join(p, 'index.html'), 'w', encoding='utf-8') as f:
+                f.write(pg)
             gone.append(name)
     print(f'index.html and {len(made)} trackable pages built ({len(page.encode()) // 1024} KB main page)'
-          + (f'; removed pages for {", ".join(gone)}' if gone else ''))
+          + (f'; kept a not-listed page for {", ".join(gone)}' if gone else ''))
 
 
 if __name__ == '__main__':

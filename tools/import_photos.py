@@ -9,8 +9,9 @@ already have their tracking numbers blurred. A file belongs to every trackable w
 is in its name, so a group photo (TBA_TBB_TBC.jpg) shows on each of their pages.
 
 For each file this writes two copies, with all metadata (including any GPS position) removed:
-photos/<name>.jpg, at most 1400 px on its long side, and photos/<name>-card.jpg, at most
-640 px, for the cards on the main page and the thumbnails. Only photos of trackables in data/shoebox.json are
+photos/<name>.jpg, at most 1400 px on its long side, and photos/cards/<name>.jpg, at most
+640 px, for the cards on the main page and the thumbnails. Files no longer in the folder are
+removed from both. Only photos of trackables in data/shoebox.json are
 copied: run tools/import_sheet.py first.
 """
 import json
@@ -22,6 +23,7 @@ from PIL import Image, ImageOps
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PHOTOS = os.path.join(ROOT, 'photos')
+CARDS = os.path.join(PHOTOS, 'cards')
 DATA = os.path.join(ROOT, 'data', 'shoebox.json')
 OUT = os.path.join(ROOT, 'data', 'photos.json')
 TB_RE = re.compile(r'TB[0-9A-Z]{4,7}')
@@ -58,7 +60,7 @@ def main():
     data = json.load(open(DATA, encoding='utf-8'))
     active = {t['tb'] for g in data['groups'] for t in g['trackables']}
     files = sorted(f for f in os.listdir(folder) if f.lower().endswith(EXTS))
-    os.makedirs(PHOTOS, exist_ok=True)
+    os.makedirs(CARDS, exist_ok=True)
     out, used, skipped = {}, set(), []
     for name in files:
         tbs = [tb for tb in dict.fromkeys(TB_RE.findall(name)) if tb in active]
@@ -69,16 +71,18 @@ def main():
         with Image.open(os.path.join(folder, name)) as src:
             img = ImageOps.exif_transpose(src).convert('RGB')
         w, h = save(img, os.path.join(PHOTOS, s + '.jpg'), 1400, 80)
-        cw, ch = save(img, os.path.join(PHOTOS, s + '-card.jpg'), 640, 74)
+        cw, ch = save(img, os.path.join(CARDS, s + '.jpg'), 640, 74)
         used.add(s)
         for tb in tbs:
             out.setdefault(tb, []).append({'file': s + '.jpg', 'w': w, 'h': h,
-                                           'card': s + '-card.jpg', 'cw': cw, 'ch': ch, 'source': name})
+                                           'card': 'cards/' + s + '.jpg', 'cw': cw, 'ch': ch, 'source': name})
     for tb in out:
         out[tb].sort(key=lambda p: order_key(tb, p['source']))
-    stale = [f for f in os.listdir(PHOTOS) if f.endswith('.jpg') and re.sub(r'-card$', '', f[:-4]) not in used]
+    keep = {s + '.jpg' for s in used}
+    stale = [os.path.join(d, f) for d in (PHOTOS, CARDS) for f in os.listdir(d)
+             if f.endswith('.jpg') and f not in keep]
     for f in stale:
-        os.remove(os.path.join(PHOTOS, f))
+        os.remove(f)
     with open(OUT, 'w', encoding='utf-8') as fh:
         json.dump(dict(sorted(out.items())), fh, ensure_ascii=False, indent=1)
         fh.write('\n')
