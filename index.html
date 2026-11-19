@@ -1192,6 +1192,9 @@ Barn quilts bring quilt blocks outdoors. In 2001, Donna Sue Groves organized the
   var toast = document.getElementById('toast');
   var cards = Array.prototype.slice.call(document.querySelectorAll('.tb'));
   var groups = Array.prototype.slice.call(document.querySelectorAll('.group'));
+  var jumps = Array.prototype.slice.call(document.querySelectorAll('.jump a')).map(function(a){
+    return [a, document.getElementById(a.getAttribute('href').slice(1))];
+  });
   function norm(s){ return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
   var keys = cards.map(function(c){ return norm(c.getAttribute('data-s') || ''); });
   function apply(){
@@ -1202,6 +1205,7 @@ Barn quilts bring quilt blocks outdoors. In 2001, Donna Sue Groves organized the
       c.hidden = !ok; if (ok) shown++;
     });
     groups.forEach(function(g){ g.hidden = !g.querySelector('.tb:not([hidden])'); });
+    jumps.forEach(function(j){ j[0].hidden = !!(j[1] && j[1].hidden); });
     count.textContent = terms.length ? shown + ' of ' + cards.length : cards.length + ' trackables';
     empty.hidden = shown > 0;
   }

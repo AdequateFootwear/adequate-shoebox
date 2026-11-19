@@ -108,13 +108,17 @@ def main():
             raise SystemExit(f'Column {letter} should be the {key} column, but its header is {h!r}. '
                              'The sheet changed: update COLS in tools/import_sheet.py.')
 
-    has_item = [bool(clean(cell_text(get(r, 'name')))) for r in rows]
+    # A row counts as an item only if it is visible: a hidden row never shapes or reaches the page.
+    has_item = [bool(clean(cell_text(get(r, 'name')))) and not hidden[i] for i, r in enumerate(rows)]
     groups, notes = [], []
     current = {'name': FIRST_GROUP, 'trackables': []}
     left_out = {'hidden': [], 'not_activated': []}
     for i, r in enumerate(rows[1:], start=1):
         name = clean(cell_text(get(r, 'name')))
         label = clean(cell_text(get(r, 'tracking')))
+        if hidden[i]:  # every hidden row stays off: items, group headings and notes alike
+            left_out['hidden'].append(name or f'row {i + 1}')
+            continue
         if not name:
             if label and any(has_item[i + 1:]):
                 if current['trackables']:
@@ -122,9 +126,6 @@ def main():
                 current = {'name': label, 'trackables': []}
             elif label:
                 notes.append(label)
-            continue
-        if hidden[i]:
-            left_out['hidden'].append(name)
             continue
         tb = clean(cell_text(get(r, 'tb'))).upper()
         if not tb:
