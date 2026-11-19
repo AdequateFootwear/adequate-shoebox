@@ -1,0 +1,984 @@
+{
+ "sheet": "AdequateFootwear Trackable Collection and Missions",
+ "read": "2026-11-19",
+ "notes": [
+  "*AS OF 2026* Your Mission:\n*In 2026, I added logging missions to my trackables. Complete the logging missions in order to discover them! Please note that I may delete trackable logs that have not completed the necessary logging mission.*"
+ ],
+ "groups": [
+  {
+   "name": "Top personal items",
+   "trackables": [
+    {
+     "name": "AdequateNametag",
+     "tb": "TB8WYXW",
+     "tracking": "CCXXCN",
+     "released": "2019-05-20",
+     "mission": "Introduce yourself to AdequateFootwear in person! Please identify your caching name. Bonus points if Adequate actually remembered the nametag!",
+     "goal": "To join Adequate at events so people know who Adequate is!",
+     "about": "“HELLO my name is AdequateFootwear Discover me at geocaching.com”",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/91d7add8-3a5d-43f7-98e3-d217cdd621a0_l.jpg"
+    },
+    {
+     "name": "AdequateSelf-Referentiality",
+     "tb": "TBB48P0",
+     "tracking": "GEF6HY",
+     "released": "2025-07-14",
+     "mission": "Discover one of the trackables in Adequate's collection! Yes, this one counts. ;)",
+     "goal": "Carry around Adequate’s trackables…",
+     "about": "A beautiful knit bag made by shnuffeluv, featuring the tracking number!",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/6d12f80e-f613-4478-beca-3b9b253da3c8_l.jpg"
+    },
+    {
+     "name": "AdequateEndpin",
+     "tb": "TB94RB3",
+     "tracking": "AR4BNQ",
+     "released": "2019-05-20",
+     "mission": "Write geocaching lyrics for one verse or chorus of any song (\"Drive, drive, drive your car, to the geocache! Hurry, quick! Hurry, quick! Hurry, quick! Hurry, quick! FTF whiplash!\") and post them in your log. Bonus points if you sing it for Adequate in person!",
+     "goal": "Go wherever Adequate plays the cello, maybe getting discovered along the way!",
+     "about": "A trackable designated for Adequate’s cello case, hidden somewhere among the sticker collection!",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/317011a6-0d3c-4de5-b82c-a5da77c9cec5_l.jpeg"
+    },
+    {
+     "name": "AdequateFabric",
+     "tb": "TB8N87T",
+     "tracking": "AR626C",
+     "released": "2019-05-20",
+     "mission": "Empty your geobag and photograph the contents knolling-style (everything laid out neatly at right angles). Point out the strangest item and tell Adequate whether it’s ever saved a find!",
+     "goal": "Go wherever Adequate caches, carrying anything needed along the way!",
+     "about": "I always meant to embroider this number onto my geobag… I never got around to it…",
+     "photo": ""
+    },
+    {
+     "name": "AdequateTires",
+     "tb": "TBATY0Z",
+     "tracking": "",
+     "released": "2024-10-19",
+     "mission": "Find Adequate’s car! If you found the tracking number, you probably found the car.",
+     "goal": "To serve as adequate transportation for most of the way to the cache!",
+     "about": "A TB magnet attached to Adequate’s car! Its tires are very adequate :)",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/0193e2f8-ff77-40ae-a7cb-e85da8fe234e_l.jpg"
+    }
+   ]
+  },
+  {
+   "name": "Go Caching",
+   "trackables": [
+    {
+     "name": "Adequate2025s",
+     "tb": "TBB3Y04",
+     "tracking": "ESJ0Q8",
+     "released": "2025-05-17",
+     "mission": "Find the number \"25\" among the swag or other special contents of a geocache. Take a picture of it and show us, along with the GC code of where you found it!",
+     "goal": "",
+     "about": "A coin from the In The Year 2025 Block Party in St. Thomas, ON. Features a train, a geocacher, and “the adventure continues” surrounded by leaves…",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/e792b354-7946-45bd-8acb-35a6020d4342_l.jpg"
+    },
+    {
+     "name": "AdequateAutumn",
+     "tb": "TBB5RDA",
+     "tracking": "FFKAW2",
+     "released": "2025-10-25",
+     "mission": "Show Adequate your next/most recent milestone cache find screen! You know, the one with the confetti! Take a picture or a screenshot and upload it with your discovered log.",
+     "goal": "",
+     "about": "A circular geocoin from FallFest 2025, GCAX1X1, AF’s 10,000th cache!",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/d5a8af07-f956-411e-bd49-7e7de8dabdd3_l.jpg"
+    },
+    {
+     "name": "AdequateBuckaroo",
+     "tb": "TBBFY5B",
+     "tracking": "FFFNF9",
+     "released": "2026-10-09",
+     "mission": "Giddy up! Find a horse while you're out caching: in a cache (in the swag, on a trackable, or on the container itself) or a real one along the way (from a respectful distance). Attach a photo of your horse, and include the GC code of the cache you found it in or near. Bonus points if it's a real horse!",
+     "goal": "To stay in Adequate's collection and hold everything together, as a good buckle should!",
+     "about": "A belt-buckle geocoin from FallFest 2026 (GCB7799) with a horse's head over a red maple leaf, framed by western scrollwork and four crystals.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/59a6b0bf-a2b6-4bdf-88e6-bf7dafbf72ac_l.jpg"
+    },
+    {
+     "name": "AdequateFootprints",
+     "tb": "TBBE9T1",
+     "tracking": "FF1NQG",
+     "released": "2026-10-09",
+     "mission": "Find yourself somewhere new! Find a cache in a county or region you've never cached in before, and attach a photo of your footprints (or just your boots) at GZ. Tell us where you found yourself, and what brought you there! Bonus points if your new county or region is in Ontario or along Lake Ontario.",
+     "goal": "To stay in Adequate's collection and leave adequate footprints wherever it's discovered!",
+     "about": "A Geocache ON \"Proud Supporter\" coin from FallFest 2026 (GCB7799), with a maple leaf, footprints, and \"Find Yourself Geocaching\" on the back.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/d381ce1e-e227-4f51-a90b-13df2630c2b5_l.jpg"
+    },
+    {
+     "name": "AdequateHurrah",
+     "tb": "TB8TR50",
+     "tracking": "BGAW8A",
+     "released": "2025-07-21",
+     "mission": "Give a \"Hurrah!\" at an appropriate time (e.g., upon avenging a DNF, upon completing a major goal, upon getting a muggle to find a geocache on their own). Must specifically be a \"Hurrah!\"; does not have to be geocaching-related. Attach a picture if you can, and tell us about your \"Hurrah! Moment\" in your log.",
+     "goal": "",
+     "about": "A Berkshire Geobash #7 – The Last Hurrah geocoin given to us by our friends MsGwozdz and gworol!",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/526eb36c-0028-46b6-b1db-0401173eee08_l.jpg"
+    },
+    {
+     "name": "AdequatePassage",
+     "tb": "TB93P1K",
+     "tracking": "GMYDFG",
+     "released": "2026-10-09",
+     "mission": "This mini geocoin shows the gate of Seattle's Chinatown–International District: a gateway marking the passage from one place into another. On a caching outing, find a gate, arch, or gateway of your own (a park entrance, a memorial arch, a garden gate, a covered bridge, a torii) and photograph yourself or your caching gear passing through it. Include the GC code of a cache you found nearby! Bonus points for a gate with a story: tell us who built it and why.",
+     "goal": "To stay in Adequate's collection: a small coin passing through the gate on the way to somewhere bigger.",
+     "about": "A square mini geocoin from the \"GC Minis\" series by GEOCOINS.org, marked Geocoinfest 2018 on the back (that year's Geocoinfest was held in Issaquah, near Seattle). The front shows Seattle's International District and its gateway: the Historic Chinatown Gate, a 45-foot paifang archway over South King Street, dedicated in 2008 to mark the west end of Chinatown.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/7fd87bcb-f16c-4118-aa33-c354fe3e1675_l.jpg"
+    },
+    {
+     "name": "AdequateTandem",
+     "tb": "TBBG0VQ",
+     "tracking": "25JRK7",
+     "released": "2026-10-09",
+     "mission": "This micro geocoin is a little cyclist who rides on top of its full-size partner's ladder, a nod to Moun10Bike. Take a ride of your own: travel to a cache on human-powered wheels (a bike, scooter, skateboard, wheelchair, unicycle...) or any unconventional mode of transportation (donkey? piggy-back ride?) and photograph your ride at GZ. Include the GC code! Bonus points for an actual tandem; giving a piggy-back ride to a cache also counts.",
+     "goal": "To stay in Adequate's collection, riding on top of its full-size partner!",
+     "about": "The trackable micro geocoin from Shop Geocaching's Celebrating 25 Years of Geocoins set: a tiny cyclist medallion that attaches by magnet to the top of the full-size coin's ladder, AdequateTribute (TBBG0NJ). A nod to Moun10Bike, who made the first-ever geocoins in 2001.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/c65681e5-a5cc-4ed5-8cda-673dde722e48_l.jpg"
+    },
+    {
+     "name": "AdequatelyHip",
+     "tb": "TBBED0N",
+     "tracking": "LST92T",
+     "released": "2026-10-09",
+     "mission": "Gordy hopes to end up in a cache in Bobcaygeon, Ontario, a small town made famous by a song. Wawa, Ontario, home of the giant Wawa Goose, has a song too: \"Little Wawa,\" by Stompin' Tom Connors. Find a cache in a place that's named in a song: a town, city, neighborhood, street, river, lake, mountain, or landmark, in any genre or language (whole states, provinces, and countries are too easy!). Tell us the song, the artist, and the GC code, and attach a photo from your visit if you can. Bonus points for Bobcaygeon or Wawa! AI permissible for research.",
+     "goal": "To stay in Adequate's collection, still dreaming of a cache in Bobcaygeon!",
+     "about": "Gordy Goose (Gordon, formally) is one of the True North Trackers from Landsharkz, a Canadian geocaching shop: four trackable characters billed as \"Canada's newest voyagers,\" alongside Beaver Dude, Otter Gal, and Cougar Annie. Gordy is a Canada goose dressed for dinner in a green jacket, red bow tie, and CANADA name badge, studying a trail map marked with X's. His dream is to end up in a cache in Bobcaygeon, Ontario.\n\nIf you know, you know: \"Bobcaygeon\" is a 1999 single by the Tragically Hip that won the Juno Award for Single of the Year. Gord Downie said any small town would have suited the song; he picked Bobcaygeon partly because it was the only place name he could find that nearly rhymed with \"constellation.\" The band finally played a concert there in 2011. The real Bobcaygeon, the \"Hub of the Kawarthas,\" is built on three islands and the mainland, and it's home to the first lock built on the Trent–Severn Waterway, in 1833.\n\nThe True North Trackers were the centerpiece of Adequate's event \"Oie ? Oie ! Je suis une oie.\" (GCBWPED), held at the Wawa Goose on Highway 17 on September 5, 2026. Wawa has a song of its own: Stompin' Tom Connors's \"Little Wawa\" tells the legend of a goose who stayed behind when her flock flew south and gave the town her name. The name itself, according to the heritage sign beside the Goose, comes from clear water: Wawa Creek was called wawank, Ojibwe for \"clear water springs,\" and it flowed out of a lake called wawagonk, \"place of clear water,\" which settlers shortened to Wawa. Somewhere along the way, the name may have been mistaken for we'we, \"snow goose,\" and the wild goose legend stuck. A giant goose has greeted travelers there since 1960, and the current bronze one was unveiled on Canada Day 2017, for Canada 150.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/ba5e41e4-c358-4b11-9d8c-fb9ff8967af1_l.jpg"
+    },
+    {
+     "name": "SufficiēnsScotia",
+     "tb": "TB902Y8",
+     "tracking": "PCVNR1",
+     "released": "2025-07-03",
+     "mission": "Nova Scotia means “New Scotland.” Find caches in both a place and its namesake (Nova Scotia and Scotland, London ON and London, England, Syracuse NY and Syracuse, Sicily…) and put both GC codes in your log. Past finds count!",
+     "goal": "",
+     "about": "A very beautiful Nova Scotia Geocaching Society association geocoin!",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/b828e400-6023-4604-80a0-11fe011b6725_l.jpg"
+    }
+   ]
+  },
+  {
+   "name": "Community",
+   "trackables": [
+    {
+     "name": "AdequateCampaign",
+     "tb": "TBBF166",
+     "tracking": "GS8GYM",
+     "released": "2026-10-09",
+     "mission": "\"Leave it as it is,\" Theodore Roosevelt said of the Grand Canyon, and litter was never part of \"as it is.\" Protect a park the geocacher's way, with Cache In, Trash Out: on a caching trip to any park (national, state, provincial, county, or your neighborhood park), pick up litter as you go, and attach a photo of your haul with the GC code of a cache you found there. Gloves on, and leave anything sharp or hazardous for park staff!",
+     "goal": "To stay in Adequate's collection, campaigning for parks everywhere!",
+     "about": "A geocoin shaped like a park ranger's campaign hat, from Geoswag (also their August 2026 Coin and Pin Club design). One side reads \"Protect Our Parks,\" with a crescent moon for the C, over a red-rock desert with saguaro cacti and a roadrunner; the other side shows a mountain lake at sunrise, with a bighorn sheep on a rocky outcrop among the evergreens. Geoswag pairs it with Theodore Roosevelt's words at the Grand Canyon in 1903: \"Leave it as it is. You can not improve on it. The ages have been at work on it, and man can only mar it.\" In 1908, Roosevelt protected the canyon as a national monument, and it became a national park in 1919.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/6f331880-f4ef-429a-88b9-d4ca065a2ab3_l.jpg"
+    },
+    {
+     "name": "AdequateComrades",
+     "tb": "TB9BGZ9",
+     "tracking": "CVEB79",
+     "released": "2025-07-03",
+     "mission": "Find a fellow geocacher who shares a non-caching hobby with you, and take a photo of the two of you (or just your hands) with something from that hobby. Name them and the hobby in your log, and you can both discover!",
+     "goal": "",
+     "about": "“The best finds are other geocachers!”",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/0f893501-ffbe-4915-a7ba-d97532e19da1_l.jpg"
+    },
+    {
+     "name": "AdequateIinang",
+     "tb": "TB93HY6",
+     "tracking": "GSR7V7",
+     "released": "2026-10-09",
+     "mission": "Iinang is the Haida word for herring, and it also means \"plentiful.\" On the Northwest Coast, plenty is tied to respect: many peoples, including the Haida, follow ancestral rules for treating salmon well, like returning salmon bones to the water, so that the salmon keep coming back. Two of the Haida guiding principles are Isda ad dii gii isda, \"giving and receiving,\" and Yahguudang, \"respect.\" People work much the same way: they come back when they're treated with respect. In a few sentences, describe one thing you do consistently to show respect to others in the geocaching community and help keep it going, and tell us about a time you did it. Those adjacent to the community count too: landowners, park staff, neighbors near GZ, or the curious non-cacher wondering what you're doing! No AI for this one.",
+     "goal": "To stay in Adequate's collection. This salmon has already swum home!",
+     "about": "Native Salmon Geocoin, a 3D geocoin from Geoswag in antique gold, shaped like a salmon with the hooked jaw a male grows on his way upstream to spawn. Its design is inspired by northern Northwest Coast formline art, the tradition of the Haida, Tlingit, Tsimshian, Nisga'a, Gitxsan, Haisla, and Heiltsuk peoples. Across the Northwest Coast, salmon are honored as relatives who return each year to feed the people, a return that depends on respect: in Haida practice, for one, salmon bones are given back to the river so that the salmon will come back.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/4cada8ab-3790-4158-9cd5-9fe9599bd046_l.jpg"
+    },
+    {
+     "name": "AdequateRespite",
+     "tb": "TBBEY85",
+     "tracking": "TRYK9C",
+     "released": "2026-10-09",
+     "mission": "This coin celebrates 25 years of Travel Bugs (2001–2026). This one is resting up at home, so it's counting on you to give the others a respite! Do a Travel Bug rescue: send out a trackable that's been sitting in a cache for six months or more, gently clean up a muddy or soggy one, or add a new charm alongside a hitchhiker that's gone missing or really worn out (add, never replace or remove!), or perform other TB TLC along those lines. Read the trackable's page first and follow its owner's wishes, and don't alter the trackable itself. Attach a before-and-after photo, include its public TB code (never the tracking code!), and say what you did in your log on its page so the owner knows. Then keep it moving!",
+     "goal": "To stay in Adequate's collection, resting up while the other Travel Bugs do the traveling!",
+     "about": "Travel Bug 25th Anniversary Geocoin, a dog tag on a ball chain celebrating 25 years of Travel Bugs. The Travel Bug mascot strides along a boardwalk with a red backpack, waving, while a plane flies overhead and a boat sails by. Stamped at the bottom: EST. 2001, the year the first Travel Bug was placed in a geocache.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/8a9e14f6-2bc2-4dd9-8c37-134e2fe75651_l.jpg"
+    },
+    {
+     "name": "AdequateVolunteerism",
+     "tb": "TBAXW1N",
+     "tracking": "CF2A8C",
+     "released": "2025-05-08",
+     "mission": "Volunteer somewhere, for geocaching or anything else (a CITO, an event, a food bank, a library), and tell Adequate what you did. Attach a photo if you can! Volunteering from the year up to your log counts.",
+     "goal": "",
+     "about": "A commemorative coin for volunteers from Geocoinfest 2024 in Syracuse.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/a6976d6f-0e49-4b81-afd9-a2e526198f12_l.jpg"
+    }
+   ]
+  },
+  {
+   "name": "Make Something (Food)",
+   "trackables": [
+    {
+     "name": "AdequateApples",
+     "tb": "TBAT4V3",
+     "tracking": "SCNJFB",
+     "released": "2025-05-08",
+     "mission": "Make something using apples! I'd like it to be edible. If you're not a cook or baker, make something cute and geocaching-related with simple, kid-friendly ingredients! Anything from that to a Tarte PATin will be accepted for this task (\"PAT\" is French \"FTF\"). Include a photo of your creation in your log.",
+     "goal": "",
+     "about": "A stained glass apples geocoin from Geocoinfest 2024.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/cccdca6b-ba05-49f1-8c48-dffdb201421f_l.jpg"
+    },
+    {
+     "name": "AdequateBrews",
+     "tb": "TBB3MA0",
+     "tracking": "VSHYEA",
+     "released": "2025-05-09",
+     "mission": "Brew something! It doesn't have to be 21+... Coffee, tea, kombucha? Soy sauce? Some sort of geocaching stamina potion? Get as creative as you want! Include a photo of the final result, and if you can, of the process. Bonus points if you teach yourself something for this; bonus points if you use a cauldron.",
+     "goal": "",
+     "about": "A commemorative geocoin that AF received from completing the Visit Syracuse Geotour!",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/303f2bce-3b16-4840-ba4b-838e2fc22f2c_l.jpg"
+    },
+    {
+     "name": "AdequateCookie",
+     "tb": "TBA5TG4",
+     "tracking": "GSBCNN",
+     "released": "2025-04-29",
+     "mission": "Bake, decorate, or draw a geocaching-themed cookie (store-bought cookies with icing count!) and attach a photo. Sharing it with a fellow cacher earns bragging rights.",
+     "goal": "",
+     "about": "CaptainCookie Lackey Tag from HQ",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/d9b83ae9-862c-47b6-98cd-0e5f9b5ce489_l.jpg"
+    },
+    {
+     "name": "AdequateGriddles",
+     "tb": "TBBE9JT",
+     "tracking": "FFN0ZC",
+     "released": "2026-10-09",
+     "mission": "Fall Fest 2026 said \"Get Your Stampede On!\", and nothing says Stampede like a pancake breakfast: the Calgary Stampede has been serving them since 1923. Hold a geocaching pancake breakfast of your own: make pancakes shaped or decorated like something from geocaching (an ammo can, a travel bug, a GZ \"X,\" a smiley) and attach a photo. Bonus points for serving them to caching friends! No AI.",
+     "goal": "To stay in Adequate's collection, holding on tight like a moose on a bucking bronco!",
+     "about": "The Fall Fest 2026 event trackable from GCB7799 in Burford, Ontario, carrying the event's motto: \"Get Your Stampede On!\" A moose in a cowboy hat and bandana rides a bucking black horse, surrounded by a lariat, a sheriff's star, a horseshoe, a cow skull, and cowboy boots.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/5c735bc2-1e11-43a8-804c-cf2b60417dd2_l.jpg"
+    }
+   ]
+  },
+  {
+   "name": "Make Something (Arts & Crafts)",
+   "trackables": [
+    {
+     "name": "AdequateAgar",
+     "tb": "TBB9AZZ",
+     "tracking": "CA9ANG",
+     "released": "2026-01-07",
+     "mission": "Agar is the vegetarian gelatin that makes vegetarian gummy bears possible. Design a geocaching gummy candy: draw, paint, or sculpt it (clay, fondant, or a real homemade gummy all count), name it, and tell us the flavor. Attach a photo! Include a fake and potentially absurd ingredients list (GeoAgar, Ammo Canola Oil, TOTTs, SWAG, flavoring...?)",
+     "goal": "",
+     "about": "A red micro gummy bear coin. Agar is a vegetarian gelatin substitute. Agar is also used as a base for growing bacteria cultures. Yum!",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/040ec397-2ef2-4993-8055-3cc13bef5711_l.jpg"
+    },
+    {
+     "name": "AdequateAnniversary",
+     "tb": "TBB1ZK0",
+     "tracking": "25BBD9",
+     "released": "2026-02-27",
+     "mission": "First, find the year you found your first geocache, if you don't know it. Then, just take the last digit, and match it up to a corresponding traditional anniversary gift. Here is what Wikipedia gives for them:\n1 – Paper\n2 – Cotton\n3 – Leather (faux acceptable)\n4 – Fruit and flowers, linen, silk\n5 – Wood\n6 – Iron, sugar\n7 – Wool, copper\n8 – Bronze, salt\n9 – Pottery, willow\n10 = 0 – Tin, aluminum\nThen make a small geocaching item or design from that material: a paper ammo can, an aluminum foil travel bug, a depiction of Signal using salt or sugar. Attach a photo!",
+     "goal": "",
+     "about": "A nano 25 charm, probably eventually to be worn as a necklace for a stuffie (perhaps that Adequate will crochet…).",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/74b24832-67f0-48e0-b137-b3d08686ed5a_l.jpg"
+    },
+    {
+     "name": "AdequateBearings",
+     "tb": "TBBA1RG",
+     "tracking": "GS4XVV",
+     "released": "2026-10-09",
+     "mission": "This coin is a “double exposure”: a bear whose silhouette holds a whole wilderness. Make your own! Fill the outline of an animal with a landscape from somewhere you’ve gone caching: draw it, paint it, collage it, or print out and layer two of your own photos. Attach a picture and name the place in your scene. Bonus points for hiding a smaller animal in the landscape, like the little black bear on this coin! AI permitted for inspiration, but a photoshopped image alone will not suffice.",
+     "goal": "To stay in Adequate's collection and never lose its bearings, even in the wilderness!",
+     "about": "Spirit of the Wilderness, the November 2019 coin from the Geoswag C&P Club. On the front, a big bear’s silhouette holds a whole wilderness: a purple-to-gold sunset, a leafy branch, a stand of evergreens, a winding river, and one small black bear out for a walk. On the back, the same bear is done in antique copper with flowing, carved-look swirls.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/8e75b848-48ea-4bda-a1f6-e84bc76e5625_l.jpg"
+    },
+    {
+     "name": "AdequateCoats",
+     "tb": "TBBABMW",
+     "tracking": "NYXM1B",
+     "released": "2026-02-27",
+     "mission": "In heraldry, the figures standing on either side of a shield (often rampant!) are called supporters. Make a coat of arms for your caching profile or team with two supporters and a motto: draw it, paint it, stitch it, cut it from paper, or design it digitally. Attach a picture. Crayon is perfectly heraldic. AI acceptable if you drive the design.",
+     "goal": "",
+     "about": "A Year of the Fire Horse trackable featuring a rampant red horse on one side and a wheel of Years of the Horse on the other side.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/5981c65d-a644-4765-8590-e72b0d7f3283_l.jpg"
+    },
+    {
+     "name": "AdequateEstuary",
+     "tb": "TBB7J43",
+     "tracking": "BPR29B",
+     "released": "2025-10-25",
+     "mission": "Name an estuary you've visited or would like to cache near (the Chesapeake Bay on this coin is one; the St. Lawrence River Estuary is another), give it a ridiculous new name (Larry's Mouth?), and make a greeting card congratulating it on the new name: drawn, painted, collaged, pop-up, or digital. Attach a photo of the card! AI is permissible as long as you come up with the name and help drive the design.",
+     "goal": "",
+     "about": "A rectangular geocoin obtained from the Block Party to Celebrate 25 Years of Geocaching in the DMV! The obverse features the letters \"DMV\" (decorated respectively for DC, Maryland, and Virginia), and the reverse features a scene from the Chesapeake Bay (an estuary), with seagulls flying alongside a buoy in the foreground, and the Chesapeake Bay Bridge in Maryland extending into the background.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/1bcaa24b-c2fa-4659-95dc-53bfe5dd5c2f_l.jpg"
+    },
+    {
+     "name": "AdequateFacets / FacettesAdéquates",
+     "tb": "TB8PGKG",
+     "tracking": "CCPQ26",
+     "released": "2026-10-09",
+     "mission": "🇬🇧 Like the Canada 150 logo, make a symbol out of pieces that each mean something! Start with a symbol of your region, where you live or where you go caching: an official emblem (leaf, tree, flower, crop, bird, fish, mammal) or anything similar. Divide it into at least 8 simple geometric shapes, each standing for something you love about your region. Then arrange a few of those shapes so they hide a smaller symbol of one of those things inside the larger one, the way the Canada 150 maple leaf hides a tulip, a ship, and more. Bonus points if you hide more than one! Draw it, cut it from paper, build it, or make it on a computer; attach a picture and tell us what each piece stands for. AI permissible for planning and blueprinting.\n\n🇫🇷 Comme le logo de Canada 150, créez un symbole fait de pièces qui ont chacune un sens! Partez d'un symbole de votre région, celle où vous habitez ou celle où vous faites du géocaching : un emblème officiel (feuille, arbre, fleur, produit agricole, oiseau, poisson, mammifère) ou tout autre symbole du genre. Divisez-le en au moins 8 formes géométriques simples, chacune représentant quelque chose que vous aimez dans votre région. Disposez ensuite quelques-unes de ces formes de façon à cacher, à l'intérieur du grand symbole, un plus petit symbole de l'une de ces choses, comme la feuille d'érable de Canada 150 cache une tulipe, un navire et plus encore. Points bonis si vous en cachez plus d'un! Dessinez-le, découpez-le dans du papier, construisez-le ou créez-le à l'ordinateur; joignez une image et dites-nous ce que représente chaque pièce. L'utilisation de l'IA est autorisée pour la planification et l’élaboration des plans.",
+     "goal": "🇬🇧 To stay in Adequate's collection, in both official languages!\n\n🇫🇷 Rester dans la collection d'Adequate, dans les deux langues officielles!",
+     "about": "🇬🇧 A trackable tag from GAG XXV, the 25th Go and Get 'Em event hosted by Canada's Capital Cachers (Cacheurs de la capitale du Canada) in Canada's 150th year. One side shows the club's logo; the other carries the official Canada 150 logo, designed by student Ariana Cuvin: a sharp-edged maple leaf of 13 diamonds, with the four at the base standing for the four original provinces of 1867 and the rest for the provinces and territories that followed. Look closely and the diamonds also form other shapes, including a tulip, an Indigenous stone spear, a ship, and the fleur-de-lis.\n\n🇫🇷 Un objet voyageur de GAG XXV, le 25e événement Go and Get 'Em organisé par Cacheurs de la capitale du Canada (Canada's Capital Cachers), pendant l'année du 150e anniversaire du Canada. Un côté porte le logo du club; l'autre, le logo officiel de Canada 150, conçu par l'étudiante Ariana Cuvin : une feuille d'érable aux arêtes vives formée de 13 losanges, dont les quatre de la base représentent les quatre provinces fondatrices de 1867, et les autres, les provinces et territoires qui se sont joints par la suite. En y regardant de près, les losanges forment aussi d'autres figures, dont une tulipe, une pointe de lance autochtone en pierre, un navire et la fleur de lys.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/481501ae-5d8c-4c52-8952-0bf7c5d5bade_l.jpg"
+    },
+    {
+     "name": "AdequateFlap",
+     "tb": "TBBBJ8J",
+     "tracking": "BL21YG",
+     "released": "2026-10-08",
+     "mission": "Every geocacher has a butterfly effect. Map yours: start with the tiny flap that started it all (a friend's comment, a sticker, a stray app download) and follow it to your tornado (a milestone, a friendship, a trip, a cache you'll never forget). Draw it, diagram it, or build it as a chain of dominoes, and attach a photo. Or write it out, as a chain of \"If ___ hadn't ___, I'd never have ___\" sentences in your log! Bonus points if one wing of your map is your FINDER side and the other is your HIDER side! AI permitted for brainstorming; the map must be yours.",
+     "goal": "To stay in Adequate's collection as a reminder that small things can start big adventures, and to be discovered by cachers along the way! And maybe make it to Texas some day.",
+     "about": "A folding blue butterfly geocoin celebrating Blue Switch Day 2026, with a HIDER wing and a FINDER wing. In 1972, meteorologist Edward Lorenz asked whether the flap of a butterfly's wings in Brazil could set off a tornado in Texas. Geocaching's answer: one switch, infinite adventure.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/a8d97a3a-071d-46aa-af8b-a0b19ab7fded_l.jpg"
+    },
+    {
+     "name": "AdequateFutility",
+     "tb": "TBB3M79",
+     "tracking": "HAHD2Y",
+     "released": "2025-07-21",
+     "mission": "Draw, diagram, or build a model of a terrible invention that turns hamster-wheel running into power for the world (labeled like a patent diagram if you’re feeling fancy), and attach a picture. The more absurd, the better. AI permissible, but you must drive the idea.",
+     "goal": "To run around that hamster wheel endlessly and to be discovered. Ideally, we will find a way to power the world with the running. Until then, it is futile.",
+     "about": "A very cool 2025 hamster wheel trackable that I won in a raffle during one of the Berkshire Geobash Reunion weekend events for the same year. This hamster is even equipped with an adequate mechanism that enables them to move around the wheel itslf!",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/484c6bae-c38c-4948-98f4-5a7671cc0af2_l.jpg"
+    },
+    {
+     "name": "AdequateLobsters",
+     "tb": "TBB1TQ7",
+     "tracking": "LSHMN8",
+     "released": "2025-07-14",
+     "mission": "A lobster mushroom is a mushroom that another fungus has taken over and turned lobster-red. Create your own hybrid creature with a geocaching twist (a key container crab? a snail with a nano for a shell?) and attach a photo of it. AI permissible for brainstorming and planning; I would like to see this as a 3D creature, in whatever way you want to go about it.",
+     "goal": "",
+     "about": "A lobster mushroom fungus tag. Very playful and outgoing.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/da844b5c-d1c9-4737-a553-19cea5603710_l.jpg"
+    },
+    {
+     "name": "AdequateMaple",
+     "tb": "TBATBT8",
+     "tracking": "SYE7XN",
+     "released": "2025-05-08",
+     "mission": "Find a real maple leaf and turn it into something: trace it, do a crayon rubbing, make a collage with it, or decorate it into a geocaching scene. Attach a photo!",
+     "goal": "",
+     "about": "A beautifully designed maple leaf TB.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/cc0e87dd-9afb-44ef-a0ef-755456f112d6_l.jpg"
+    },
+    {
+     "name": "AdequatePride",
+     "tb": "TBAXPVG",
+     "tracking": "PFACZF",
+     "released": "2025-05-08",
+     "mission": "Make something about pride and progress and what they mean to you: a short piece of writing, a drawing, a craft, a flag of your own design. This is an LGBTQ+ themed trackable, but any kind of pride is welcome, including pride in being a geocacher! AI permitted, but should ultimately be your own work. No hatred.",
+     "goal": "",
+     "about": "A progress flag tag.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/c2a98f02-f336-4bbf-b344-5e07143ab1b6_l.jpg"
+    },
+    {
+     "name": "AdequateProgress",
+     "tb": "TBB8Q7V",
+     "tracking": "PF1MYF",
+     "released": "2026-10-09",
+     "mission": "The Progress flag didn't replace the rainbow flag; it added to it, so more people could see themselves in it. Make a flag the Progress way: start with an existing flag (your town's, your state's or province's, your country's, your school's, your caching team's, or a pride flag) and add to it so it also represents two or more communities you're part of, from your identity to your hobbies, geocaching included. Draw it, sew it, paint it, or design it digitally (make a new version; don't mark up a real flag), attach a picture, and tell us what you added and why. Log it with pride! AI permissible for research.",
+     "goal": "To stay in Adequate's collection, moving forward with pride!",
+     "about": "A Progress Pride flag tag, in the design Daniel Quasar created in 2018: the rainbow flag with an arrow of white, pink, light blue, brown, and black along its left side. The light blue, pink, and white represent trans and non-binary people; the brown and black represent marginalized communities of color, with the black also honoring those living with AIDS. The arrow points right to show forward movement, and that progress still needs to be made. It wears a handmade \"Log With Pride\" pin in the trans flag's colors, made by Adequate, with a little trail from a cheering figure to a flag.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/510f57bc-a423-41c1-8ddc-32b9efcd9ae1_l.jpg"
+    },
+    {
+     "name": "AdequateRails",
+     "tb": "TB8AEB8",
+     "tracking": "GS01V8",
+     "released": "2025-07-21",
+     "mission": "Build a geocaching train out of anything (ammo cans, pill bottles, bison tubes, cardboard) and attach a photo. What is it delivering?",
+     "goal": "",
+     "about": "A Berkshire Geobash #6 geocoin featuring a train!",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/36eab279-64dc-44b3-acba-e0e9aab8e77a_l.jpg"
+    },
+    {
+     "name": "AdequateSleeper",
+     "tb": "TBAXR8V",
+     "tracking": "LSP8Z5",
+     "released": "2026-01-09",
+     "mission": "Show Adequate a sleepy shark: drawn, folded, sculpted, or stuffed. Is she ready for bed? Is he sipping sleepytime tea? Attach a photo!",
+     "goal": "",
+     "about": "A pacific sleeper shark tag from sharkzcoins.ca",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/f9d31f97-aa87-45a7-8d4f-59903c32dfae_l.jpg"
+    },
+    {
+     "name": "AdequateTribute",
+     "tb": "TBBG0NJ",
+     "tracking": "25K6F5",
+     "released": "2026-10-09",
+     "mission": "The first-ever geocoins were made by Jon Stanley (Moun10Bike) and placed in a cache above Puget Sound on September 30, 2001. Twenty-five years later, design your own geocoin: front and back, with your caching name and something that represents you, the way the bicycle represents Moun10Bike. Draw it, paint it, sculpt it, or design it digitally, and attach a picture. AI permitted for brainstorming, but the design itself must be your own. (No need to purchase any actual geocoins made from the design unless you want to!)",
+     "goal": "To stay in Adequate's collection, honoring the proud Geocoin, with its micro partner riding in tandem.",
+     "about": "The full-size coin from Shop Geocaching's Celebrating 25 Years of Geocoins set, a tribute to the first-ever geocoins, made by Jon Stanley (Moun10Bike) and placed above Puget Sound near Deception Pass, Washington, on September 30, 2001. One side carries the original Moun10Bike design. The other is based on the geocache where that first geocoin was placed, with a pivoting ladder that doubles as a stand for its trackable micro geocoin, AdequateTandem (TBBG0VQ).",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/c0968986-ce41-4950-9cf9-443888e4acd2_l.jpg"
+    },
+    {
+     "name": "AdequateWhereabouts",
+     "tb": "TB93KW0",
+     "tracking": "GSB26B",
+     "released": "2026-10-08",
+     "mission": "Where are you? Where were you? Where will you be? Draw that path on a map, at whatever scale you like: a day's errands across town, the route from your last caching trip to your next one, or Earth's path around the Sun (or the Sun's around the galaxy, if you're feeling cosmic). Mark the present with an X, YOU ARE HERE style, and attach a photo of your map! Drawn, painted, stitched, collaged, or digital all count. AI permitted for research; the map must be yours.",
+     "goal": "To stay in Adequate's collection and help cachers figure out where they are, where they've been, and where they're going!",
+     "about": "A small metal \"Global Positioning Device\" with a slide-out tab that reads YOU ARE [X] HERE.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/b2391392-74a4-46dc-9492-0d48c448c666_l.jpg"
+    },
+    {
+     "name": "AdequateWicker",
+     "tb": "TBB0VJ2",
+     "tracking": "LSAKAV",
+     "released": "2026-01-07",
+     "mission": "This coin is an Easter basket full of goodies. Weave or fold a small basket (paper strips, pipe cleaners, etc.), fill it with geocaching swag, and attach a photo!",
+     "goal": "",
+     "about": "An Easter basket geocoin, featuring Tracker and a duck!",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/29a63a35-5843-41ce-ad65-56ad4a8bb2f8_l.jpg"
+    },
+    {
+     "name": "SlyBoots!",
+     "tb": "TBBFYBR",
+     "tracking": "FF5PB2",
+     "released": "2026-10-09",
+     "mission": "In honor of SlyBoots, a collage artist, make a \"cowboy collage\" on a pair of boots. Then saddle up and go out caching in them, and attach a photo of them at GZ! Not a boots person? Make a collage of Signal the Cowfrog wearing some sly boots instead. Paper, fabric, mixed media, and 3D collage all count. Attach a photo!",
+     "goal": "To stay in Adequate's collection and go wherever the boots take it!",
+     "about": "A boot-shaped trackable from FallFest 2026 (GCB7799) in Burford, Ontario, September 23–27, 2026! The front carries the event details inside the boot; the back shows someone riding a horse. Named for SlyBoots, the caching alias Adequate's sister goes by when she's out caching with Adequate.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/09f372c4-232c-4b84-b4b2-c90619b4a678_l.jpg"
+    }
+   ]
+  },
+  {
+   "name": "Research and Respond",
+   "trackables": [
+    {
+     "name": "AdequateAdministration",
+     "tb": "TB98YGD",
+     "tracking": "HQ2888",
+     "released": "2025-04-29",
+     "mission": "When United States agencies pass new rules and regulations, the general rule is that they have to give members of the public a period of notice and a chance to comment on these proposed regulations.\n\nThe public comment period is open! Draft an official-sounding proposed rule for geocaching (“All ammo cans shall be greeted by name”) with a rule number and a one-paragraph justification, and post it in your log. AI permitted, but I encourage you to come up with the idea for the rule yourself.",
+     "goal": "",
+     "about": "A purple HQ (“geocaching administration?”) tag, perhaps eventually to be attached to something pertinent to administrations.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/915caae2-3fe6-4802-981c-f8fbee142ff7_l.jpg"
+    },
+    {
+     "name": "AdequateChants",
+     "tb": "TBB1W53",
+     "tracking": "LSY2QP",
+     "released": "2025-07-14",
+     "mission": "Compose a short Gregorian chant about geocaching (a cache name, a hint, or “TFTC” is plenty of text) and write it out with your own neumes: little marks above the words showing where the pitch goes. Attach a photo, or sing it for AF in person. You will not be graded on pitch.",
+     "goal": "",
+     "about": "A chantarelle fungus tag. Distinguished and proper, though sometimes a bit curt.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/0154b796-5c43-4e0d-99b9-7db175187859_l.jpg"
+    },
+    {
+     "name": "合適的馬 (AdequateEquine)",
+     "tb": "TBBA0NR",
+     "tracking": "NYNJXA",
+     "released": "2026-02-27",
+     "mission": "Find a classical Japanese haiku about a horse (馬, uma) and copy the original version out by hand in tategaki: vertical columns running right to left. Credit the poet! Copying the characters closely is fine; calligraphy is a bonus. Decorate your page with appropriate imagery. AI is acceptable for research. Include a translation in your log (credit any formal translations you provide).",
+     "goal": "",
+     "about": "A bright red and gold geocoin featuring a beautiful stalwart horse on the obverse and \"Year of the Horse\" and \"Happy New Year\" in script on the reverse.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/c6272b18-da61-4653-8edb-b3a50a657efd_l.jpg"
+    },
+    {
+     "name": "AdequateHemoglobin",
+     "tb": "TBBAFZB",
+     "tracking": "VAXWRF",
+     "released": "2026-02-27",
+     "mission": "Love is in the air! Air is in the lungs! But how does it get to the heart? Make a diagram that follows one love \"molecule\" as it hunts for its GZ: the heart muscle. Label every stop along the way. (Potential hint: Hemoglobin is the blood's delivery vehicle, and the heart feeds itself through its own arteries. If that's not the route you go, that's fine!) Draw it, paint it, or build it as a model (string, beads, pipe cleaners…). Attach a photo! Bonus points if you give the love molecule a Corporeal Positioning System-compatible device. AI permitted for research; the diagram must be yours.",
+     "goal": "",
+     "about": "A gold heart-shaped geocoin featuring birds, flowers, \"XOXO,\" and \"Love is in the Air.\"",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/cc4aa8b7-bf0b-4f10-92dd-14127281b874_l.jpg"
+    },
+    {
+     "name": "AdequateMorals",
+     "tb": "TBB1VB2",
+     "tracking": "LS2P5E",
+     "released": "2025-07-14",
+     "mission": "Read the Geocacher's Creed in the Help Center, then write one new point for it in the same style as the others, and tell Adequate in your log why it belongs there. AI acceptable for research purposes (though you should be able to find the Creed yourself).",
+     "goal": "",
+     "about": "A morel fungus tag. Very shy, but friendly once approached.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/4c863bd0-69c7-4a1d-984f-ee3d47453991_l.jpg"
+    },
+    {
+     "name": "AdequateNewYorkers",
+     "tb": "TBAYD3J",
+     "tracking": "DMZEAZ",
+     "released": "2025-05-08",
+     "mission": "GC39 The Spot sits on Nundawao, where Seneca oral history places the origin of the Nation. Discover one thing about the Seneca Nation (Onöndowa’ga:’) from a cache or cache page, a historical marker, a museum, or a book, and do your best to research it more thoroughly (i.e., find authoritative sources – ideally firsthand Haudenosaunee – discussing the thing you learned). Include in your log (1) the thing you discovered, (2) where you discovered it, and (3) what your deeper research turned up, including whether authoritative sources confirmed or denied it.",
+     "goal": "",
+     "about": "A NYGO tag commemorating The Spot!",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/8cce3972-7692-4c00-abe5-20feecec1677_l.jpg"
+    },
+    {
+     "name": "AdequateOphidian",
+     "tb": "TBB160R",
+     "tracking": "GSN2P6",
+     "released": "2025-07-03",
+     "mission": "Pick a snake species and make an artistic representation of it, labeled with its common name, scientific name, and conservation status, plus one fact you found interesting. Attach your art! AI permissible for research.",
+     "goal": "",
+     "about": "A very cool 2025 Year of the Snake trackable, with a snake wrapped around an ammo can. Acquired at the Maritime Mega VI Block Party in Nova Scotia.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/4cfa0fa3-4b13-46c6-8c8f-3cba0c91f710_l.jpg"
+    },
+    {
+     "name": "AdequateReduction",
+     "tb": "TBBG7XC",
+     "tracking": "CCWPWT",
+     "released": "2026-10-09",
+     "mission": "Reduce, reuse, recycle! Come up with one very small change you can make in your life to help the environment (e.g., \"use a future geocache container instead of plastic sandwich bags,\" \"skip the lid and straw when I don't need them,\" or \"add one more meatless meal per month\"). Research the kind of impact that change can make, and guesstimate your own impact if you actually stick with it for 1 year, 10 years, and a lifetime. Then tell us one positive impact your change could have on the oceans somewhere down the line. Bonus: what law could your country, state or province, or a union like the EU pass to make that change easier for everyone (e.g., a safe, plastic-free food packaging standard, or subsidies for meatless options), and how much impact might it have? Estimates are fine! AI permitted for research; the reasoning must be yours.",
+     "goal": "To stay in Adequate's collection and remind cachers that small reductions add up!",
+     "about": "A sea turtle trackable! The front shows a sea turtle; the back reads \"SAVE THE OCEANS AND THE SEA TURTLES · STOP PLASTIC POLLUTION.\" Sea turtles can mistake floating plastic bags for jellyfish, one of their foods, which is one reason small reductions in plastic use matter. Cache In, Trash Out!",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/5b8e3046-ebce-4179-b08c-67f0713ad723_l.jpg"
+    },
+    {
+     "name": "AdequateRemembrance",
+     "tb": "TB9T1MW",
+     "tracking": "PHF12H",
+     "released": "2025-07-03",
+     "mission": "Share one fact about the friendship between Canada and the Netherlands (the TB page gives you a head start), ideally one recent logs haven't mentioned. Attach a tulip with it: drawn, photographed, or folded.",
+     "goal": "To stay in AdequateFootwear's inventory as a reminder of some very interesting and meaningful Canadian history, and to be discovered by caching friends, hopefully passing along that history.",
+     "about": "This coin was acquired at the Maritime Mega VI Block Party in Nova Scotia. We learned some very cool Canadian history behind it that we had not heard before, considering we grew up in the States:\n\nCanada was the primary country that liberated the Netherlands during WWII, along with some help from the UK. The Netherlands are very appreciative of the help that Canada offered, and still send 20,000 tulip bulbs to Ottawa each year as a thank you for the aid.\n\nDuring the war, the queen of the Netherlands was staying in Ottawa for safety. She was carrying a child at the time. When she was ready to give birth, Canada made the one room of the hospital she was in into Dutch territory so that the child could still be born in the Netherlands! (It was given back afterwards.) I'm very glad I got to hear this very interesting story.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/594b6498-c3f9-4916-b0f8-817027f00509_l.jpeg"
+    }
+   ]
+  },
+  {
+   "name": "Observe, Collect, and Record",
+   "trackables": [
+    {
+     "name": "AdequateBlue",
+     "tb": "TBAYBTK",
+     "tracking": "LSWQX2",
+     "released": "2026-01-08",
+     "mission": "Something old, something new, something borrowed, something blue: gather one geocaching item for each (an old log, a new pen, a borrowed TOTT, any blue swag), photograph them together, and caption which is which!",
+     "goal": "",
+     "about": "A blue shark tag from sharkzcoins.ca",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/bdc84de7-6935-4dab-898b-a89cdfbe245a_l.jpg"
+    },
+    {
+     "name": "AdequateHeadquarters",
+     "tb": "TB98VGY",
+     "tracking": "HQQBAR",
+     "released": "2025-04-29",
+     "mission": "Photograph something of yours (a coin, a toy, your thumb) “visiting” Geocaching HQ: in front of a printed, on-screen, or hand-drawn HQ. Been there in person? Post that photo instead! AI permitted if you need help with editing photos.",
+     "goal": "",
+     "about": "A coin from when AF went to Geocaching HQ! A fantastic trip with HoggleA10 in April 2023. Ask for some stories - Adequate is sure to have some to share from that trip!",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/e8179bac-56e6-4f76-abd6-b9c53ee9656c_l.jpg"
+    },
+    {
+     "name": "AdequateSystem",
+     "tb": "TBAVH37",
+     "tracking": "SSB4WK",
+     "released": "2026-01-01",
+     "mission": "Spot three things from this marble’s list in the sky (the Moon, a planet, the ISS…), sketch where they were, and put the date, time, and place in your log. Spotting them with Adequate at a night event is a bonus!",
+     "goal": "",
+     "about": "A beautiful solar system marble, featuring depictions of the Sun, Moon, Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto, and space ships Mercury, Gemini, Saturn V, Apollo Command & Lunar Modules, Space Shuttle, Hubble Space Telescope, International Space Station, and Space Launch System Orion.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/39db15bc-bbf0-412a-b2e8-5f2983f9cf42_l.jpg"
+    },
+    {
+     "name": "AdequateWayfarer",
+     "tb": "TBBAAPC",
+     "tracking": "GS0FR1",
+     "released": "2026-10-09",
+     "mission": "This traveler walks the same trail in two different lights: one side by day, the other under a pink sky with the sun low on the horizon. Your turn! Photograph one geocaching spot (a GZ, a trailhead, a view on the way to a cache) at two different times: day and night, sunrise and sunset, or two different seasons. Stand in about the same place for both, attach both photos, include the GC code, and tell us what changed. One of the photos can be an older one you already have. Real photos only: no turning day into night with filters or AI! Please stay safe after dark. Bonus points if you want to print the two pictures out and overlap them in some cool way.",
+     "goal": "To stay in Adequate's collection, exploring the world one discover log at a time!",
+     "about": "Geo Traveler Geocoin from Geoswag, in black nickel, shaped like the hiker on a trail sign. One side shows the trail by day: blue sky, white clouds, birds in flight, green hills, evergreens, and a path winding off into the distance. The other shows the same traveler under a pink sky with the sun low on the horizon, birds perched on a branch, and \"NEVER STOP EXPLORING\" running down the walking stick. Geoswag's tagline for it: \"Travel… the best way to be lost and found at the same time.\"",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/ebe70749-7bb6-4aee-bc6e-353b26271063_l.jpg"
+    }
+   ]
+  },
+  {
+   "name": "Signal and Friends (Frogs)",
+   "trackables": [
+    {
+     "name": "AdequateSignal",
+     "tb": "TB8MED5",
+     "tracking": "HQ6VZ4",
+     "released": "2025-05-08",
+     "mission": "Oh no! You're supposed to meet Signal, but the event's in a dead zone – he can't come! Instead, he wants you to meet Offline the Frog! Get or make a stand-in frog (plush, plastic, paper, or drawn) and photograph it with your hand giving a thumbs-up. Your frog can star in other missions on this list, too!",
+     "goal": "",
+     "about": "A commemorative tag for when Adequate met Signal the Frog at Geocoinfest in Syracuse!",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/55d88b54-8856-49e1-b72f-137004501a13_l.jpg"
+    },
+    {
+     "name": "AdequateProxy",
+     "tb": "TB8MCAD",
+     "tracking": "HQT5JF",
+     "released": "2026-10-10",
+     "mission": "Oh no, not again! Signal couldn't make it to the event because of the dead zone, and now Offline the Frog (see TB8MED5) can't come either: his GPSr is out of batteries. He's sending Proxy the Frog in his place, but Proxy needs a body. Build him at or near GZ out of whatever you find there (fallen leaves, pebbles, pinecones, twigs) or whatever's in your geobag, attach a photo, and include the GC code in your log. Afterward, put his parts back where you found them; nothing living, please!",
+     "goal": "To stay in Adequate's collection, standing in for Offline until his batteries recharge!",
+     "about": "Another \"I Met Signal\" tag: a scalloped, bottle-cap-shaped tag with Signal the Frog, antenna and all, waving hello above the words \"I MET SIGNAL.\" This one belongs to Proxy the Frog, who fills in whenever Offline can't make it.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/a5d8c083-6e75-49b2-a0e3-fb0009d8973a_l.jpg"
+    },
+    {
+     "name": "AdequateCroakwork",
+     "tb": "TBAR7H6",
+     "tracking": "GSDQ8W",
+     "released": "2025-05-08",
+     "mission": "Make a steampunk accessory for yourself or a fake frog (e.g., the one from TB8MED5) out of household odds and ends: cardboard gears, bottle-cap goggles, a foil monocle. Attach a photo!",
+     "goal": "",
+     "about": "Meet AdequateCroakwork, a very dapper steampunk frog with a very fine collection of cogs. Feel free to discover him! But he is to remain in Adequate's collection.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/b0457c27-7cbd-4154-b452-afb36a614aa9_l.jpg"
+    },
+    {
+     "name": "AdequateHareloom",
+     "tb": "TBBAWBZ",
+     "tracking": "DRR2XJ",
+     "released": "2026-10-09",
+     "mission": "Signal the Frog saw this distinguished rabbit family's portrait and wants one for his own family! Get or make at least one larger frog and at least one smaller frog (plush, plastic, paper, or drawn; your frog from TB8MED5 is welcome), dress them up, and pose them for a family portrait: distinguished, silly, or otherwise, as long as the family is coordinated! Attach the photo. Bonus points for a fancy frame like the one on this coin. AI permitted for ideas, but the portrait itself must be made by you.",
+     "goal": "To stay in Adequate's collection, holding very still for the family portrait!",
+     "about": "Distinguished Rabbits Geocoin: a rabbit family portrait in an ornate bronze-toned oval frame. On one side, a dapper rabbit in a dark suit and cravat sits for the portrait, flanked by two little ones in their best dresses. On the other, a rabbit in a lace-collared dress gathers three more little rabbits close.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/b52c2d9e-73ba-4a85-b592-8fbc6fb42f5d_l.jpg"
+    },
+    {
+     "name": "AdequateHopamine",
+     "tb": "TBB15QT",
+     "tracking": "GSJCD6",
+     "released": "2025-07-14",
+     "mission": "Make a proud, hoppy frog: draw it, fold it (origami frogs can really hop), sculpt it, or dress up a toy one. Rainbows optional but encouraged. Attach a photo! AI permitted for research and ideas; you must produce a physical object for this one.",
+     "goal": "To be discovered by other cachers and to meet other gay frogs!",
+     "about": "\"I don't want them putting chemicals in the water that turn the frickin frogs gay!\"\n\nA fun hippie frog trackable with the text \"Don't Worry Be Hoppy\" on the obverse and \"2025 World Frog Day\" on the reverse. I don't know what chemicals this frog got into exactly, but it might just have been the ones we were warned about! Or maybe just some Alizarin Red, Alkali Blue, and Cadmium Yellow. Regardless, in hoppy hippie fashion, we support and welcome any gay frogs here!",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/b4d8295f-20be-413e-b003-04a1c14de1f9_l.jpg"
+    },
+    {
+     "name": "AdequateLicks",
+     "tb": "TBBAX25",
+     "tracking": "CBWFJB",
+     "released": "2026-03-06",
+     "mission": "How many licks does it take to get to the center of an ammo can? The world may never know, because we shouldn't lick paint. Signal is persistent, though. Give Signal or one of his frog friends (like Offline - see TB8MED5) a lollipop shaped like an ammo can. Draw, paint, sculpt, or make a homemade lollipop with a rectangular mold. How you do it is up to you. Attach a photo!",
+     "goal": "",
+     "about": "A trackable with two heart-shaped lollipops on it. It says, \"Life would suck without you.\"",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/7863e145-b15a-4ed3-b61a-cf887f2b02e1_l.jpg"
+    },
+    {
+     "name": "AdequateMaritimes",
+     "tb": "TBB554R",
+     "tracking": "MM5JN4",
+     "released": "2025-07-03",
+     "mission": "Signal the Amphibian never got the hang of boats. Build a boat out of anything (foil, a milk carton, a leaf) and have a fake frog test it on water. Attach a photo of the voyage, successful or otherwise!",
+     "goal": "",
+     "about": "From Maritime Mega VI Block Party in Bridgewater, NS!",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/c5ab018f-6cf3-41d3-8338-9f02e3866ae5_l.jpg"
+    },
+    {
+     "name": "AdequateShag",
+     "tb": "TBB0T4V",
+     "tracking": "LSQ7YJ",
+     "released": "2025-07-14",
+     "mission": "Who said hair and fur were exclusive to mammals? Give Signal the Frog a shaggy new look (inspired by any animal, or completely original) by drawing it, making it, or adding an extra element to your frog from TB8MED5, and attach a photo.",
+     "goal": "",
+     "about": "A Shaggy Mane fungus tag. A very pleasant and chill fellow.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/2db194cd-4cbf-419a-9630-1f418fbb731d_l.jpg"
+    },
+    {
+     "name": "AdequateSlippers",
+     "tb": "TBB1JPJ",
+     "tracking": "PJ2ZDQ",
+     "released": "2026-01-07",
+     "mission": "Show Adequate a frog in slippers (your frog from TB8MED5 is welcome) and post a photo, or find a cache in your own pajamas and slippers, and attach the evidence!",
+     "goal": "",
+     "about": "A Caching in Your Pajamas Day geocoin from April 16, 2025!",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/5b626676-8e90-40c1-9185-a293a5d843dc_l.jpg"
+    },
+    {
+     "name": "BoreāsSufficiēns",
+     "tb": "TBBDXXF",
+     "tracking": "GDWT2F",
+     "released": "2026-10-09",
+     "mission": "Offline the Frog (see TB8MED5) lives up to his name: no signal, no GPS. Help him find his way north anyway! Pose Offline (or any stand-in frog) using a no-GPS method to find north: following the Big Dipper's pointer stars to the North Star (or the Southern Cross, down under), a shadow stick (mark the tip of a stick's shadow, wait 15 minutes, and mark it again; the line from the first mark to the second runs roughly west to east), an analog watch and the sun, or a compass. Attach a photo of Offline with north marked (an arrow of sticks, a pen, a pointing frog finger). Bonus points if you do it at a cache and include the GC code. Moss on trees doesn't count! AI permitted for research.",
+     "goal": "To stay in Adequate's collection, always pointing true north!",
+     "about": "BoreāsSufficiēns: Boreas is the North Wind of Greek myth, and the source of \"borealis\" in aurora borealis. The 2026 International Geocaching Day geocoin from Shop Geocaching, celebrating August 15, 2026, and that year's theme, the aurora borealis. One side shows a geocache (container, logbook, and pencil) against a globe; the other shows three geocachers among the evergreens beneath dancing northern lights, stars, and a satellite overhead.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/e85f7537-5450-4d4d-81af-c5942334029e_l.jpg"
+    }
+   ]
+  },
+  {
+   "name": "Pirates!",
+   "trackables": [
+    {
+     "name": "AdequateArtillery",
+     "tb": "TB4C2HZ",
+     "tracking": "PICAP3",
+     "released": "2026-10-10",
+     "mission": "Ready, aim, fire! Build a tabletop swag cannon or catapult from household odds and ends (craft sticks, rubber bands, a spoon, a cardboard tube) and launch something soft and harmless, like a pom-pom, a bottle cap, or a crumpled scrap of paper. Attach a photo of your launcher and tell us your best distance. Bonus points if you land a shot in an empty cache container! Never aim at people or animals.",
+     "goal": "To stay in Adequate's collection, keeping its powder dry and its aim adequate!",
+     "about": "A square \"Traveling Pirates\" trackable tag starring Gunnin' Bill Blaster, a mustachioed pirate with an eyepatch, a red bandana, and a skull-and-crossbones hat, set against a sunburst. The back has a compass rose topped by a sailing ship, under \"Track me at geocaching.com.\" Fellow Gunnin' Bill Blasters have been sailing the geocaching seas since at least 2012.\n\nGunnin' Bill's weapon of choice has a surprisingly gentle name: cannon comes from Italian cannone, \"big tube,\" built on Latin canna, \"reed, tube.\" Its near-twin canon, \"rule,\" most likely grows from the same Greek word for reed, kanna, since a straight reed made a handy measuring rod. English spelled the two alike until the gun picked up its second n.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/581db47d-9c69-43f9-b565-dcf1f82965f9_l.jpg"
+    }
+   ]
+  },
+  {
+   "name": "Seasons – Equinoxes and Solstices",
+   "trackables": [
+    {
+     "name": "AdequateOstara",
+     "tb": "TBB1N8M",
+     "tracking": "EQ6KR9",
+     "released": "2026-01-07",
+     "mission": "Ostara eggs are said to carry wishes into the season ahead. Decorate an egg (real, plastic, paper, or drawn) with a caching wish for the coming season: a cache, a county, a milestone, a trip. Attach a photo!",
+     "goal": "",
+     "about": "A beautiful Spring Equinox (Ostara) geocoin featuring a rabbit and birds.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/bc56f671-83e7-449e-bc14-ec1366956464_l.jpg"
+    },
+    {
+     "name": "AdequateLitha",
+     "tb": "TBB4BMD",
+     "tracking": "SSAQG3",
+     "released": "2026-01-07",
+     "mission": "Litha is the longest day of the year. Make a sun out of whatever you have (paper, chalk, a ring of pinecones) and attach a photo, then write in your log about your longest or most prolific caching day!",
+     "goal": "",
+     "about": "A lovely Summer Solstice (Litha) geocoin, featuring a depiction of a solar eclipse and two birds.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/cdb3e2bd-e166-4e6c-a50f-9ee09e204245_l.jpg"
+    },
+    {
+     "name": "AdequateMabon",
+     "tb": "TBB6CAB",
+     "tracking": "FE15QW",
+     "released": "2026-01-07",
+     "mission": "Mabon is a harvest festival of giving thanks. Arrange the geocaching things you’re thankful for (swag, a trusty pen, a TB, a photo of a caching friend) into a little harvest display, photograph it, and caption it with a short expression of gratitude for everyone and everything in the photo, and everyone and everything that didn't make it in.",
+     "goal": "",
+     "about": "A fantastic Autumn Equinox (Mabon) geocoin featuring a fox and a bird.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/60244885-1650-4ab5-ab8a-6c51ab979bc5_l.jpg"
+    },
+    {
+     "name": "AdequateYule",
+     "tb": "TBB98DN",
+     "tracking": "WSQ98Z",
+     "released": "2026-01-07",
+     "mission": "Yule is the longest night, when the Oak King gains the upper hand over the Holly King in their perpetual battle, and the days start growing longer. Make a small piece of art from plants (evergreen sprigs, leaves, pinecones, bark) showing where you stand in this conflict, and attach a photo.",
+     "goal": "",
+     "about": "A gorgeous Winter Solstice (Yule) geocoin featuring a snowy owl and a white caribou.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/b6e8261b-e960-4529-a058-cbf4e7b311d5_l.jpg"
+    },
+    {
+     "name": "AdequateMigration",
+     "tb": "TBBD57F",
+     "tracking": "SE7BCA",
+     "released": "2026-10-09",
+     "mission": "Humpback whales migrate with the seasons, between cold waters where they feed and warm waters where they raise their young. Pick an animal that migrates through (or near) a place you've cached, like Canada geese, monarch butterflies, American eels, hawks, or whales, and make a map of its journey with one or more caches you've found marked along the way: drawn, painted, stitched, or built from whatever you have. Attach a photo, name the animal, and tell us one thing you learned about its trip. AI permitted for research.",
+     "goal": "To stay in Adequate's collection: the one humpback that skips migration season!",
+     "about": "The 2026 Seasons Geocoin from Shop Geocaching, made to celebrate the 2026 solstices and equinoxes with humpback whales from both hemispheres. On the front, a humpback and her calf swim through a starry sky above \"SEASONS 2026.\" On the back, two humpbacks circle the globe, with a sun at one edge and constellations scattered among the stars.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/cfa94583-3b5b-4111-8412-90c766322f73_l.jpg"
+    },
+    {
+     "name": "AdequateFernBlossom",
+     "tb": "TBBBKQB",
+     "tracking": "SSPK24",
+     "released": "2026-10-09",
+     "mission": "Jāņi is the shortest night of the year, when Latvians stay up until sunrise, jumping bonfires and searching the woods for the mythical fern blossom (ferns never actually bloom). Do your own search in the dark: look for a cache (real or mythical) after sunset or before sunrise, and attach a photo from your search (a flashlight shot counts!) with the GC code. It still counts if you DNF the cache. Bring a good light or a buddy, and bonus points for spotting a real fern along the way! Find an actual fern blossom and you’ve found what no one ever has: name your own prize!",
+     "goal": "To stay in Adequate's collection, awake until sunrise on the shortest night!",
+     "about": "A stamp-shaped geocoin, the 26¢ 2026 Summer Solstice design, second of four 2026 equinox and solstice geocoins designed by Landsharkz for Shop Geocaching. One side shows sunflowers nodding over rolling countryside under summer clouds; the other, a vine of ripe tomatoes from the garden, with a postmark and the year 2026.\n\nIn the Latvian folk calendar, the summer solstice is Jāņi, celebrated on the night of June 23–24, the shortest night of the year. People wear wreaths of blossoms and oak leaves, gather herbs said to have special powers that night, jump over bonfires for luck and health, and stay awake until sunrise, some of them searching the woods for the mythical fern blossom. Ferns reproduce by spores and never flower, which makes it the ultimate DNF.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/f6a15d49-46e4-4b62-80da-281b65b26a50_l.jpg"
+    },
+    {
+     "name": "AdequateJumis",
+     "tb": "TBBE29C",
+     "tracking": "EQBJ7P",
+     "released": "2026-10-09",
+     "mission": "Barn quilts are giant painted quilt blocks hung on barns and sheds, and many counties link them into driving trails. Spot one on a caching trip (from the road or another public spot; no trespassing!), photograph it, and tell us its pattern name if you can find it (Ohio Star, Log Cabin, Flying Geese...), along with the GC code of a cache nearby. No barn quilts near you? Design a geocaching quilt block instead (drawn, painted, pieced, or digital), give it a name, and attach a photo. AI permissible for research.",
+     "goal": "To stay in Adequate's collection, snug under a quilt as the nights grow longer!",
+     "about": "A stamp-shaped geocoin, the 26¢ 2026 Fall Equinox design, third of four 2026 equinox and solstice geocoins designed by Landsharkz for Shop Geocaching. One side is a quilt: six blocks, including stars, tulips, and a little red barn set in a sawtooth star, framed by a folk-art border of flowers and vines. The other side is built for leaf peeping: a stone farmhouse among red and orange trees under a big autumn sky.\n\nIn the Latvian folk calendar, the autumn equinox brings Miķeļi, which absorbed the older harvest festival Apjumības. Families mowed the last field but left a small bundle of grain standing for Jumis, the spirit of the harvest, and dug beneath the last sheaf to look for him among the insects and worms there. Stalks with two ears grown together, called jumīši, were woven into a crown and a belt, and the Jumis sign, two crossed ears of grain, went up on rooftops for prosperity, a bit like a barn quilt on a barn. The Latvia block of Canada's Quilt of Belonging features the jumis too.\n\nBarn quilts bring quilt blocks outdoors. In 2001, Donna Sue Groves organized the first official quilt trail in Adams County, Ohio, to honor her mother, Maxine, a noted quilter; the first barn quilt was an Ohio Star. Quilt trails now wind through dozens of states and several Canadian provinces, including Ontario.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/7dc70f16-4477-4eed-95e4-2d8e7cd4f27c_l.jpg"
+    }
+   ]
+  },
+  {
+   "name": "NYS Summer Parks Challenge",
+   "trackables": [
+    {
+     "name": "AdequateParks – Central 2023",
+     "tb": "TBAHTFH",
+     "tracking": "VBMQ1R",
+     "released": "2025-07-10",
+     "mission": "Find a cache in any state or provincial park and attach a photo of yourself (or your thumb) with the park’s sign. Central New York parks earn extra appreciation!",
+     "goal": "",
+     "about": "",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/95abef73-ad4d-478f-b022-9be140be8217_l.jpg"
+    },
+    {
+     "name": "AdequateParks – Central 2025",
+     "tb": "TBB3XCH",
+     "tracking": "PCEA5V",
+     "released": "2025-09-12",
+     "mission": "Make a map of your favorite park to cache in, anywhere in the world, with your favorite cache marked: drawn, painted, stitched, built from LEGO, or laid out in sticks and stones. Cartographic accuracy not required! Attach a photo.",
+     "goal": "",
+     "about": "",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/b1ea4543-acae-40fc-a644-52ab23c8f6fd_l.jpg"
+    },
+    {
+     "name": "AdequateParks – SaraCap 2025",
+     "tb": "TBB3WFX",
+     "tracking": "PCXBQZ",
+     "released": "2025-10-25",
+     "mission": "Find a cache in any state or provincial park within sight of water (a spring, falls, river, or lake) and attach a photo of the water, with the park’s name in your log.",
+     "goal": "",
+     "about": "",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/64ffb7bd-077d-482d-9010-ef40fd10c1f7_l.jpg"
+    },
+    {
+     "name": "AdequateParks – Taconic 2025",
+     "tb": "TBB55DW",
+     "tracking": "PCKAKQ",
+     "released": "2025-10-25",
+     "mission": "Find a cache in any state or provincial park with a view (a summit, an overlook, a fire tower, a ridge) and attach a photo of the view, or a sketch of it if you’re feeling artistic!",
+     "goal": "",
+     "about": "",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/a893d175-d671-49ab-b1f4-ec0fc72d1ea9_l.jpg"
+    },
+    {
+     "name": "AdequateParks – Thous Is 2025",
+     "tb": "TBB3WT5",
+     "tracking": "PCV5NT",
+     "released": "2025-10-25",
+     "mission": "Find a cache in any state or provincial park on an island, or with an island in view (any size, in any pond, river, lake, or sea), and attach a photo of the island with its name in your log.",
+     "goal": "",
+     "about": "",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/f5a68b39-12ef-49a3-8704-2badc1b74b7a_l.jpg"
+    },
+    {
+     "name": "AdequateParks – SaraCap 2026",
+     "tb": "TBBBNFG",
+     "tracking": "PC3AYZ",
+     "released": "2026-10-13",
+     "mission": "Find a cache near a historic house that's listed on the National Register of Historic Places (or another country's national heritage register) and attach a photo of the house, taken from public property. In your log, tell us when it was built and when it was listed, with its reference number if the register gives one. Bonus points if someone famous lived, married, or stayed there!",
+     "goal": "To stay in Adequate's collection as a prisoner guest, just like General Burgoyne!",
+     "about": "A circular geocoin from the 2026 Saratoga/Capital District Region parks geocache challenge, featuring Schuyler Mansion State Historic Site in Albany: the brick mansion on its lawn beneath a leafy tree, surrounded by a ring of text which reads, \"Schuyler Mansion State Historic Site | Saratoga / Capital District Region.\" The mansion was built between 1761 and 1765 for Philip Schuyler, later a Continental Army general and U.S. senator, who lived there until his death in 1804. His daughter Elizabeth married Alexander Hamilton there in 1780. After the British defeat at Saratoga in 1777, General John Burgoyne stayed there as a \"prisoner guest,\" even though he had ordered the burning of the Schuylers' estate at Saratoga. Schuyler Mansion was listed on the National Register of Historic Places and designated a National Historic Landmark on December 24, 1967.",
+     "photo": ""
+    },
+    {
+     "name": "AdequateParks – Thous Is 2026",
+     "tb": "TBBAYTC",
+     "tracking": "TICPV8",
+     "released": "2026-10-09",
+     "mission": "Find a cache on or near a former battlefield, and attach a photo of a historical marker, plaque, interpretive sign, or identifying object there. Bonus points if you include one thing you learned from your visit in your log.",
+     "goal": "",
+     "about": "A circular geocoin from the 2026 Thousand Islands Region parks geocache challenge, featuring Sackets Harbor Battlefield State Historic Site: a sailboat on the water beyond a yellow building and a white picket fence, with what appears to be a cannon on the lawn in the shade of a tree, surrounded by a ring of text which reads, \"Sackets Harbor Battlefield | Thousand Islands Region.\" Two battles of the War of 1812 were fought at Sackets Harbor: the first in July 1812, and the second in May 1813, when British and Canadian forces landed but were driven back. The site's restored 1850s Navy Yard and Commandant's House are still interpreted today, and Franklin D. Roosevelt spoke when its granite monument was dedicated for the battle's 100th anniversary.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/3db5c266-2605-4871-8f77-8afa1e86e1e2_l.jpg"
+    }
+   ]
+  },
+  {
+   "name": "Earthcache Tags",
+   "trackables": [
+    {
+     "name": "AdequateAmethyst",
+     "tb": "TBAXKHE",
+     "tracking": "ECMVJT",
+     "released": "2025-07-14",
+     "mission": "Amethyst is a violet variety of quartz, which often grows as crystals in cavities and veins. Do an earthcache and find a rock nearby with visible crystals or a mineral vein running through it (quartz veins are often white). Identify the EC and provide a photo! Look, don't take: leave every rock where you found it.",
+     "goal": "",
+     "about": "A purple amethyst quartz tag.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/27315724-4525-4402-a99d-61ddf8196aa3_l.jpg"
+    },
+    {
+     "name": "AdequateCalcite",
+     "tb": "TBAXJNT",
+     "tracking": "ECR29Z",
+     "released": "2025-07-14",
+     "mission": "Calcite dissolves in slightly acidic rainwater, which is how caves get carved out of limestone. Do an earthcache and find a rock nearby showing chemical weathering: pits or grooves dissolved by water, rusty stains, a crumbly weathered rind, or a mineral crust. Tell us what you think caused it! Identify the EC and provide a photo! Look, don't take: leave every rock where you found it.",
+     "goal": "",
+     "about": "A blue calcite tag.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/ea2a0208-978e-4ad5-bae4-546851aa23c2_l.jpg"
+    },
+    {
+     "name": "AdequateLabradorite",
+     "tb": "TBAXKBP",
+     "tracking": "ECFPGX",
+     "released": "2025-07-14",
+     "mission": "Labradorite flashes with color as you turn it, an effect called labradorescence. Do an earthcache and find a rock that plays with the light: one that sparkles, shimmers, flashes, or shows a rainbow sheen as you move around it. Take a photo that catches the effect (two angles are welcome). Identify the EC and provide a photo! Look, don't take: leave every rock where you found it.",
+     "goal": "",
+     "about": "A labradorite tag designed to reflect the iridescence of actual labradorite.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/0670bbab-5390-4bb4-af25-0520815784cb_l.jpg"
+    },
+    {
+     "name": "AdequateMica",
+     "tb": "TBAXK4Z",
+     "tracking": "EC6X7C",
+     "released": "2025-07-14",
+     "mission": "Mica splits into thin, flexible sheets, a property called perfect cleavage. Do an earthcache and find a rock nearby that splits, flakes, or peels into thin, flat layers, like shale, slate, schist, or mica itself. Identify the EC and provide a photo! Look, don't take: no splitting rocks to prove it, either.",
+     "goal": "",
+     "about": "A gray mica tag.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/0f138f20-4cfe-42e8-8d4c-f03424b65164_l.jpg"
+    },
+    {
+     "name": "AdequateOlivine",
+     "tb": "TBAXJVX",
+     "tracking": "EC0WYF",
+     "released": "2025-07-14",
+     "mission": "Olivine is a green mineral that crystallizes from hot, iron- and magnesium-rich magma. Do an earthcache and find an igneous rock nearby, one that cooled from magma or lava, like granite or basalt (a glacial boulder from far away might be one!), and tell us how you could tell. Identify the EC and provide a photo! Look, don't take: leave every rock where you found it.",
+     "goal": "",
+     "about": "A green olivine tag.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/27384037-88f9-48d4-8a6a-7320571870e3_l.jpg"
+    },
+    {
+     "name": "AdequateArchaeopteryx",
+     "tb": "TBBEG7A",
+     "tracking": "ECB0T5",
+     "released": "2026-10-09",
+     "mission": "Archaeopteryx is one of the earliest known birds, with feathers but also teeth and a long bony tail. Do an earthcache and photograph a bird you see there, or a feather you find along the way (left where it lies). Identify the EC and provide a photo!",
+     "goal": "To stay in AdequateFootwear's inventory as a relic from times past!",
+     "about": "An Archaeopteryx fossil tag. Archaeopteryx lived about 150 million years ago in what is now southern Germany, where its fossils are preserved in fine-grained Solnhofen limestone. With feathers, teeth, clawed fingers, and a long bony tail, it is one of the earliest known birds and a famous link between dinosaurs and birds.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/6353de73-1759-4f50-ac1c-6a34267fdab2_l.jpg"
+    },
+    {
+     "name": "AdequateDilophosaurus",
+     "tb": "TBBEGTQ",
+     "tracking": "ECXJ0E",
+     "released": "2026-10-09",
+     "mission": "Dinosaurs much like Dilophosaurus left footprints that are still preserved in rock today. Leave a temporary footprint of your own: do an earthcache, press a footprint into mud, sand, snow, or dust nearby (never on the geological feature itself!), and photograph it. Identify the EC and provide a photo!",
+     "goal": "To stay in AdequateFootwear's inventory as a relic from times past!",
+     "about": "A Dilophosaurus fossil tag. Dilophosaurus, the \"two-crested lizard,\" was a meat-eating dinosaur of the Early Jurassic, about 193 million years ago, known from fossils in Arizona. The real animal was about 6 to 7 meters long, and the frill and venom spit from the movies are Hollywood inventions.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/7bf2e36e-dfe4-4647-9e50-dd72cd300725_l.jpg"
+    },
+    {
+     "name": "AdequateIchthyosaur",
+     "tb": "TBBEHCD",
+     "tracking": "ECKT2B",
+     "released": "2026-10-09",
+     "mission": "Ichthyosaurs were dolphin-shaped marine reptiles, and their fossils turn up far from today's oceans. Do an earthcache somewhere that used to be underwater (an ancient seabed, reef, lake, or riverbed; the EC page will often tell you), and tell us what kind of water was there. Identify the EC and provide a photo! Bonus points if you can identify what we now call the former body of water.",
+     "goal": "To stay in AdequateFootwear's inventory as a relic from times past!",
+     "about": "An Ichthyosaur fossil tag. Ichthyosaurs, the \"fish lizards,\" were dolphin-shaped marine reptiles that lived from the Triassic into the Cretaceous and gave birth to live young. Mary Anning and her brother found one of the first complete ichthyosaur skeletons at Lyme Regis, England, in the early 1800s.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/0d6fc384-7633-40ec-8775-a063c7741d3c_l.jpg"
+    },
+    {
+     "name": "AdequateMeganisoptera",
+     "tb": "TBBEH0X",
+     "tracking": "ECNF5Z",
+     "released": "2026-10-09",
+     "mission": "Meganisoptera were dragonfly relatives with wingspans of up to about 70 cm (over two feet). Do an earthcache and take a forced-perspective photo that makes something small (a bug, a leaf, a pebble, a toy, a pen) look giant against the landscape. Identify the EC and provide the photo!",
+     "goal": "To stay in AdequateFootwear's inventory as a relic from times past!",
+     "about": "A Meganisoptera fossil tag. Meganisoptera, sometimes called griffinflies, were giant relatives of dragonflies that lived about 300 million years ago, in the Late Carboniferous and Permian. The largest had wingspans of about 70 cm, making them some of the biggest insects ever known.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/71377381-08b1-49bf-aa32-2d43f35cfbfc_l.jpg"
+    },
+    {
+     "name": "AdequateStegosaurus",
+     "tb": "TBBEHV3",
+     "tracking": "ECTQ77",
+     "released": "2026-10-09",
+     "mission": "Stegosaurus lived about 150 million years ago, so long ago that T. rex lived closer in time to us than to Stegosaurus. Do an earthcache, find out roughly how old its rocks or features are, and tell us: older or younger than Stegosaurus? Identify the EC and provide a photo! AI permitted for research.",
+     "goal": "To stay in AdequateFootwear's inventory as a relic from times past!",
+     "about": "A Stegosaurus fossil tag. Stegosaurus, the \"roof lizard,\" was a plant-eating dinosaur of the Late Jurassic, about 150 million years ago, in what is now western North America. It is famous for the plates along its back and its spiked tail, which paleontologists nicknamed the \"thagomizer\" after a Far Side cartoon.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/a4239ea2-b4d5-475c-9b78-1e4f625eb982_l.jpg"
+    }
+   ]
+  },
+  {
+   "name": "Cachekinz",
+   "trackables": [
+    {
+     "name": "AdequateKin",
+     "tb": "TB5FWHV",
+     "tracking": "4KDP77",
+     "released": "2026-10-10",
+     "mission": "Every caching family has a family tree. Draw yours: you in the middle, with at least five other cachers around you, by caching name. Your parents are the cachers who got you into geocaching or taught you the ropes; your grandparents are their mentors; your siblings learned from the same people (or started around the same time as you); your partners are the people you cache with most; and your children are the people you got into caching. Invent more relations if you need them, and tell us what they mean! Draw it by hand or get fancy with free family tree software like Gramps, and attach a picture. More of a solo cacher? Make a family tree for Signal the Frog instead (Offline and Proxy are already in it), with a little drawing of each member.",
+     "goal": "To stay in Adequate's collection, hopping from branch to branch of the family tree!",
+     "about": "A pink bunny Cachekinz, from a long-running line of cartoon-animal trackable tags. (Cachekinz were already traveling by 2012, and new animals are still being made.) This one sits up on its haunches with floppy ears, buck teeth, and big pink feet, ready to hop into your family tree.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/a78565d1-0623-4b19-89c0-3f3b86a083df_l.jpg"
+    },
+    {
+     "name": "AdequateLepidoptera",
+     "tb": "TB6850C",
+     "tracking": "4K2X8G",
+     "released": "2026-10-10",
+     "mission": "Butterfly wings do real work: they hide a butterfly against bark or dead leaves, warn predators away with bold colors, or bluff with eyespots that look like a bigger animal's eyes. Design a butterfly of your own whose wings would vanish at a GZ you know (on bark, lichen, a guardrail, a lamppost, a stone wall, an actual cache!, ...). Draw, paint, collage, or fold-and-blot it, attach a photo, and tell us how its pattern works and what kind of spot it was made for, without spoiling any hides!",
+     "goal": "To stay in Adequate's collection, fluttering from cache to cache!",
+     "about": "A butterfly Cachekinz, with glittery purple wings outlined in black and silver, from the same line of cartoon-animal trackable tags as AdequateKin's bunny. Lepidoptera, the order of butterflies and moths, means \"scale wings\": their wing patterns are built from thousands of tiny overlapping scales, like a mosaic. Those patterns do real work, hiding a butterfly against bark or dead leaves, warning predators that it tastes bad, or flashing eyespots to startle an attacker.",
+     "photo": "https://s3.amazonaws.com/gs-geo-images/af5af17a-f307-4480-b8b7-4ddc45fd01c6_l.jpg"
+    }
+   ]
+  }
+ ]
+}
