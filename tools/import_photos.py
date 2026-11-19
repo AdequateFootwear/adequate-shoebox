@@ -12,7 +12,8 @@ For each file this writes two copies, with all metadata (including any GPS posit
 photos/<name>.jpg, at most 1400 px on its long side, and photos/cards/<name>.jpg, at most
 640 px, for the cards on the main page and the thumbnails. Files no longer in the folder are
 removed from both. Only photos of trackables in data/shoebox.json are
-copied: run tools/import_sheet.py first.
+copied: run tools/import_sheet.py first. If two files would get the same <name> (TBX.jpg and
+TBX.jpeg, or "TBX back.jpg" and "TBX-back.jpg"), nothing is written: rename one and run it again.
 """
 import json
 import os
@@ -60,14 +61,21 @@ def main():
     data = json.load(open(DATA, encoding='utf-8'))
     active = {t['tb'] for g in data['groups'] for t in g['trackables']}
     files = sorted(f for f in os.listdir(folder) if f.lower().endswith(EXTS))
-    os.makedirs(CARDS, exist_ok=True)
-    out, used, skipped = {}, set(), []
+    plan, skipped, seen = [], [], {}
     for name in files:
         tbs = [tb for tb in dict.fromkeys(TB_RE.findall(name)) if tb in active]
         if not tbs:
             skipped.append(name)
             continue
         s = slug(name)
+        if s in seen:  # checked before anything is written, so one photo never overwrites another
+            raise SystemExit(f'{seen[s]!r} and {name!r} would both become photos/{s}.jpg. '
+                             'Rename one of them in the Upload-ready folder, then run this again.')
+        seen[s] = name
+        plan.append((name, s, tbs))
+    os.makedirs(CARDS, exist_ok=True)
+    out, used = {}, set()
+    for name, s, tbs in plan:
         with Image.open(os.path.join(folder, name)) as src:
             img = ImageOps.exif_transpose(src).convert('RGB')
         w, h = save(img, os.path.join(PHOTOS, s + '.jpg'), 1400, 80)
