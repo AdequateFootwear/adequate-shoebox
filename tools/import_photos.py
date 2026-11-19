@@ -9,8 +9,8 @@ already have their tracking numbers blurred. A file belongs to every trackable w
 is in its name, so a group photo (TBA_TBB_TBC.jpg) shows on each of their pages.
 
 For each file this writes two copies, with all metadata (including any GPS position) removed:
-photos/<name>.jpg, at most 1600 px on its long side, and photos/<name>-card.jpg, at most
-800 px, for the cards on the main page. Only photos of trackables in data/shoebox.json are
+photos/<name>.jpg, at most 1400 px on its long side, and photos/<name>-card.jpg, at most
+640 px, for the cards on the main page and the thumbnails. Only photos of trackables in data/shoebox.json are
 copied: run tools/import_sheet.py first.
 """
 import json
@@ -68,8 +68,8 @@ def main():
         s = slug(name)
         with Image.open(os.path.join(folder, name)) as src:
             img = ImageOps.exif_transpose(src).convert('RGB')
-        w, h = save(img, os.path.join(PHOTOS, s + '.jpg'), 1600, 82)
-        cw, ch = save(img, os.path.join(PHOTOS, s + '-card.jpg'), 800, 78)
+        w, h = save(img, os.path.join(PHOTOS, s + '.jpg'), 1400, 80)
+        cw, ch = save(img, os.path.join(PHOTOS, s + '-card.jpg'), 640, 74)
         used.add(s)
         for tb in tbs:
             out.setdefault(tb, []).append({'file': s + '.jpg', 'w': w, 'h': h,
