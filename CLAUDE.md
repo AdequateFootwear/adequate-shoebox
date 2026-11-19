@@ -2,17 +2,25 @@
 
 This repository is **public**, and GitHub Pages publishes it to the open internet at
 https://adequatefootwear.github.io/adequate-shoebox/ from the `main` branch, root folder.
-It holds **Adequate's Shoebox**: one page listing AdequateFootwear's trackable collection, with each
-trackable's name, photo, TB code, tracking code, release date, mission, goal and About text. The QR
-code Aegis hands out points here. Aegis uses **it/its** pronouns.
+It holds **Adequate's Shoebox**: a main page listing AdequateFootwear's trackable collection, and a page
+of its own for each trackable at `…/adequate-shoebox/<TB code>/`, with its photos, TB code, tracking
+code, release date, mission, goal and About text. The QR code Aegis hands out points here. Aegis uses
+**it/its** pronouns.
 
 ## The sheet is the source
 - Every word on the page about a trackable comes from Aegis's collection sheet ("AdequateFootwear
   Trackable Collection and Missions"). A research chat drafts that text and keeps the sheet; Aegis
   decides what is published. This repository only builds the page from it.
-- `tools/import_sheet.py` turns a snapshot of the sheet into `data/shoebox.json`, and
-  `tools/build.py` turns that into `index.html`. Never edit either output by hand: change the sheet,
-  then rebuild. The page's own labels, layout and script live in `tools/page.html`.
+- `tools/import_sheet.py` turns a snapshot of the sheet into `data/shoebox.json`;
+  `tools/import_photos.py` copies Aegis's own photos into `photos/` and lists them in
+  `data/photos.json`; and `tools/build.py` turns both into `index.html` and every `<TB code>/index.html`.
+  Never edit any of those outputs by hand: change the sheet or the photos, then rebuild. The pages'
+  own labels, layout and script live in `tools/page.html`, `tools/trackable.html`, `tools/style.css`
+  and `tools/topo.svg`.
+- **Photos** are Aegis's own files from Drive's Upload-ready folder (Claude › Projects › Geocaching ›
+  Trackable Collection Missions › Photos › Upload-ready), where tracking numbers are already blurred.
+  A file belongs to every trackable whose TB code is in its name. The importer strips all metadata
+  (GPS included). Never link photos from geocaching.com's image host.
 - Text goes on the page as plain text. Never add links, names or words that aren't in the sheet.
   If a web address shows up in the sheet's text, ask Aegis before it goes public.
 
@@ -22,9 +30,13 @@ code Aegis hands out points here. Aegis uses **it/its** pronouns.
   it back by TB code (`WITHHELD_TRACKING`); never publish it anywhere in this repository.
 - Every other tracking code is public on purpose (Aegis's decision, 2026-11-13): the mission is what
   a discover costs, and Aegis deletes discover logs that fall short of it.
-- No tracking, no analytics, no sign-in, and nothing collected from visitors. The only things the
-  page loads from elsewhere are Google Fonts and the trackables' own photos on geocaching.com's
-  image host; TB codes link to `https://coord.info/<TB code>`.
+- No tracking, no analytics, no sign-in, and nothing collected from visitors. The only thing the
+  pages load from elsewhere is Google Fonts; TB codes link to `https://coord.info/<TB code>`.
+- **Never read geocaching.com automatically.** Its Terms of Use forbid using "any robot, spider,
+  scraper, or other means to access, display, or collect data from our services without our express
+  written permission". Release dates, photos and anything else come from the sheet and Aegis's own
+  files. (Log checking for Aegis uses the log emails geocaching.com sends to Aegis, in a session,
+  never on these pages.)
 - Geocaching only. Nothing from Aegis's legal work or any client data, ever.
 
 ## Refreshing the page
@@ -32,10 +44,13 @@ code Aegis hands out points here. Aegis uses **it/its** pronouns.
    and fields that the top of `tools/import_sheet.py` lists, and save the result to a file outside
    this repository. (The sheet's address is in the collection handoff; ask Aegis.)
 2. `python3 tools/import_sheet.py <that file> --read <the day you read it, YYYY-MM-DD>`. Read what it
-   reports: rows left out, and trackables with no photo or no Released date.
-3. `python3 tools/build.py`
-4. Look at the page at phone width (~375 px) and desktop width, in light and dark mode.
-5. Work on a branch and open a pull request. Aegis reviews and merges; never push to `main` and
+   reports: rows left out, and trackables with no Released date.
+3. If photos changed: copy the Upload-ready folder's files to a folder outside this repository and run
+   `python3 tools/import_photos.py <that folder>`. Look at any new photo of AdequateTires before it
+   goes in: its tracking code must not be readable.
+4. `python3 tools/build.py`
+5. Look at the pages at phone width (~375 px) and desktop width, in light and dark mode.
+6. Work on a branch and open a pull request. Aegis reviews and merges; never push to `main` and
    never merge.
 
 When a trackable is activated, whoever fills in its TB code also fills in column K, **Released**,
@@ -44,7 +59,9 @@ with the date its trackable page shows as "Released" (YYYY-MM-DD).
 ## Never break a link
 - Never rename this repository or move `index.html`. Printed QR codes point here, and GitHub
   doesn't redirect Pages URLs.
-- Each card's id is its TB code, so `…/adequate-shoebox/#TBXXXXX` opens one trackable. Keep it so.
+- Each trackable's page is at `…/adequate-shoebox/<TB code>/`, and each card on the main page keeps its
+  TB code as its id, so `…/adequate-shoebox/#TBXXXXX` still opens that card. Keep both: QR codes on
+  individual tags may point at either.
 
 ## Look
 - It must read well on a phone and on a desktop: one column of cards on a phone, more side by side

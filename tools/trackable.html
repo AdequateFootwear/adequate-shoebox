@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>{{TITLE}} · Adequate's Shoebox</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231D4D30'/%3E%3Cpath d='M16 4l4.5 12L16 28l-4.5-12z' fill='%23F4F2E8'/%3E%3Cpath d='M16 4l4.5 12h-9z' fill='%23E8BE66'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+{{STYLE}}
+</style>
+</head>
+<body>
+<header class="band">
+{{TOPO}}
+  <div class="band-in">
+    <div class="suite">
+      <a class="who" href="../"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="14.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M16 4.5l4.2 11.5L16 27.5 11.8 16z" fill="currentColor" opacity=".55"/><path d="M16 4.5l4.2 11.5h-8.4z" fill="var(--band-hl)"/></svg><span>Adequate's Shoebox</span></a>
+      <span class="by">{{GROUP}}</span>
+    </div>
+    <div class="brand">
+      <h1 class="name">{{NAME}}</h1>
+      <p class="stats">{{SUBLINE}}</p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="tbgrid">
+    <section class="gallery" aria-label="Photos">
+{{GALLERY}}
+    </section>
+    <section class="facts" aria-label="About this trackable">
+{{FACTS}}
+    </section>
+  </div>
+  <nav class="prevnext" aria-label="Other trackables">
+{{PREVNEXT}}
+  </nav>
+  <footer>
+    <span>Built from Adequate's collection sheet, as read on {{READ}}.</span>
+    <span>Log it on its page at geocaching.com once your mission is done.</span>
+  </footer>
+</main>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+  'use strict';
+  var toast = document.getElementById('toast'), timer;
+  function say(msg){
+    toast.textContent = msg; toast.classList.add('on');
+    clearTimeout(timer); timer = setTimeout(function(){ toast.classList.remove('on'); }, 1600);
+  }
+  var main = document.getElementById('ph-main');
+  document.addEventListener('click', function(e){
+    var t = e.target.closest ? e.target.closest('.thumbs a') : null;
+    if (t && main) {
+      e.preventDefault();
+      main.src = t.getAttribute('href');
+      main.width = +t.getAttribute('data-w'); main.height = +t.getAttribute('data-h');
+      Array.prototype.forEach.call(document.querySelectorAll('.thumbs a'), function(a){ a.setAttribute('aria-current', a === t ? 'true' : 'false'); });
+      return;
+    }
+    var b = e.target.closest ? e.target.closest('button.copy') : null;
+    if (!b) return;
+    var code = b.getAttribute('data-code');
+    function fallback(){
+      var el = b.parentNode.querySelector('.code');
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      say('Selected: copy it from your menu');
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(code).then(function(){ say('Copied ' + code); }, fallback);
+    } else { fallback(); }
+  });
+})();
+</script>
+</body>
+</html>

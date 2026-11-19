@@ -3,11 +3,13 @@ The place for Adequate's collection of trackables and other shiny things picked 
 
 **The page:** https://adequatefootwear.github.io/adequate-shoebox/
 
-Each trackable's card shows its photo, TB code (linked to its page on geocaching.com), tracking code,
-release date, the mission to complete before logging it as discovered, its goal, and its story.
-Link straight to one trackable with its TB code: `https://adequatefootwear.github.io/adequate-shoebox/#TBBE9T1`.
+Each trackable has a card on the main page and a page of its own, with its photos, TB code (linked to
+its page on geocaching.com), tracking code, release date, the mission to complete before logging it as
+discovered, its goal, and its story. A trackable's page is at its TB code:
+`https://adequatefootwear.github.io/adequate-shoebox/TBBE9T1/`.
 
 ## How it's made
-The page is built from Adequate's collection sheet, never edited by hand:
-`tools/import_sheet.py` reads a snapshot of the sheet into `data/shoebox.json`, and `tools/build.py`
-turns that into `index.html`. See `CLAUDE.md` for the full steps and what stays off the page.
+The pages are built from Adequate's collection sheet and Adequate's own photos, never edited by hand:
+`tools/import_sheet.py` reads a snapshot of the sheet into `data/shoebox.json`, `tools/import_photos.py`
+copies the photos into `photos/`, and `tools/build.py` builds the main page and each trackable's page.
+See `CLAUDE.md` for the full steps and what stays off the pages.
