@@ -5,7 +5,9 @@ The place for Adequate's collection of trackables and other shiny things picked 
 
 Each trackable has a card on the main page and a page of its own, with its photos, TB code (linked to
 its page on geocaching.com), tracking code, release date, the mission to complete before logging it as
-discovered, its goal, and its story. A trackable's page is at its TB code:
+discovered, its goal, and its story. Its page also has the mission as a checklist: write or paste your
+log there, and the items it covers light up (your log, photos and ticks stay on your device). A
+trackable's page is at its TB code:
 `https://adequatefootwear.github.io/adequate-shoebox/TBBE9T1/`.
 
 ## How it's made
