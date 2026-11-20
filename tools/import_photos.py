@@ -1,0 +1,108 @@
+#!/usr/bin/env python3
+"""Copy Aegis's own trackable photos into photos/ and list them in data/photos.json.
+
+Usage: python3 tools/import_photos.py FOLDER
+
+FOLDER holds the files from Drive's Upload-ready folder (Claude > Projects > Geocaching >
+Trackable Collection Missions > Photos > Upload-ready), named as they are there. Those files
+already have their tracking numbers blurred. A file belongs to every trackable whose TB code
+is in its name, so a group photo (TBA_TBB_TBC.jpg) shows on each of their pages.
+
+For each file this writes two copies, with all metadata (including any GPS position) removed:
+photos/<name>.jpg, at most 1400 px on its long side, and photos/cards/<name>.jpg, at most
+640 px, for the cards on the main page and the thumbnails. Files no longer in the folder are
+removed from both. Only photos of trackables in data/shoebox.json are
+copied: run tools/import_sheet.py first. If two files would get the same <name> (TBX.jpg and
+TBX.jpeg, or "TBX back.jpg" and "TBX-back.jpg"), nothing is written: rename one and run it again.
+"""
+import json
+import os
+import re
+import sys
+
+from PIL import Image, ImageOps
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PHOTOS = os.path.join(ROOT, 'photos')
+CARDS = os.path.join(PHOTOS, 'cards')
+DATA = os.path.join(ROOT, 'data', 'shoebox.json')
+OUT = os.path.join(ROOT, 'data', 'photos.json')
+TB_RE = re.compile(r'TB[0-9A-Z]{4,7}')
+EXTS = ('.jpg', '.jpeg', '.png')
+
+
+def slug(name):
+    base = os.path.splitext(name)[0]
+    return re.sub(r'[^a-z0-9]+', '-', base.lower()).strip('-')
+
+
+def save(img, path, longest, quality):
+    im = img.copy()
+    im.thumbnail((longest, longest), Image.LANCZOS)
+    im.save(path, 'JPEG', quality=quality, optimize=True, progressive=True)  # no exif= : metadata dropped
+    return im.size
+
+
+def order_key(tb, name):
+    base = os.path.splitext(name)[0]
+    if base == tb:
+        return (0, name)
+    if base.startswith(tb) and len(TB_RE.findall(base)) == 1:
+        return (1, name)
+    if base.startswith(tb):
+        return (2, name)
+    return (3, name)
+
+
+def main():
+    if len(sys.argv) != 2:
+        raise SystemExit(__doc__)
+    folder = sys.argv[1]
+    data = json.load(open(DATA, encoding='utf-8'))
+    active = {t['tb'] for g in data['groups'] for t in g['trackables']}
+    files = sorted(f for f in os.listdir(folder) if f.lower().endswith(EXTS))
+    plan, skipped, seen = [], [], {}
+    for name in files:
+        tbs = [tb for tb in dict.fromkeys(TB_RE.findall(name)) if tb in active]
+        if not tbs:
+            skipped.append(name)
+            continue
+        s = slug(name)
+        if s in seen:  # checked before anything is written, so one photo never overwrites another
+            raise SystemExit(f'{seen[s]!r} and {name!r} would both become photos/{s}.jpg. '
+                             'Rename one of them in the Upload-ready folder, then run this again.')
+        seen[s] = name
+        plan.append((name, s, tbs))
+    os.makedirs(CARDS, exist_ok=True)
+    out, used = {}, set()
+    for name, s, tbs in plan:
+        with Image.open(os.path.join(folder, name)) as src:
+            img = ImageOps.exif_transpose(src).convert('RGB')
+        w, h = save(img, os.path.join(PHOTOS, s + '.jpg'), 1400, 80)
+        cw, ch = save(img, os.path.join(CARDS, s + '.jpg'), 640, 74)
+        used.add(s)
+        for tb in tbs:
+            out.setdefault(tb, []).append({'file': s + '.jpg', 'w': w, 'h': h,
+                                           'card': 'cards/' + s + '.jpg', 'cw': cw, 'ch': ch, 'source': name})
+    for tb in out:
+        out[tb].sort(key=lambda p: order_key(tb, p['source']))
+    keep = {s + '.jpg' for s in used}
+    stale = [os.path.join(d, f) for d in (PHOTOS, CARDS) for f in os.listdir(d)
+             if f.endswith('.jpg') and f not in keep]
+    for f in stale:
+        os.remove(f)
+    with open(OUT, 'w', encoding='utf-8') as fh:
+        json.dump(dict(sorted(out.items())), fh, ensure_ascii=False, indent=1)
+        fh.write('\n')
+    print(f'{len(used)} photos for {len(out)} trackables written to photos/ and data/photos.json')
+    if skipped:
+        print('not for an activated trackable, so not copied: ' + ', '.join(skipped))
+    missing = sorted(active - set(out))
+    if missing:
+        print('trackables with no photo: ' + ', '.join(missing))
+    if stale:
+        print(f'removed {len(stale)} photo files no longer in the folder')
+
+
+if __name__ == '__main__':
+    main()
