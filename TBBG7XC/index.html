@@ -219,6 +219,55 @@ a.btn{text-decoration:none}
 .prevnext .all{grid-area:all;font-weight:600;text-align:center}
 @media (min-width:700px){.prevnext{grid-template-columns:1fr auto 1fr;grid-template-areas:'prev all next'}}
 
+/* ---------- mission checklist (trackable pages) ---------- */
+.check{margin-top:20px;background:var(--surface);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px 18px}
+.check h2{
+  margin:0 0 6px;font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:26px;line-height:1;
+  text-transform:uppercase;letter-spacing:.02em;
+}
+.ck-intro{margin:0 0 14px;color:var(--ink-2);max-width:70ch}
+.ck-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-items:start}
+@media (min-width:860px){.ck-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}}
+.cks{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ck{
+  display:grid;grid-template-columns:auto minmax(0,1fr);gap:0 10px;align-items:start;
+  padding:9px 11px;border:1px solid var(--line);border-radius:8px;background:var(--surface);
+}
+.ck input{width:20px;height:20px;margin:1px 0 0;cursor:pointer}
+.ck label{cursor:pointer;overflow-wrap:anywhere}
+.ck .chips,.ck .mine{grid-column:2}
+.ck.lit{border-color:var(--accent);background:var(--accent-soft)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:5px}
+.chip{
+  font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid var(--line-strong);border-radius:999px;padding:1px 8px;color:var(--ink-2);background:var(--surface);
+}
+.chip.bonus{color:var(--brass);border-color:var(--brass)}
+.chip.lit{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.mine{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.mine img{width:52px;height:52px;object-fit:cover;border-radius:6px;border:1px solid var(--line);display:block}
+.ck-sum{margin:10px 0 0;color:var(--muted);font-size:14px}
+.ck-work{display:flex;flex-direction:column;gap:8px}
+.ck-work .lbl{margin-top:4px}
+.ck-work textarea{
+  width:100%;min-height:190px;resize:vertical;border:1px solid var(--line-strong);border-radius:6px;
+  background:var(--surface);color:var(--ink);padding:9px 11px;font:inherit;font-size:16px;line-height:1.45;
+}
+.ck-work textarea:hover{border-color:var(--accent)}
+.ck-row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.ck-words{color:var(--muted);font-size:14px}
+.ck-work input[type=file]{font-size:14px;max-width:100%;color:var(--ink-2)}
+.ck-work input[type=file]::file-selector-button{
+  margin-right:10px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);
+  border-radius:6px;padding:6px 11px;cursor:pointer;
+  font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;
+}
+.ck-work input[type=file]::file-selector-button:hover{background:var(--surface-2)}
+.ck-yours{display:flex;gap:8px;flex-wrap:wrap}
+.ck-yours:empty{display:none}
+.ck-yours img{width:88px;height:88px;object-fit:cover;border-radius:7px;border:1px solid var(--line);display:block}
+.ck-note{margin:2px 0 0;color:var(--muted);font-size:13px}
+
 </style>
 </head>
 <body>
@@ -248,13 +297,37 @@ a.btn{text-decoration:none}
       <div class="about-full"><span class="lbl">About</span><p class="txt">A sea turtle trackable! The front shows a sea turtle; the back reads &quot;SAVE THE OCEANS AND THE SEA TURTLES · STOP PLASTIC POLLUTION.&quot; Sea turtles can mistake floating plastic bags for jellyfish, one of their foods, which is one reason small reductions in plastic use matter. Cache In, Trash Out!</p></div>
     </section>
   </div>
+  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="TBBG7XC" data-sig="b24a04ca2ef7">
+    <h2 id="ck-h">Mission checklist</h2>
+    <p class="ck-intro">Tick each item as you do it. Write or paste your log, and items your words cover light up. Tick the rest yourself: a photo can show what words don't.</p>
+    <div class="ck-grid">
+      <div class="ck-list">
+      <ol class="cks">
+        <li class="ck"><input type="checkbox" id="ck-0"><label for="ck-0">Pick one very small change you can make to help the environment</label></li>
+        <li class="ck"><input type="checkbox" id="ck-1"><label for="ck-1">Research the impact that kind of change can make</label></li>
+        <li class="ck" data-mentions="[&quot;lifetime&quot;]"><input type="checkbox" id="ck-2"><label for="ck-2">Guesstimate your impact over 1 year, 10 years and a lifetime</label><span class="chips"><span class="chip lit" hidden>In your log</span></span></li>
+        <li class="ck" data-mentions="[&quot;ocean&quot;, &quot;oceans&quot;, &quot;sea&quot;, &quot;seas&quot;, &quot;marine&quot;]"><input type="checkbox" id="ck-3"><label for="ck-3">Tell us one positive impact it could have on the oceans</label><span class="chips"><span class="chip lit" hidden>In your log</span></span></li>
+        <li class="ck"><input type="checkbox" id="ck-4"><label for="ck-4">Make the reasoning your own (AI only for research)</label></li>
+        <li class="ck bonus" data-mentions="[&quot;law&quot;, &quot;laws&quot;, &quot;legislation&quot;, &quot;regulation&quot;]"><input type="checkbox" id="ck-5"><label for="ck-5">Bonus: name a law that could make the change easier, and its impact</label><span class="chips"><span class="chip bonus">Bonus</span><span class="chip lit" hidden>In your log</span></span></li>
+      </ol>
+      <p class="ck-sum" id="ck-sum" aria-live="polite"></p>
+      </div>
+      <div class="ck-work">
+        <label class="lbl" for="ck-log">Your log</label>
+        <textarea id="ck-log" rows="9" spellcheck="true" placeholder="Write or paste your log here"></textarea>
+        <div class="ck-row"><span class="ck-words" id="ck-words">0 words</span><button class="btn small" type="button" id="ck-copy">Copy log</button></div>
+        <p class="ck-note">Your log, photos and ticks stay on this device. Nothing is sent anywhere.</p>
+        <div class="ck-row"><a class="btn primary" href="https://coord.info/TBBG7XC">Log it on geocaching.com</a><button class="btn small" type="button" id="ck-clear">Clear</button></div>
+      </div>
+    </div>
+  </section>
   <nav class="prevnext" aria-label="Other trackables">
     <a class="prev" href="../TBB160R/">← AdequateOphidian</a>
     <a class="all" href="../#TBBG7XC">All trackables</a>
     <a class="next" href="../TB9T1MW/">AdequateRemembrance →</a>
   </nav>
   <footer>
-    <span>Built from Adequate's collection sheet, as read on November 19, 2026.</span>
+    <span>Built from Adequate's collection sheet, as read on November 20, 2026.</span>
     <span>Log it on its page at geocaching.com once your mission is done.</span>
   </footer>
 </main>
@@ -291,6 +364,105 @@ a.btn{text-decoration:none}
       navigator.clipboard.writeText(code).then(function(){ say('Copied ' + code); }, fallback);
     } else { fallback(); }
   });
+
+  // ---------- mission checklist: ticks are the cacher's; a log only ever lights items, never fails one ----------
+  var ck = document.getElementById('checklist');
+  if (ck) (function(){
+    var KEY = 'shoebox.checklist.' + ck.getAttribute('data-tb'), sig = ck.getAttribute('data-sig');
+    var items = Array.prototype.slice.call(ck.querySelectorAll('li.ck'));
+    var log = document.getElementById('ck-log'), wordsOut = document.getElementById('ck-words');
+    var sum = document.getElementById('ck-sum'), file = document.getElementById('ck-file');
+    var yours = document.getElementById('ck-yours'), urls = [], was = [];
+    function norm(s){
+      return s.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+              .replace(/[\u2018\u2019\u02bc\u2032]/g, "'").replace(/[\u2010-\u2015\u2212]/g, '-');
+    }
+    function esc(s){ return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+    var LETTER = '[\\p{L}\\p{N}]', GC = /(?:^|[^a-z0-9])(gc[0-9a-z]{2,7})(?![a-z0-9])/g;
+    function codes(text){  // how many different GC codes the log holds
+      var seen = {}, m; GC.lastIndex = 0;
+      while ((m = GC.exec(text))) seen[m[1]] = 1;
+      return Object.keys(seen).length;
+    }
+    items.forEach(function(li){
+      var m = li.getAttribute('data-mentions');
+      li._re = m ? JSON.parse(m).map(function(w){
+        return new RegExp('(^|[^\\p{L}\\p{N}])' + esc(norm(w).trim()).replace(/\s+/g, '\\s+') + '(?!' + LETTER + ')', 'u');
+      }) : null;
+      li._box = li.querySelector('input');
+    });
+    function lit(li, text, words){
+      var any = false;
+      if (li.hasAttribute('data-gc')) { if (codes(text) < +li.getAttribute('data-gc')) return false; any = true; }
+      if (li.hasAttribute('data-words')) { if (words < +li.getAttribute('data-words')) return false; any = true; }
+      if (li._re) { if (!li._re.some(function(r){ return r.test(text); })) return false; any = true; }
+      return any;
+    }
+    function load(){ try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+    function save(){
+      try {
+        localStorage.setItem(KEY, JSON.stringify({ sig: sig, log: log.value,
+          ticks: items.map(function(li){ return li._box.checked ? 1 : 0; }) }));
+      } catch (e) {}
+    }
+    function tally(){
+      var req = 0, reqT = 0, bon = 0, bonT = 0;
+      items.forEach(function(li){
+        var b = li.classList.contains('bonus'), t = li._box.checked;
+        if (b) { bon++; if (t) bonT++; } else { req++; if (t) reqT++; }
+        li.classList.toggle('done', t);
+      });
+      sum.textContent = reqT + ' of ' + req + ' ticked' + (bon ? ' · bonus ' + bonT + ' of ' + bon : '');
+    }
+    function check(first){
+      var text = norm(log.value), words = (text.match(/[\p{L}\p{N}]+(?:['-][\p{L}\p{N}]+)*/gu) || []).length;
+      wordsOut.textContent = words + (words === 1 ? ' word' : ' words');
+      items.forEach(function(li, i){
+        var on = lit(li, text, words), chip = li.querySelector('.chip.lit');
+        if (chip) chip.hidden = !on;
+        li.classList.toggle('lit', on);
+        if (on && !was[i] && !first) li._box.checked = true;  // it lights up; it never unticks
+        was[i] = on;
+      });
+      tally();
+    }
+    var st = load();
+    if (typeof st.log === 'string') log.value = st.log;
+    if (st.sig === sig && st.ticks) items.forEach(function(li, i){ li._box.checked = !!st.ticks[i]; });
+    check(true);
+    log.addEventListener('input', function(){ check(false); save(); });
+    ck.addEventListener('change', function(e){ if (e.target.type === 'checkbox') { tally(); save(); } });
+    function showPhotos(){
+      var imgs = urls.map(function(u){ return '<img src="' + u + '" alt="">'; }).join('');
+      if (yours) yours.innerHTML = imgs;
+      items.forEach(function(li){
+        var m = li.querySelector('.mine');
+        if (m) { m.innerHTML = imgs; m.hidden = !urls.length; }
+      });
+    }
+    if (file) file.addEventListener('change', function(){
+      urls.forEach(URL.revokeObjectURL);
+      urls = Array.prototype.slice.call(file.files || []).filter(function(f){ return /^image\//.test(f.type); })
+             .map(function(f){ return URL.createObjectURL(f); });
+      showPhotos();
+    });
+    document.getElementById('ck-copy').addEventListener('click', function(){
+      if (!log.value.trim()) { say('Nothing to copy yet'); return; }
+      function pick(){ log.focus(); log.select(); say('Selected: copy it from your menu'); }
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(log.value).then(function(){ say('Log copied'); }, pick);
+      } else { pick(); }
+    });
+    document.getElementById('ck-clear').addEventListener('click', function(){
+      if (!window.confirm('Clear your ticks, log and photos on this page?')) return;
+      try { localStorage.removeItem(KEY); } catch (e) {}
+      log.value = '';
+      items.forEach(function(li){ li._box.checked = false; });
+      urls.forEach(URL.revokeObjectURL); urls = [];
+      if (file) file.value = '';
+      showPhotos(); check(true);
+    });
+  })();
 })();
 </script>
 </body>

@@ -5,7 +5,7 @@ The snapshot is what the Google Sheets connector's get_spreadsheet returns for
 the sheet "AdequateFootwear Trackable Collection and Missions" (its address
 is in the collection handoff) with
   includeGridData: true
-  ranges: ["A1:K300"]
+  ranges: ["A1:L300"]
   fields: ["sheets.data.rowMetadata.hiddenByUser",
            "sheets.data.rowData.values.userEnteredValue",
            "sheets.data.rowData.values.formattedValue"]
@@ -42,6 +42,7 @@ COLS = {
     'goal':     ('I', lambda h: h.startswith('TB Mission')),
     'photo':    ('J', lambda h: h == 'Photo'),
     'released': ('K', lambda h: h == 'Released'),
+    'checklist': ('L', lambda h: h == 'Checklist'),
 }
 TB_RE = re.compile(r'TB[0-9A-Z]{4,7}')
 PHOTO_RE = re.compile(r'=IMAGE\(\s*"(https://s3\.amazonaws\.com/gs-geo-images/[0-9a-f-]{36}_l\.(?:jpe?g|png|gif))"\s*\)', re.I)
@@ -83,6 +84,46 @@ def parse_date(cell):
         except ValueError:
             pass
     raise SystemExit(f'Released date not understood: {s!r}')
+
+
+CHECK_LINE = re.compile(r'(.*?)((?:\s*\[[^\[\]]*\])*)')
+CHECK_TAG = re.compile(r'\[([^\[\]]*)\]')
+
+
+def parse_checklist(text, row):
+    """Checklist: one item per line, tags at the end of the line (see CLAUDE.md)."""
+    items = []
+    for line in clean(text).split('\n'):
+        line = line.strip()
+        if not line:
+            continue
+        m = CHECK_LINE.fullmatch(line)
+        body = m.group(1).strip()
+        if '[' in body or ']' in body or not body:
+            raise SystemExit(f'Row {row}: a Checklist line needs its text first and its tags at the end: {line!r}')
+        item = {'text': body}
+        for tag in CHECK_TAG.findall(m.group(2)):
+            tag = tag.strip()
+            words = re.fullmatch(r'words:\s*(\d+)', tag)
+            mentions = re.fullmatch(r'mentions:\s*(.*\S)', tag)
+            codes = re.fullmatch(r'GC codes:\s*(\d+)', tag)
+            if tag == 'GC code':
+                item['gc'] = 1
+            elif codes and int(codes.group(1)) >= 1:
+                item['gc'] = int(codes.group(1))
+            elif tag == 'photo':
+                item['photo'] = True
+            elif tag == 'bonus':
+                item['bonus'] = True
+            elif words:
+                item['words'] = int(words.group(1))
+            elif mentions:
+                found = [w.strip() for w in mentions.group(1).split(',') if w.strip()]
+                item['mentions'] = list(dict.fromkeys(item.get('mentions', []) + found))
+            else:
+                raise SystemExit(f'Row {row}: Checklist tag not understood: [{tag}] in {line!r}')
+        items.append(item)
+    return items
 
 
 def main():
@@ -147,6 +188,7 @@ def main():
             'goal': clean(cell_text(get(r, 'goal'))),
             'about': clean(cell_text(get(r, 'about'))),
             'photo': m.group(1) if m else '',
+            'checklist': parse_checklist(cell_text(get(r, 'checklist')), i + 1),
         })
     if current['trackables']:
         groups.append(current)
@@ -164,6 +206,9 @@ def main():
     missing = [t['name'] for g in groups for t in g['trackables'] if not t['released']]
     if missing:
         print('no Released date yet: ' + ', '.join(missing))
+    nolist = [t['name'] for g in groups for t in g['trackables'] if not t['checklist']]
+    if nolist:
+        print('no checklist: ' + ', '.join(nolist))
     nophoto = [t['name'] for g in groups for t in g['trackables'] if not t['photo']]
     if nophoto:
         print('no photo: ' + ', '.join(nophoto))
