@@ -225,7 +225,8 @@ a.btn{text-decoration:none}
   margin:0 0 6px;font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:26px;line-height:1;
   text-transform:uppercase;letter-spacing:.02em;
 }
-.ck-intro{margin:0 0 14px;color:var(--ink-2);max-width:70ch}
+.ck-intro{margin:0 0 4px;color:var(--ink-2);max-width:70ch}
+.ck-guide{margin:0 0 14px;color:var(--muted);font-size:14px;max-width:70ch}
 .ck-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-items:start}
 @media (min-width:860px){.ck-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}}
 .cks{list-style:none;margin:0;padding:0;display:grid;gap:8px}
@@ -306,19 +307,23 @@ a.btn{text-decoration:none}
       <div class="about-full"><span class="lbl">About</span><p class="txt">A Progress Pride flag tag, in the design Daniel Quasar created in 2018: the rainbow flag with an arrow of white, pink, light blue, brown, and black along its left side. The light blue, pink, and white represent trans and non-binary people; the brown and black represent marginalized communities of color, with the black also honoring those living with AIDS. The arrow points right to show forward movement, and that progress still needs to be made. It wears a handmade &quot;Log With Pride&quot; pin in the trans flag&#x27;s colors, made by Adequate, with a little trail from a cheering figure to a flag.</p></div>
     </section>
   </div>
-  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="TBB8Q7V" data-sig="fb9241dc977c">
+  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="TBB8Q7V" data-sig="ffbef7b1e926">
     <h2 id="ck-h">Mission checklist</h2>
     <p class="ck-intro">Tick each item as you do it. Write or paste your log, and items your words cover light up. Tick the rest yourself: a photo can show what words don't.</p>
+    <p class="ck-guide">The lights are only a guide. They look for words, not meaning, so one can light up by mistake or miss something you did.</p>
     <div class="ck-grid">
       <div class="ck-list">
       <ol class="cks">
         <li class="ck"><input type="checkbox" id="ck-0"><label for="ck-0">Start with an existing flag: town, state, country, school, team or pride</label></li>
         <li class="ck"><input type="checkbox" id="ck-1"><label for="ck-1">Add to it so it also represents two or more of your communities</label></li>
-        <li class="ck"><input type="checkbox" id="ck-2"><label for="ck-2">Make a new version; don&#x27;t mark up a real flag</label></li>
         <li class="ck" data-photo="1"><input type="checkbox" id="ck-3"><label for="ck-3">Attach a picture</label><span class="chips"><span class="chip photo">Photo</span></span><span class="mine" hidden></span></li>
-        <li class="ck" data-words="15"><input type="checkbox" id="ck-4"><label for="ck-4">Tell us what you added and why</label><span class="chips"><span class="chip lit" hidden>In your log</span></span></li>
+        <li class="ck" data-words="15"><input type="checkbox" id="ck-4"><label for="ck-4">Say in your log what you added and why</label><span class="chips"><span class="chip lit" hidden>In your log</span></span></li>
       </ol>
       <p class="ck-sum" id="ck-sum" aria-live="polite"></p>
+      <h3 class="lbl rem-h" id="rem-h">Reminders</h3>
+      <ul class="rems" aria-labelledby="rem-h">
+        <li class="rem"><span class="rem-text">Make a new version; don&#x27;t mark up a real flag</span></li>
+      </ul>
       </div>
       <div class="ck-work">
         <label class="lbl" for="ck-log">Your log</label>

@@ -101,9 +101,15 @@ def parse_checklist(text, row):
         body = m.group(1).strip()
         if '[' in body or ']' in body or not body:
             raise SystemExit(f'Row {row}: a Checklist line needs its text first and its tags at the end: {line!r}')
-        item = {'text': body}
+        item, lights = {'text': body}, set()
         for tag in CHECK_TAG.findall(m.group(2)):
             tag = tag.strip()
+            kind = 'GC code' if tag.startswith('GC code') else tag.split(':')[0].strip()
+            if kind in ('GC code', 'words', 'mentions'):
+                if kind in lights:  # each must be met on its own, so a repeat would weaken or overwrite one
+                    raise SystemExit(f'Row {row}: a Checklist line can carry each of [GC code(s)], [words] and '
+                                     f'[mentions] only once; put all the words in one [mentions: …]: {line!r}')
+                lights.add(kind)
             words = re.fullmatch(r'words:\s*(\d+)', tag)
             mentions = re.fullmatch(r'mentions:\s*(.*\S)', tag)
             codes = re.fullmatch(r'GC codes:\s*(\d+)', tag)

@@ -225,7 +225,8 @@ a.btn{text-decoration:none}
   margin:0 0 6px;font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:26px;line-height:1;
   text-transform:uppercase;letter-spacing:.02em;
 }
-.ck-intro{margin:0 0 14px;color:var(--ink-2);max-width:70ch}
+.ck-intro{margin:0 0 4px;color:var(--ink-2);max-width:70ch}
+.ck-guide{margin:0 0 14px;color:var(--muted);font-size:14px;max-width:70ch}
 .ck-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-items:start}
 @media (min-width:860px){.ck-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}}
 .cks{list-style:none;margin:0;padding:0;display:grid;gap:8px}
@@ -306,15 +307,17 @@ a.btn{text-decoration:none}
       <div class="about-full"><span class="lbl">About</span><p class="txt">A chantarelle fungus tag. Distinguished and proper, though sometimes a bit curt.</p></div>
     </section>
   </div>
-  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="TBB1W53" data-sig="32b0415f467b">
+  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="TBB1W53" data-sig="60b50ac77552">
     <h2 id="ck-h">Mission checklist</h2>
     <p class="ck-intro">Tick each item as you do it. Write or paste your log, and items your words cover light up. Tick the rest yourself: a photo can show what words don't.</p>
+    <p class="ck-guide">The lights are only a guide. They look for words, not meaning, so one can light up by mistake or miss something you did.</p>
     <div class="ck-grid">
       <div class="ck-list">
       <ol class="cks">
         <li class="ck" data-mentions="[&quot;chant&quot;]"><input type="checkbox" id="ck-0"><label for="ck-0">Compose a short Gregorian chant about geocaching</label><span class="chips"><span class="chip lit" hidden>In your log</span></span></li>
         <li class="ck"><input type="checkbox" id="ck-1"><label for="ck-1">Write it out with your own neumes above the words</label></li>
-        <li class="ck" data-photo="1"><input type="checkbox" id="ck-2"><label for="ck-2">Attach a photo, or sing it for Adequate in person</label><span class="chips"><span class="chip photo">Photo</span></span><span class="mine" hidden></span></li>
+        <li class="ck" data-photo="1"><input type="checkbox" id="ck-2"><label for="ck-2">Attach a photo</label><span class="chips"><span class="chip photo">Photo</span></span><span class="mine" hidden></span></li>
+        <li class="ck alt"><input type="checkbox" id="ck-3"><label for="ck-3">Or sing it for Adequate in person instead</label><span class="chips"><span class="chip alt">Alternate</span></span></li>
       </ol>
       <p class="ck-sum" id="ck-sum" aria-live="polite"></p>
       </div>

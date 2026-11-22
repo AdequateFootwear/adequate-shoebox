@@ -179,6 +179,8 @@ def checklist_html(t):
             '    <h2 id="ck-h">Mission checklist</h2>\n'
             '    <p class="ck-intro">Tick each item as you do it. Write or paste your log, and items your words cover '
             'light up. Tick the rest yourself: a photo can show what words don\'t.</p>\n'
+            '    <p class="ck-guide">The lights are only a guide. They look for words, not meaning, so one can light '
+            'up by mistake or miss something you did.</p>\n'
             '    <div class="ck-grid">\n'
             '      <div class="ck-list">\n'
             '      <ol class="cks">\n' + '\n'.join(lis) + '\n      </ol>\n'

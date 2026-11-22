@@ -225,7 +225,8 @@ a.btn{text-decoration:none}
   margin:0 0 6px;font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:26px;line-height:1;
   text-transform:uppercase;letter-spacing:.02em;
 }
-.ck-intro{margin:0 0 14px;color:var(--ink-2);max-width:70ch}
+.ck-intro{margin:0 0 4px;color:var(--ink-2);max-width:70ch}
+.ck-guide{margin:0 0 14px;color:var(--muted);font-size:14px;max-width:70ch}
 .ck-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-items:start}
 @media (min-width:860px){.ck-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}}
 .cks{list-style:none;margin:0;padding:0;display:grid;gap:8px}
@@ -306,15 +307,16 @@ a.btn{text-decoration:none}
       <div class="about-full"><span class="lbl">About</span><p class="txt">A Berkshire Geobash #7 – The Last Hurrah geocoin given to us by our friends MsGwozdz and gworol!</p></div>
     </section>
   </div>
-  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="TB8TR50" data-sig="10d8f93b8730">
+  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="TB8TR50" data-sig="fceb1fb2ee63">
     <h2 id="ck-h">Mission checklist</h2>
     <p class="ck-intro">Tick each item as you do it. Write or paste your log, and items your words cover light up. Tick the rest yourself: a photo can show what words don't.</p>
+    <p class="ck-guide">The lights are only a guide. They look for words, not meaning, so one can light up by mistake or miss something you did.</p>
     <div class="ck-grid">
       <div class="ck-list">
       <ol class="cks">
         <li class="ck" data-mentions="[&quot;hurrah&quot;]"><input type="checkbox" id="ck-0"><label for="ck-0">Say &quot;Hurrah!&quot; (that exact word) at a fitting moment</label><span class="chips"><span class="chip lit" hidden>In your log</span></span></li>
         <li class="ck bonus" data-photo="1"><input type="checkbox" id="ck-1"><label for="ck-1">If you can, attach a picture</label><span class="chips"><span class="chip bonus">Bonus</span><span class="chip photo">Photo</span></span><span class="mine" hidden></span></li>
-        <li class="ck" data-words="15"><input type="checkbox" id="ck-2"><label for="ck-2">Tell us about your Hurrah! Moment in your log</label><span class="chips"><span class="chip lit" hidden>In your log</span></span></li>
+        <li class="ck" data-words="15"><input type="checkbox" id="ck-2"><label for="ck-2">Say in your log what your Hurrah! Moment was</label><span class="chips"><span class="chip lit" hidden>In your log</span></span></li>
       </ol>
       <p class="ck-sum" id="ck-sum" aria-live="polite"></p>
       </div>

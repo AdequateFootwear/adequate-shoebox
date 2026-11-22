@@ -225,7 +225,8 @@ a.btn{text-decoration:none}
   margin:0 0 6px;font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:26px;line-height:1;
   text-transform:uppercase;letter-spacing:.02em;
 }
-.ck-intro{margin:0 0 14px;color:var(--ink-2);max-width:70ch}
+.ck-intro{margin:0 0 4px;color:var(--ink-2);max-width:70ch}
+.ck-guide{margin:0 0 14px;color:var(--muted);font-size:14px;max-width:70ch}
 .ck-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-items:start}
 @media (min-width:860px){.ck-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}}
 .cks{list-style:none;margin:0;padding:0;display:grid;gap:8px}
@@ -310,19 +311,23 @@ a.btn{text-decoration:none}
       <div class="about-full"><span class="lbl">About</span><p class="txt">A geocoin shaped like a park ranger&#x27;s campaign hat, from Geoswag (also their August 2026 Coin and Pin Club design). One side reads &quot;Protect Our Parks,&quot; with a crescent moon for the C, over a red-rock desert with saguaro cacti and a roadrunner; the other side shows a mountain lake at sunrise, with a bighorn sheep on a rocky outcrop among the evergreens. Geoswag pairs it with Theodore Roosevelt&#x27;s words at the Grand Canyon in 1903: &quot;Leave it as it is. You can not improve on it. The ages have been at work on it, and man can only mar it.&quot; In 1908, Roosevelt protected the canyon as a national monument, and it became a national park in 1919.</p></div>
     </section>
   </div>
-  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="TBBF166" data-sig="ddf407247b53">
+  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="TBBF166" data-sig="a97473305405">
     <h2 id="ck-h">Mission checklist</h2>
     <p class="ck-intro">Tick each item as you do it. Write or paste your log, and items your words cover light up. Tick the rest yourself: a photo can show what words don't.</p>
+    <p class="ck-guide">The lights are only a guide. They look for words, not meaning, so one can light up by mistake or miss something you did.</p>
     <div class="ck-grid">
       <div class="ck-list">
       <ol class="cks">
         <li class="ck" data-mentions="[&quot;park&quot;]"><input type="checkbox" id="ck-0"><label for="ck-0">Go caching in any park: national, state, provincial, county or local</label><span class="chips"><span class="chip lit" hidden>In your log</span></span></li>
         <li class="ck" data-mentions="[&quot;litter&quot;, &quot;trash&quot;, &quot;garbage&quot;, &quot;rubbish&quot;, &quot;CITO&quot;]"><input type="checkbox" id="ck-1"><label for="ck-1">Pick up litter as you go</label><span class="chips"><span class="chip lit" hidden>In your log</span></span></li>
-        <li class="ck"><input type="checkbox" id="ck-2"><label for="ck-2">Wear gloves, and leave anything sharp or hazardous for park staff</label></li>
         <li class="ck" data-photo="1"><input type="checkbox" id="ck-3"><label for="ck-3">Attach a photo of your haul</label><span class="chips"><span class="chip photo">Photo</span></span><span class="mine" hidden></span></li>
         <li class="ck" data-gc="1"><input type="checkbox" id="ck-4"><label for="ck-4">Include the GC code of a cache you found there</label><span class="chips"><span class="chip lit" hidden>In your log</span></span></li>
       </ol>
       <p class="ck-sum" id="ck-sum" aria-live="polite"></p>
+      <h3 class="lbl rem-h" id="rem-h">Reminders</h3>
+      <ul class="rems" aria-labelledby="rem-h">
+        <li class="rem"><span class="rem-text">Wear gloves, and leave anything sharp or hazardous for park staff</span></li>
+      </ul>
       </div>
       <div class="ck-work">
         <label class="lbl" for="ck-log">Your log</label>

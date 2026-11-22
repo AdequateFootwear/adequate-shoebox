@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>AdequateWhereabouts · Adequate's Shoebox</title>
-<meta name="description" content="Where are you? Where were you? Where will you be? Draw that path on a map, at whatever scale you like: a day&#x27;s errands across town, the route from your last…">
+<meta name="description" content="Where are you? Where were you? Where will you be? Draw that path on a map, at whatever scale you like, from cosmic to microbiological: a day&#x27;s errands across…">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231D4D30'/%3E%3Cpath d='M16 4l4.5 12L16 28l-4.5-12z' fill='%23F4F2E8'/%3E%3Cpath d='M16 4l4.5 12h-9z' fill='%23E8BE66'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -225,7 +225,8 @@ a.btn{text-decoration:none}
   margin:0 0 6px;font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:26px;line-height:1;
   text-transform:uppercase;letter-spacing:.02em;
 }
-.ck-intro{margin:0 0 14px;color:var(--ink-2);max-width:70ch}
+.ck-intro{margin:0 0 4px;color:var(--ink-2);max-width:70ch}
+.ck-guide{margin:0 0 14px;color:var(--muted);font-size:14px;max-width:70ch}
 .ck-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-items:start}
 @media (min-width:860px){.ck-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}}
 .cks{list-style:none;margin:0;padding:0;display:grid;gap:8px}
@@ -306,22 +307,27 @@ a.btn{text-decoration:none}
     <section class="facts" aria-label="About this trackable">
       <dl class="ids"><dt>TB code</dt><dd><a class="mono" href="https://coord.info/TB93KW0">TB93KW0</a></dd><dt>Tracking code</dt><dd><span class="mono code">GSB26B</span><button class="btn small copy" type="button" data-code="GSB26B" aria-label="Copy the tracking code for AdequateWhereabouts">Copy</button></dd><dt>Released</dt><dd><time datetime="2026-10-08">October 8, 2026</time></dd></dl>
       <p class="log"><a class="btn primary" href="https://coord.info/TB93KW0">Open its page on geocaching.com</a></p>
-      <div class="block"><span class="lbl">Your mission</span><p class="txt">Where are you? Where were you? Where will you be? Draw that path on a map, at whatever scale you like: a day&#x27;s errands across town, the route from your last caching trip to your next one, or Earth&#x27;s path around the Sun (or the Sun&#x27;s around the galaxy, if you&#x27;re feeling cosmic). Mark the present with an X, YOU ARE HERE style, and attach a photo of your map! Drawn, painted, stitched, collaged, or digital all count. AI permitted for research; the map must be yours.</p></div><div class="block"><span class="lbl">Its goal</span><p class="txt">To stay in Adequate&#x27;s collection and help cachers figure out where they are, where they&#x27;ve been, and where they&#x27;re going!</p></div>
+      <div class="block"><span class="lbl">Your mission</span><p class="txt">Where are you? Where were you? Where will you be? Draw that path on a map, at whatever scale you like, from cosmic to microbiological: a day&#x27;s errands across town, the route from your last caching trip to your next one, or Earth&#x27;s path around the Sun (or the Sun&#x27;s around the galaxy, if you&#x27;re feeling cosmic). Mark the present with an X, YOU ARE HERE style, and attach a photo of your map! Drawn, painted, stitched, collaged, or digital all count. AI permitted for research; the map must be yours.</p></div><div class="block"><span class="lbl">Its goal</span><p class="txt">To stay in Adequate&#x27;s collection and help cachers figure out where they are, where they&#x27;ve been, and where they&#x27;re going!</p></div>
       <div class="about-full"><span class="lbl">About</span><p class="txt">A small metal &quot;Global Positioning Device&quot; with a slide-out tab that reads YOU ARE [X] HERE.</p></div>
     </section>
   </div>
-  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="TB93KW0" data-sig="77aa6f5cbcb8">
+  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="TB93KW0" data-sig="a4660df06416">
     <h2 id="ck-h">Mission checklist</h2>
     <p class="ck-intro">Tick each item as you do it. Write or paste your log, and items your words cover light up. Tick the rest yourself: a photo can show what words don't.</p>
+    <p class="ck-guide">The lights are only a guide. They look for words, not meaning, so one can light up by mistake or miss something you did.</p>
     <div class="ck-grid">
       <div class="ck-list">
       <ol class="cks">
         <li class="ck"><input type="checkbox" id="ck-0"><label for="ck-0">Draw a path on a map, from where you were to where you&#x27;ll be</label></li>
         <li class="ck"><input type="checkbox" id="ck-1"><label for="ck-1">Mark the present with an X, YOU ARE HERE style</label></li>
         <li class="ck" data-photo="1"><input type="checkbox" id="ck-2"><label for="ck-2">Attach a photo of your map</label><span class="chips"><span class="chip photo">Photo</span></span><span class="mine" hidden></span></li>
-        <li class="ck"><input type="checkbox" id="ck-3"><label for="ck-3">Make the map your own (AI only for research)</label></li>
       </ol>
       <p class="ck-sum" id="ck-sum" aria-live="polite"></p>
+      <h3 class="lbl rem-h" id="rem-h">Reminders</h3>
+      <ul class="rems" aria-labelledby="rem-h">
+        <li class="rem"><span class="rem-text">Make the map your own (AI only for research)</span></li>
+        <li class="rem"><span class="rem-text">Use any scale you want, from cosmic to microbiological</span></li>
+      </ul>
       </div>
       <div class="ck-work">
         <label class="lbl" for="ck-log">Your log</label>

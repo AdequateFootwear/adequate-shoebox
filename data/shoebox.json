@@ -96,7 +96,7 @@
        ]
       },
       {
-       "text": "Tell Adequate whether it's ever saved a find"
+       "text": "Say in your log whether it's ever saved a find"
       }
      ]
     },
@@ -218,7 +218,7 @@
        "photo": true
       },
       {
-       "text": "Tell us where you found yourself, and what brought you there",
+       "text": "Say in your log where you found yourself, and what brought you there",
        "words": 15
       },
       {
@@ -252,7 +252,7 @@
        "bonus": true
       },
       {
-       "text": "Tell us about your Hurrah! Moment in your log",
+       "text": "Say in your log what your Hurrah! Moment was",
        "words": 15
       }
      ]
@@ -394,7 +394,8 @@
        "text": "Find caches in both a place and its namesake (past finds count)"
       },
       {
-       "text": "Put both GC codes in your log"
+       "text": "Put both GC codes in your log",
+       "gc": 2
       }
      ]
     }
@@ -430,7 +431,8 @@
        ]
       },
       {
-       "text": "Wear gloves, and leave anything sharp or hazardous for park staff"
+       "text": "Wear gloves, and leave anything sharp or hazardous for park staff",
+       "reminder": true
       },
       {
        "text": "Attach a photo of your haul",
@@ -479,10 +481,11 @@
        "words": 25
       },
       {
-       "text": "Tell us about a time you did it"
+       "text": "Describe in your log a time you did it"
       },
       {
-       "text": "Write it yourself: no AI for this one"
+       "text": "Write it yourself: no AI for this one",
+       "reminder": true
       }
      ]
     },
@@ -505,10 +508,12 @@
        ]
       },
       {
-       "text": "Read the trackable's page first and follow its owner's wishes"
+       "text": "Read the trackable's page first and follow its owner's wishes",
+       "reminder": true
       },
       {
-       "text": "Don't alter the trackable itself (add a charm, never replace or remove)"
+       "text": "If you add a charm, never replace or remove",
+       "reminder": true
       },
       {
        "text": "Attach a before-and-after photo",
@@ -545,7 +550,7 @@
        ]
       },
       {
-       "text": "Tell Adequate what you did",
+       "text": "Say in your log what you did",
        "words": 15
       },
       {
@@ -675,7 +680,8 @@
        "photo": true
       },
       {
-       "text": "Make it yourself: no AI"
+       "text": "Make it yourself: no AI",
+       "reminder": true
       },
       {
        "text": "Bonus: serve them to caching friends",
@@ -759,7 +765,8 @@
        "text": "Fill an animal's outline with a landscape from a place you've cached"
       },
       {
-       "text": "Make it yourself: a photoshopped image alone won't do"
+       "text": "Make it yourself: a photoshopped image alone won't do",
+       "reminder": true
       },
       {
        "text": "Attach a picture",
@@ -798,7 +805,8 @@
        "photo": true
       },
       {
-       "text": "Drive the design yourself, even if AI helps"
+       "text": "Drive the design yourself, even if AI helps",
+       "reminder": true
       }
      ]
     },
@@ -829,7 +837,8 @@
        "photo": true
       },
       {
-       "text": "Come up with the name yourself and help drive the design"
+       "text": "Come up with the name yourself and help drive the design",
+       "reminder": true
       }
      ]
     },
@@ -860,7 +869,7 @@
        "photo": true
       },
       {
-       "text": "Tell us what each piece stands for",
+       "text": "Say in your log what each piece stands for",
        "words": 30
       },
       {
@@ -891,7 +900,8 @@
        ]
       },
       {
-       "text": "Make the map your own (AI only for brainstorming)"
+       "text": "Make the map your own (AI only for brainstorming)",
+       "reminder": true
       },
       {
        "text": "Bonus: make one wing your FINDER side, the other your HIDER side",
@@ -921,7 +931,8 @@
        "photo": true
       },
       {
-       "text": "Drive the idea yourself, even if AI helps"
+       "text": "Drive the idea yourself, even if AI helps",
+       "reminder": true
       }
      ]
     },
@@ -983,13 +994,19 @@
      "photo": "https://s3.amazonaws.com/gs-geo-images/c2a98f02-f336-4bbf-b344-5e07143ab1b6_l.jpg",
      "checklist": [
       {
-       "text": "Make something about pride and progress and what they mean to you"
+       "text": "Write or make something about pride and progress"
       },
       {
-       "text": "Make it your own work, even if AI helps"
+       "text": "Make it your own work, even if AI helps",
+       "reminder": true
       },
       {
-       "text": "Keep it free of hatred"
+       "text": "Keep it free of hatred",
+       "reminder": true
+      },
+      {
+       "text": "Use whatever \"pride\" and \"progress\" mean to you",
+       "reminder": true
       }
      ]
     },
@@ -1010,14 +1027,15 @@
        "text": "Add to it so it also represents two or more of your communities"
       },
       {
-       "text": "Make a new version; don't mark up a real flag"
+       "text": "Make a new version; don't mark up a real flag",
+       "reminder": true
       },
       {
        "text": "Attach a picture",
        "photo": true
       },
       {
-       "text": "Tell us what you added and why",
+       "text": "Say in your log what you added and why",
        "words": 15
       }
      ]
@@ -1043,7 +1061,7 @@
        "photo": true
       },
       {
-       "text": "Tell us what it's delivering",
+       "text": "Say in your log what it's delivering",
        "mentions": [
         "delivering",
         "delivers",
@@ -1097,7 +1115,12 @@
        "photo": true
       },
       {
-       "text": "Make the design your own (AI only for brainstorming)"
+       "text": "Make the design your own (AI only for brainstorming)",
+       "reminder": true
+      },
+      {
+       "text": "No need to purchase the coin you design, unless you want to",
+       "reminder": true
       }
      ]
     },
@@ -1106,7 +1129,7 @@
      "tb": "TB93KW0",
      "tracking": "GSB26B",
      "released": "2026-10-08",
-     "mission": "Where are you? Where were you? Where will you be? Draw that path on a map, at whatever scale you like: a day's errands across town, the route from your last caching trip to your next one, or Earth's path around the Sun (or the Sun's around the galaxy, if you're feeling cosmic). Mark the present with an X, YOU ARE HERE style, and attach a photo of your map! Drawn, painted, stitched, collaged, or digital all count. AI permitted for research; the map must be yours.",
+     "mission": "Where are you? Where were you? Where will you be? Draw that path on a map, at whatever scale you like, from cosmic to microbiological: a day's errands across town, the route from your last caching trip to your next one, or Earth's path around the Sun (or the Sun's around the galaxy, if you're feeling cosmic). Mark the present with an X, YOU ARE HERE style, and attach a photo of your map! Drawn, painted, stitched, collaged, or digital all count. AI permitted for research; the map must be yours.",
      "goal": "To stay in Adequate's collection and help cachers figure out where they are, where they've been, and where they're going!",
      "about": "A small metal \"Global Positioning Device\" with a slide-out tab that reads YOU ARE [X] HERE.",
      "photo": "https://s3.amazonaws.com/gs-geo-images/b2391392-74a4-46dc-9492-0d48c448c666_l.jpg",
@@ -1122,7 +1145,12 @@
        "photo": true
       },
       {
-       "text": "Make the map your own (AI only for research)"
+       "text": "Make the map your own (AI only for research)",
+       "reminder": true
+      },
+      {
+       "text": "Use any scale you want, from cosmic to microbiological",
+       "reminder": true
       }
      ]
     },
@@ -1173,7 +1201,8 @@
       },
       {
        "text": "Or instead: collage Signal the Cowfrog in sly boots, and attach a photo",
-       "photo": true
+       "photo": true,
+       "alternate": true
       }
      ]
     }
@@ -1227,8 +1256,12 @@
        "text": "Write it out with your own neumes above the words"
       },
       {
-       "text": "Attach a photo, or sing it for Adequate in person",
+       "text": "Attach a photo",
        "photo": true
+      },
+      {
+       "text": "Or sing it for Adequate in person instead",
+       "alternate": true
       }
      ]
     },
@@ -1288,7 +1321,8 @@
        "photo": true
       },
       {
-       "text": "Make the diagram your own (AI only for research)"
+       "text": "Make the diagram your own (AI only for research)",
+       "reminder": true
       },
       {
        "text": "Bonus: give the molecule a Corporeal Positioning System device",
@@ -1316,7 +1350,7 @@
        "text": "Write one new point for it, in the same style"
       },
       {
-       "text": "Tell Adequate in your log why it belongs there",
+       "text": "Say in your log why it belongs there",
        "words": 15
       }
      ]
@@ -1342,13 +1376,13 @@
        "text": "Research it further in authoritative sources, ideally Haudenosaunee"
       },
       {
-       "text": "Tell us what you discovered"
+       "text": "Say in your log what you discovered"
       },
       {
-       "text": "Tell us where you discovered it"
+       "text": "Say in your log where you discovered it"
       },
       {
-       "text": "Tell us what your research turned up, and whether it confirmed it",
+       "text": "Say in your log what your research turned up, and whether it confirmed it",
        "words": 30
       }
      ]
@@ -1416,7 +1450,7 @@
        ]
       },
       {
-       "text": "Tell us one positive impact it could have on the oceans",
+       "text": "Say in your log one positive impact it could have on the oceans",
        "mentions": [
         "ocean",
         "oceans",
@@ -1426,10 +1460,11 @@
        ]
       },
       {
-       "text": "Make the reasoning your own (AI only for research)"
+       "text": "Make the reasoning your own (AI only for research)",
+       "reminder": true
       },
       {
-       "text": "Bonus: name a law that could make the change easier, and its impact",
+       "text": "Bonus: propose a law that could make the change easier, and estimate its impact",
        "bonus": true,
        "mentions": [
         "law",
@@ -1563,22 +1598,28 @@
        "photo": true
       },
       {
-       "text": "Stand in about the same place (one can be an older photo)"
+       "text": "Take the photos from about the same place (one can be an older photo)",
+       "reminder": true
       },
       {
        "text": "Include the GC code",
        "gc": 1
       },
       {
-       "text": "Tell us what changed",
+       "text": "Say in your log what changed",
        "words": 10
       },
       {
-       "text": "Use real photos only: no filters or AI turning day into night"
+       "text": "Use real photos only: no filters or AI turning day into night",
+       "reminder": true
       },
       {
        "text": "Bonus: print the two pictures and overlap them in a cool way",
        "bonus": true
+      },
+      {
+       "text": "Stay safe after dark",
+       "reminder": true
       }
      ]
     }
@@ -1628,7 +1669,8 @@
        ]
       },
       {
-       "text": "Use nothing living"
+       "text": "Use nothing living",
+       "reminder": true
       },
       {
        "text": "Attach a photo",
@@ -1639,7 +1681,8 @@
        "gc": 1
       },
       {
-       "text": "Afterward, put his parts back where you found them"
+       "text": "Afterward, put his parts back where you found them",
+       "reminder": true
       }
      ]
     },
@@ -1690,7 +1733,8 @@
        "photo": true
       },
       {
-       "text": "Make the portrait yourself (AI only for ideas)"
+       "text": "Make the portrait yourself (AI only for ideas)",
+       "reminder": true
       },
       {
        "text": "Bonus: give it a fancy frame",
@@ -1718,7 +1762,8 @@
        ]
       },
       {
-       "text": "Make it a physical object"
+       "text": "Make it a physical object",
+       "reminder": true
       },
       {
        "text": "Attach a photo",
@@ -1746,6 +1791,10 @@
       {
        "text": "Attach a photo",
        "photo": true
+      },
+      {
+       "text": "Draw, paint, sculpt or make a homemade lollipop with a rectangular mold: how you do it is up to you",
+       "reminder": true
       }
      ]
     },
@@ -1851,14 +1900,16 @@
         "shadow",
         "watch",
         "compass"
-       ]
+       ],
+       "reminder": true
       },
       {
        "text": "Attach a photo with north marked",
        "photo": true
       },
       {
-       "text": "Moss on trees doesn't count"
+       "text": "Moss on trees doesn't count",
+       "reminder": true
       },
       {
        "text": "Bonus: do it at a cache and include the GC code",
@@ -1894,14 +1945,15 @@
        "text": "Launch something soft and harmless"
       },
       {
-       "text": "Never aim at people or animals"
+       "text": "Never aim at people or animals",
+       "reminder": true
       },
       {
        "text": "Attach a photo of your launcher",
        "photo": true
       },
       {
-       "text": "Tell us your best distance",
+       "text": "Say in your log how far your best shot went",
        "mentions": [
         "inches",
         "feet",
@@ -1967,7 +2019,7 @@
        "photo": true
       },
       {
-       "text": "Tell us about your longest or most prolific caching day",
+       "text": "Say in your log what your longest or most prolific caching day was",
        "words": 15
       }
      ]
@@ -2050,7 +2102,7 @@
        "text": "Name the animal"
       },
       {
-       "text": "Tell us one thing you learned about its trip",
+       "text": "Say in your log one thing you learned about its trip",
        "words": 10
       }
      ]
@@ -2095,6 +2147,10 @@
       {
        "text": "Bonus: find an actual fern blossom, and name your own prize",
        "bonus": true
+      },
+      {
+       "text": "Bring a good light or a buddy",
+       "reminder": true
       }
      ]
     },
@@ -2120,7 +2176,7 @@
        "photo": true
       },
       {
-       "text": "If you can find it, tell us its pattern name",
+       "text": "If you can find it, say its pattern name in your log",
        "bonus": true
       },
       {
@@ -2129,7 +2185,8 @@
       },
       {
        "text": "None near you? Design and name a geocaching quilt block, and attach a photo",
-       "photo": true
+       "photo": true,
+       "alternate": true
       }
      ]
     }
@@ -2170,7 +2227,7 @@
      "tb": "TBB3XCH",
      "tracking": "PCEA5V",
      "released": "2025-09-12",
-     "mission": "Make a map of your favorite park to cache in, anywhere in the world, with your favorite cache marked: drawn, painted, stitched, built from LEGO, or laid out in sticks and stones. Cartographic accuracy not required! Attach a photo.",
+     "mission": "Make a map of your favorite park to cache in, anywhere in the world, with your favorite cache marked: drawn, painted, stitched, built from LEGO, or laid out in sticks and stones. Cartographic accuracy not required, but don't spoil any caches! Attach a photo.",
      "goal": "",
      "about": "",
      "photo": "https://s3.amazonaws.com/gs-geo-images/b1ea4543-acae-40fc-a644-52ab23c8f6fd_l.jpg",
@@ -2184,6 +2241,10 @@
       {
        "text": "Attach a photo",
        "photo": true
+      },
+      {
+       "text": "Don't spoil any caches!",
+       "reminder": true
       }
      ]
     },
@@ -2296,13 +2357,13 @@
        "photo": true
       },
       {
-       "text": "Tell us when it was built",
+       "text": "Say in your log when it was built",
        "mentions": [
         "built"
        ]
       },
       {
-       "text": "Tell us when it was listed, with its reference number if given",
+       "text": "Say in your log when it was listed, with its reference number if given",
        "mentions": [
         "listed"
        ]
@@ -2378,7 +2439,8 @@
        "photo": true
       },
       {
-       "text": "Look, don't take: leave every rock where you found it"
+       "text": "Look, don't take: leave every rock where you found it",
+       "reminder": true
       }
      ]
     },
@@ -2411,14 +2473,15 @@
        ]
       },
       {
-       "text": "Tell us what you think caused it"
+       "text": "Say in your log what you think caused it"
       },
       {
        "text": "Attach a photo",
        "photo": true
       },
       {
-       "text": "Look, don't take: leave every rock where you found it"
+       "text": "Look, don't take: leave every rock where you found it",
+       "reminder": true
       }
      ]
     },
@@ -2457,7 +2520,8 @@
        "photo": true
       },
       {
-       "text": "Look, don't take: leave every rock where you found it"
+       "text": "Look, don't take: leave every rock where you found it",
+       "reminder": true
       }
      ]
     },
@@ -2492,7 +2556,8 @@
        "photo": true
       },
       {
-       "text": "Look, don't take: no splitting rocks to prove it"
+       "text": "Look, don't take: no splitting rocks to prove it",
+       "reminder": true
       }
      ]
     },
@@ -2522,14 +2587,15 @@
        ]
       },
       {
-       "text": "Tell us how you could tell"
+       "text": "Say in your log how you could tell"
       },
       {
        "text": "Attach a photo",
        "photo": true
       },
       {
-       "text": "Look, don't take: leave every rock where you found it"
+       "text": "Look, don't take: leave every rock where you found it",
+       "reminder": true
       }
      ]
     },
@@ -2575,7 +2641,8 @@
        ]
       },
       {
-       "text": "Keep it off the geological feature itself"
+       "text": "Keep it off the geological feature itself",
+       "reminder": true
       },
       {
        "text": "Photograph your footprint",
@@ -2598,7 +2665,7 @@
        "gc": 1
       },
       {
-       "text": "Tell us what kind of water was there",
+       "text": "Say in your log what kind of water was there",
        "mentions": [
         "sea",
         "ocean",
@@ -2662,7 +2729,7 @@
        ]
       },
       {
-       "text": "Tell us: older or younger than Stegosaurus?",
+       "text": "Say in your log whether they're older or younger than Stegosaurus",
        "mentions": [
         "older",
         "younger"
@@ -2696,14 +2763,16 @@
        "text": "Include at least five other cachers, by caching name"
       },
       {
-       "text": "If you invent relations, tell us what they mean"
+       "text": "If you invent relations, say in your log what they mean"
       },
       {
        "text": "Attach a picture",
        "photo": true
       },
       {
-       "text": "Solo cacher? Make Signal the Frog's family tree instead, with drawings"
+       "text": "Solo cacher? Make Signal the Frog's family tree instead, with drawings",
+       "photo": true,
+       "alternate": true
       }
      ]
     },
@@ -2725,11 +2794,12 @@
        "photo": true
       },
       {
-       "text": "Tell us how its pattern works and what spot it's for",
+       "text": "Say in your log how its pattern works and what spot it's for",
        "words": 15
       },
       {
-       "text": "Don't spoil any hides"
+       "text": "Don't spoil any hides",
+       "reminder": true
       }
      ]
     }

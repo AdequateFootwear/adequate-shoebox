@@ -225,7 +225,8 @@ a.btn{text-decoration:none}
   margin:0 0 6px;font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:26px;line-height:1;
   text-transform:uppercase;letter-spacing:.02em;
 }
-.ck-intro{margin:0 0 14px;color:var(--ink-2);max-width:70ch}
+.ck-intro{margin:0 0 4px;color:var(--ink-2);max-width:70ch}
+.ck-guide{margin:0 0 14px;color:var(--muted);font-size:14px;max-width:70ch}
 .ck-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-items:start}
 @media (min-width:860px){.ck-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}}
 .cks{list-style:none;margin:0;padding:0;display:grid;gap:8px}
@@ -306,19 +307,23 @@ a.btn{text-decoration:none}
       <div class="about-full"><span class="lbl">About</span><p class="txt">A gold heart-shaped geocoin featuring birds, flowers, &quot;XOXO,&quot; and &quot;Love is in the Air.&quot;</p></div>
     </section>
   </div>
-  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="TBBAFZB" data-sig="c655262e274e">
+  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="TBBAFZB" data-sig="26545ae7e120">
     <h2 id="ck-h">Mission checklist</h2>
     <p class="ck-intro">Tick each item as you do it. Write or paste your log, and items your words cover light up. Tick the rest yourself: a photo can show what words don't.</p>
+    <p class="ck-guide">The lights are only a guide. They look for words, not meaning, so one can light up by mistake or miss something you did.</p>
     <div class="ck-grid">
       <div class="ck-list">
       <ol class="cks">
         <li class="ck"><input type="checkbox" id="ck-0"><label for="ck-0">Diagram a love molecule&#x27;s route from the lungs to the heart muscle</label></li>
         <li class="ck"><input type="checkbox" id="ck-1"><label for="ck-1">Label every stop along the way</label></li>
         <li class="ck" data-photo="1"><input type="checkbox" id="ck-2"><label for="ck-2">Attach a photo of your drawing or model</label><span class="chips"><span class="chip photo">Photo</span></span><span class="mine" hidden></span></li>
-        <li class="ck"><input type="checkbox" id="ck-3"><label for="ck-3">Make the diagram your own (AI only for research)</label></li>
         <li class="ck bonus"><input type="checkbox" id="ck-4"><label for="ck-4">Bonus: give the molecule a Corporeal Positioning System device</label><span class="chips"><span class="chip bonus">Bonus</span></span></li>
       </ol>
       <p class="ck-sum" id="ck-sum" aria-live="polite"></p>
+      <h3 class="lbl rem-h" id="rem-h">Reminders</h3>
+      <ul class="rems" aria-labelledby="rem-h">
+        <li class="rem"><span class="rem-text">Make the diagram your own (AI only for research)</span></li>
+      </ul>
       </div>
       <div class="ck-work">
         <label class="lbl" for="ck-log">Your log</label>

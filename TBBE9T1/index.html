@@ -225,7 +225,8 @@ a.btn{text-decoration:none}
   margin:0 0 6px;font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:26px;line-height:1;
   text-transform:uppercase;letter-spacing:.02em;
 }
-.ck-intro{margin:0 0 14px;color:var(--ink-2);max-width:70ch}
+.ck-intro{margin:0 0 4px;color:var(--ink-2);max-width:70ch}
+.ck-guide{margin:0 0 14px;color:var(--muted);font-size:14px;max-width:70ch}
 .ck-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-items:start}
 @media (min-width:860px){.ck-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}}
 .cks{list-style:none;margin:0;padding:0;display:grid;gap:8px}
@@ -310,15 +311,16 @@ a.btn{text-decoration:none}
       <div class="about-full"><span class="lbl">About</span><p class="txt">A Geocache ON &quot;Proud Supporter&quot; coin from FallFest 2026 (GCB7799), with a maple leaf, footprints, and &quot;Find Yourself Geocaching&quot; on the back.</p></div>
     </section>
   </div>
-  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="TBBE9T1" data-sig="3a2306b5c36f">
+  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="TBBE9T1" data-sig="8818df547f58">
     <h2 id="ck-h">Mission checklist</h2>
     <p class="ck-intro">Tick each item as you do it. Write or paste your log, and items your words cover light up. Tick the rest yourself: a photo can show what words don't.</p>
+    <p class="ck-guide">The lights are only a guide. They look for words, not meaning, so one can light up by mistake or miss something you did.</p>
     <div class="ck-grid">
       <div class="ck-list">
       <ol class="cks">
         <li class="ck"><input type="checkbox" id="ck-0"><label for="ck-0">Find a cache in a county or region you&#x27;ve never cached in before</label></li>
         <li class="ck" data-photo="1"><input type="checkbox" id="ck-1"><label for="ck-1">Attach a photo of your footprints (or boots) at GZ</label><span class="chips"><span class="chip photo">Photo</span></span><span class="mine" hidden></span></li>
-        <li class="ck" data-words="15"><input type="checkbox" id="ck-2"><label for="ck-2">Tell us where you found yourself, and what brought you there</label><span class="chips"><span class="chip lit" hidden>In your log</span></span></li>
+        <li class="ck" data-words="15"><input type="checkbox" id="ck-2"><label for="ck-2">Say in your log where you found yourself, and what brought you there</label><span class="chips"><span class="chip lit" hidden>In your log</span></span></li>
         <li class="ck bonus" data-mentions="[&quot;Ontario&quot;]"><input type="checkbox" id="ck-3"><label for="ck-3">Bonus: your new county or region is in Ontario or along Lake Ontario</label><span class="chips"><span class="chip bonus">Bonus</span><span class="chip lit" hidden>In your log</span></span></li>
       </ol>
       <p class="ck-sum" id="ck-sum" aria-live="polite"></p>
