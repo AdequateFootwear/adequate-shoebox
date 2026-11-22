@@ -23,6 +23,9 @@ change and every review.
 - **The mission checklist never marks an item as failing.** A log only lights and ticks items it
   covers; the cacher ticks the rest. A cacher's log, ticks and photos stay on their device: the
   checklist may keep ticks and the draft log in `localStorage`, and must never send or upload anything.
+  The same goes for the visitor's discovered list (`localStorage` key `shoebox.discovered`, and its
+  backup link in the page address): it stays on their device, and nothing may read geocaching.com to
+  fill it.
 - **Never rename the repository, move `index.html` or a `<TB code>/` page, and keep each card's id as
   its TB code:** printed QR codes and links point here.
 

@@ -81,6 +81,25 @@
     } else { fallback(); }
   });
 
+  // ---------- your discoveries: the same list as the main page's, kept only in this browser ----------
+  (function(){
+    var KEY = 'shoebox.discovered', mine;
+    try { mine = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { mine = {}; }
+    if (typeof mine !== 'object') mine = {};
+    var btns = Array.prototype.slice.call(document.querySelectorAll('button.disc'));
+    function paint(){ btns.forEach(function(b){ b.setAttribute('aria-pressed', mine[b.getAttribute('data-tb')] ? 'true' : 'false'); }); }
+    btns.forEach(function(b){
+      b.addEventListener('click', function(){
+        try { mine = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) {}
+        var tb = b.getAttribute('data-tb');
+        if (mine[tb]) delete mine[tb]; else mine[tb] = new Date().toISOString().slice(0, 10);
+        try { localStorage.setItem(KEY, JSON.stringify(mine)); } catch (e) {}
+        paint(); say(mine[tb] ? 'Marked as discovered' : 'No longer marked as discovered');
+      });
+    });
+    paint();
+  })();
+
   // ---------- mission checklist: ticks are the cacher's; a log only ever lights items, never fails one ----------
   var ck = document.getElementById('checklist');
   if (ck) (function(){
