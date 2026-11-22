@@ -125,11 +125,14 @@ def parse_checklist(text, row):
                 item['reminder'] = True
             elif tag == 'alternate':
                 item['alternate'] = True
-            elif words:
+            elif words and int(words.group(1)) >= 1:
                 item['words'] = int(words.group(1))
             elif mentions:
                 found = [w.strip() for w in mentions.group(1).split(',') if w.strip()]
-                item['mentions'] = list(dict.fromkeys(item.get('mentions', []) + found))
+                if not found or not all(re.search(r'\w', w) for w in found):
+                    raise SystemExit(f'Row {row}: every word in [mentions: …] needs a letter or digit, '
+                                     f'and the list can\'t be empty: {line!r}')
+                item['mentions'] = list(dict.fromkeys(found))
             else:
                 raise SystemExit(f'Row {row}: Checklist tag not understood: [{tag}] in {line!r}')
         kinds = [k for k in ('bonus', 'reminder', 'alternate') if item.get(k)]
