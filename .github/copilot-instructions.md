@@ -20,6 +20,9 @@ change and every review.
 - **No tracking, analytics or sign-in, and nothing collected from visitors.** The pages load only
   Google Fonts from elsewhere; photos live in `photos/`, with their metadata stripped.
 - **Nothing here may read geocaching.com automatically** (its Terms of Use forbid scrapers).
+- **The mission checklist never marks an item as failing.** A log only lights and ticks items it
+  covers; the cacher ticks the rest. A cacher's log, ticks and photos stay on their device: the
+  checklist may keep ticks and the draft log in `localStorage`, and must never send or upload anything.
 - **Never rename the repository, move `index.html` or a `<TB code>/` page, and keep each card's id as
   its TB code:** printed QR codes and links point here.
 

@@ -11,6 +11,7 @@ photo from data/photos.json, which tools/import_photos.py makes from Aegis's own
 Never edit the built pages by hand.
 """
 import datetime as dt
+import hashlib
 import html
 import json
 import os
@@ -127,6 +128,72 @@ def facts(t):
     return '\n'.join(out)
 
 
+def checklist_html(t):
+    """The mission checklist: the cacher ticks items; a pasted log lights the tagged ones (never fails any)."""
+    items = t.get('checklist') or []
+    if not items:
+        return ''
+    sig = hashlib.sha1(json.dumps(items, ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:12]
+    lis, rems = [], []
+    for n, it in enumerate(items):
+        attrs = ''
+        if it.get('gc'):
+            attrs += f' data-gc="{int(it["gc"])}"'
+        if it.get('words'):
+            attrs += f' data-words="{it["words"]}"'
+        if it.get('mentions'):
+            attrs += f' data-mentions="{esc(json.dumps(it["mentions"], ensure_ascii=False))}"'
+        if it.get('photo'):
+            attrs += ' data-photo="1"'
+        chips = []
+        if it.get('bonus'):
+            chips.append('<span class="chip bonus">Bonus</span>')
+        if it.get('alternate'):
+            chips.append('<span class="chip alt">Alternate</span>')
+        if it.get('photo'):
+            chips.append('<span class="chip photo">Photo</span>')
+        if attrs.replace(' data-photo="1"', ''):
+            chips.append('<span class="chip lit" hidden>In your log</span>')
+        if it.get('reminder'):  # no checkbox and no count; it can still light when the log covers it
+            rems.append(f'        <li class="rem"{attrs}><span class="rem-text">{esc(it["text"])}</span>'
+                        + (f'<span class="chips">{"".join(chips)}</span>' if chips else '') + '</li>')
+            continue
+        kind = ' bonus' if it.get('bonus') else ' alt' if it.get('alternate') else ''
+        lis.append(f'        <li class="ck{kind}"{attrs}>'
+                   f'<input type="checkbox" id="ck-{n}"><label for="ck-{n}">{esc(it["text"])}</label>'
+                   + (f'<span class="chips">{"".join(chips)}</span>' if chips else '')
+                   + ('<span class="mine" hidden></span>' if it.get('photo') else '') + '</li>')
+    photo = any(it.get('photo') for it in items)
+    work = ['        <label class="lbl" for="ck-log">Your log</label>',
+            '        <textarea id="ck-log" rows="9" spellcheck="true" placeholder="Write or paste your log here"></textarea>',
+            '        <div class="ck-row"><span class="ck-words" id="ck-words">0 words</span>'
+            '<button class="btn small" type="button" id="ck-copy">Copy log</button></div>']
+    if photo:
+        work += ['        <label class="lbl" for="ck-file">Your photos</label>',
+                 '        <input type="file" id="ck-file" accept="image/*" multiple>',
+                 '        <div class="ck-yours" id="ck-yours"></div>']
+    work += ['        <p class="ck-note">Your log, photos and ticks stay on this device. Nothing is sent anywhere.</p>',
+             '        <div class="ck-row"><a class="btn primary" href="https://coord.info/' + esc(t['tb']) + '">Log it on geocaching.com</a>'
+             '<button class="btn small" type="button" id="ck-clear">Clear</button></div>']
+    return ('  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="' + esc(t['tb']) + f'" data-sig="{sig}">\n'
+            '    <h2 id="ck-h">Mission checklist</h2>\n'
+            '    <p class="ck-intro">Tick each item as you do it. Write or paste your log, and items your words cover '
+            'light up. Tick the rest yourself: a photo can show what words don\'t.</p>\n'
+            '    <p class="ck-guide">The lights are only a guide. They look for words, not meaning, so one can light '
+            'up by mistake or miss something you did.</p>\n'
+            '    <div class="ck-grid">\n'
+            '      <div class="ck-list">\n'
+            '      <ol class="cks">\n' + '\n'.join(lis) + '\n      </ol>\n'
+            '      <p class="ck-sum" id="ck-sum" aria-live="polite"></p>\n'
+            + ('      <h3 class="lbl rem-h" id="rem-h">Reminders</h3>\n'
+               '      <ul class="rems" aria-labelledby="rem-h">\n' + '\n'.join(rems) + '\n      </ul>\n' if rems else '')
+            + 
+            '      </div>\n'
+            '      <div class="ck-work">\n' + '\n'.join(work) + '\n      </div>\n'
+            '    </div>\n'
+            '  </section>')
+
+
 def main():
     data = json.load(open(DATA, encoding='utf-8'))
     photos = json.load(open(PHOTOS, encoding='utf-8')) if os.path.exists(PHOTOS) else {}
@@ -177,6 +244,7 @@ def main():
             '{{SUBLINE}}': esc(t['tb']),
             '{{GALLERY}}': gallery(t, photos.get(t['tb'], [])),
             '{{FACTS}}': facts(t),
+            '{{CHECKLIST}}': checklist_html(t),
             '{{PREVNEXT}}': prevnext,
             '{{READ}}': read_on,
         }, 'tools/trackable.html')
@@ -203,6 +271,7 @@ def main():
                 '{{FACTS}}': (f'      <p class="txt">This trackable isn\'t listed in Adequate\'s Shoebox right now.</p>\n'
                               f'      <p class="log"><a class="btn primary" href="../">See all trackables</a></p>\n'
                               f'      <p><a href="https://coord.info/{esc(name)}">Its page on geocaching.com</a></p>'),
+                '{{CHECKLIST}}': '',
                 '{{PREVNEXT}}': '    <a class="all" href="../">All trackables</a>',
                 '{{READ}}': read_on,
             }, 'tools/trackable.html')

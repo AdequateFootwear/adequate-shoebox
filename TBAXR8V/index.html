@@ -219,6 +219,65 @@ a.btn{text-decoration:none}
 .prevnext .all{grid-area:all;font-weight:600;text-align:center}
 @media (min-width:700px){.prevnext{grid-template-columns:1fr auto 1fr;grid-template-areas:'prev all next'}}
 
+/* ---------- mission checklist (trackable pages) ---------- */
+.check{margin-top:20px;background:var(--surface);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px 18px}
+.check h2{
+  margin:0 0 6px;font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:26px;line-height:1;
+  text-transform:uppercase;letter-spacing:.02em;
+}
+.ck-intro{margin:0 0 4px;color:var(--ink-2);max-width:70ch}
+.ck-guide{margin:0 0 14px;color:var(--muted);font-size:14px;max-width:70ch}
+.ck-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-items:start}
+@media (min-width:860px){.ck-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}}
+.cks{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ck{
+  display:grid;grid-template-columns:auto minmax(0,1fr);gap:0 10px;align-items:start;
+  padding:9px 11px;border:1px solid var(--line);border-radius:8px;background:var(--surface);
+}
+.ck input{width:20px;height:20px;margin:1px 0 0;cursor:pointer}
+.ck label{cursor:pointer;overflow-wrap:anywhere}
+.ck .chips,.ck .mine{grid-column:2}
+.ck.lit{border-color:var(--accent);background:var(--accent-soft)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:5px}
+.chip{
+  font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid var(--line-strong);border-radius:999px;padding:1px 8px;color:var(--ink-2);background:var(--surface);
+}
+.chip.bonus{color:var(--brass);border-color:var(--brass)}
+.chip.lit{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.mine{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.mine img{width:52px;height:52px;object-fit:cover;border-radius:6px;border:1px solid var(--line);display:block}
+.ck-sum{margin:10px 0 0;color:var(--muted);font-size:14px}
+.ck-work{display:flex;flex-direction:column;gap:8px}
+.ck-work .lbl{margin-top:4px}
+.ck-work textarea{
+  width:100%;min-height:190px;resize:vertical;border:1px solid var(--line-strong);border-radius:6px;
+  background:var(--surface);color:var(--ink);padding:9px 11px;font:inherit;font-size:16px;line-height:1.45;
+}
+.ck-work textarea:hover{border-color:var(--accent)}
+.ck-row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.ck-words{color:var(--muted);font-size:14px}
+.ck-work input[type=file]{font-size:14px;max-width:100%;color:var(--ink-2)}
+.ck-work input[type=file]::file-selector-button{
+  margin-right:10px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);
+  border-radius:6px;padding:6px 11px;cursor:pointer;
+  font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;
+}
+.ck-work input[type=file]::file-selector-button:hover{background:var(--surface-2)}
+.ck-yours{display:flex;gap:8px;flex-wrap:wrap}
+.ck-yours:empty{display:none}
+.ck-yours img{width:88px;height:88px;object-fit:cover;border-radius:7px;border:1px solid var(--line);display:block}
+.ck-note{margin:2px 0 0;color:var(--muted);font-size:13px}
+.chip.alt{color:var(--accent);border-color:var(--accent)}
+.rem-h{margin:16px 0 6px}
+.rems{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.rem{
+  display:grid;grid-template-columns:minmax(0,1fr);padding:7px 11px 7px 13px;border-left:3px solid var(--brass);
+  background:var(--surface-2);border-radius:0 6px 6px 0;color:var(--ink-2);font-size:15px;overflow-wrap:anywhere;
+}
+.rem.lit{border-left-color:var(--accent);background:var(--accent-soft)}
+.rem .chips{margin-top:4px}
+
 </style>
 </head>
 <body>
@@ -248,13 +307,37 @@ a.btn{text-decoration:none}
       <div class="about-full"><span class="lbl">About</span><p class="txt">A pacific sleeper shark tag from sharkzcoins.ca</p></div>
     </section>
   </div>
+  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="TBAXR8V" data-sig="b60695abd368">
+    <h2 id="ck-h">Mission checklist</h2>
+    <p class="ck-intro">Tick each item as you do it. Write or paste your log, and items your words cover light up. Tick the rest yourself: a photo can show what words don't.</p>
+    <p class="ck-guide">The lights are only a guide. They look for words, not meaning, so one can light up by mistake or miss something you did.</p>
+    <div class="ck-grid">
+      <div class="ck-list">
+      <ol class="cks">
+        <li class="ck" data-mentions="[&quot;shark&quot;]"><input type="checkbox" id="ck-0"><label for="ck-0">Make a sleepy shark: drawn, folded, sculpted or stuffed</label><span class="chips"><span class="chip lit" hidden>In your log</span></span></li>
+        <li class="ck" data-photo="1"><input type="checkbox" id="ck-1"><label for="ck-1">Attach a photo</label><span class="chips"><span class="chip photo">Photo</span></span><span class="mine" hidden></span></li>
+      </ol>
+      <p class="ck-sum" id="ck-sum" aria-live="polite"></p>
+      </div>
+      <div class="ck-work">
+        <label class="lbl" for="ck-log">Your log</label>
+        <textarea id="ck-log" rows="9" spellcheck="true" placeholder="Write or paste your log here"></textarea>
+        <div class="ck-row"><span class="ck-words" id="ck-words">0 words</span><button class="btn small" type="button" id="ck-copy">Copy log</button></div>
+        <label class="lbl" for="ck-file">Your photos</label>
+        <input type="file" id="ck-file" accept="image/*" multiple>
+        <div class="ck-yours" id="ck-yours"></div>
+        <p class="ck-note">Your log, photos and ticks stay on this device. Nothing is sent anywhere.</p>
+        <div class="ck-row"><a class="btn primary" href="https://coord.info/TBAXR8V">Log it on geocaching.com</a><button class="btn small" type="button" id="ck-clear">Clear</button></div>
+      </div>
+    </div>
+  </section>
   <nav class="prevnext" aria-label="Other trackables">
     <a class="prev" href="../TB8AEB8/">← AdequateRails</a>
     <a class="all" href="../#TBAXR8V">All trackables</a>
     <a class="next" href="../TBBG0NJ/">AdequateTribute →</a>
   </nav>
   <footer>
-    <span>Built from Adequate's collection sheet, as read on November 19, 2026.</span>
+    <span>Built from Adequate's collection sheet, as read on November 22, 2026.</span>
     <span>Log it on its page at geocaching.com once your mission is done.</span>
   </footer>
 </main>
@@ -291,6 +374,122 @@ a.btn{text-decoration:none}
       navigator.clipboard.writeText(code).then(function(){ say('Copied ' + code); }, fallback);
     } else { fallback(); }
   });
+
+  // ---------- mission checklist: ticks are the cacher's; a log only ever lights items, never fails one ----------
+  var ck = document.getElementById('checklist');
+  if (ck) (function(){
+    var KEY = 'shoebox.checklist.' + ck.getAttribute('data-tb'), sig = ck.getAttribute('data-sig');
+    var items = Array.prototype.slice.call(ck.querySelectorAll('li.ck'));
+    var rems = Array.prototype.slice.call(ck.querySelectorAll('li.rem'));  // reminders: they light, but have no box
+    var log = document.getElementById('ck-log'), wordsOut = document.getElementById('ck-words');
+    var sum = document.getElementById('ck-sum'), file = document.getElementById('ck-file');
+    var yours = document.getElementById('ck-yours'), urls = [], was = [], off = [];  // off: the cacher unticked it
+    function norm(s){
+      return s.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+              .replace(/[\u2018\u2019\u02bc\u2032]/g, "'").replace(/[\u2010-\u2015\u2212]/g, '-');
+    }
+    function esc(s){ return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+    var LETTER = '[\\p{L}\\p{N}]', GC = /(?:^|[^a-z0-9])(gc[0-9a-z]{2,7})(?![a-z0-9])/g;
+    function codes(text){  // how many different GC codes the log holds
+      var seen = {}, m; GC.lastIndex = 0;
+      while ((m = GC.exec(text))) seen[m[1]] = 1;
+      return Object.keys(seen).length;
+    }
+    items.concat(rems).forEach(function(li){
+      var m = li.getAttribute('data-mentions');
+      li._re = m ? JSON.parse(m).map(function(w){
+        return new RegExp('(^|[^\\p{L}\\p{N}])' + esc(norm(w).trim()).replace(/\s+/g, '\\s+') + '(?!' + LETTER + ')', 'u');
+      }) : null;
+      li._box = li.querySelector('input');
+    });
+    function light(li, on){
+      var chip = li.querySelector('.chip.lit');
+      if (chip) chip.hidden = !on;
+      li.classList.toggle('lit', on);
+    }
+    function lit(li, text, words){
+      var any = false;
+      if (li.hasAttribute('data-gc')) { if (codes(text) < +li.getAttribute('data-gc')) return false; any = true; }
+      if (li.hasAttribute('data-words')) { if (words < +li.getAttribute('data-words')) return false; any = true; }
+      if (li._re) { if (!li._re.some(function(r){ return r.test(text); })) return false; any = true; }
+      return any;
+    }
+    function load(){ try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+    function save(){
+      try {
+        localStorage.setItem(KEY, JSON.stringify({ sig: sig, log: log.value,
+          ticks: items.map(function(li){ return li._box.checked ? 1 : 0; }),
+          off: items.map(function(li, i){ return off[i] ? 1 : 0; }) }));
+      } catch (e) {}
+    }
+    function tally(){
+      var n = { req: [0, 0], bonus: [0, 0], alt: [0, 0] };
+      items.forEach(function(li){
+        var k = li.classList.contains('bonus') ? 'bonus' : li.classList.contains('alt') ? 'alt' : 'req';
+        n[k][1]++; if (li._box.checked) n[k][0]++;
+        li.classList.toggle('done', li._box.checked);
+      });
+      sum.textContent = n.req[0] + ' of ' + n.req[1] + ' ticked'
+        + (n.bonus[1] ? ' · bonus ' + n.bonus[0] + ' of ' + n.bonus[1] : '')
+        + (n.alt[1] ? ' · alternate ' + n.alt[0] + ' of ' + n.alt[1] : '');
+    }
+    function check(first){
+      var text = norm(log.value), words = (text.match(/[\p{L}\p{N}]+(?:['-][\p{L}\p{N}]+)*/gu) || []).length;
+      wordsOut.textContent = words + (words === 1 ? ' word' : ' words');
+      rems.forEach(function(li){ light(li, lit(li, text, words)); });
+      items.forEach(function(li, i){
+        var on = lit(li, text, words);
+        light(li, on);
+        // it lights up and ticks, never unticks, and never re-ticks a box the cacher unticked
+        if (on && !was[i] && !first && !off[i]) li._box.checked = true;
+        was[i] = on;
+      });
+      tally();
+    }
+    var st = load();
+    if (typeof st.log === 'string') log.value = st.log;
+    if (st.sig === sig && st.ticks) items.forEach(function(li, i){
+      li._box.checked = !!st.ticks[i]; off[i] = !!(st.off && st.off[i]);
+    });
+    check(true);
+    log.addEventListener('input', function(){ check(false); save(); });
+    ck.addEventListener('change', function(e){
+      if (e.target.type !== 'checkbox') return;
+      off[items.indexOf(e.target.closest('li.ck'))] = !e.target.checked;
+      tally(); save();
+    });
+    function showPhotos(){
+      var imgs = urls.map(function(u){ return '<img src="' + u + '" alt="">'; }).join('');
+      if (yours) yours.innerHTML = imgs;
+      items.forEach(function(li){
+        var m = li.querySelector('.mine');
+        if (m) { m.innerHTML = imgs; m.hidden = !urls.length; }
+      });
+    }
+    if (file) file.addEventListener('change', function(){
+      urls.forEach(URL.revokeObjectURL);
+      urls = Array.prototype.slice.call(file.files || []).filter(function(f){ return /^image\//.test(f.type); })
+             .map(function(f){ return URL.createObjectURL(f); });
+      showPhotos();
+    });
+    document.getElementById('ck-copy').addEventListener('click', function(){
+      if (!log.value.trim()) { say('Nothing to copy yet'); return; }
+      function pick(){ log.focus(); log.select(); say('Selected: copy it from your menu'); }
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(log.value).then(function(){ say('Log copied'); }, pick);
+      } else { pick(); }
+    });
+    document.getElementById('ck-clear').addEventListener('click', function(){
+      if (!window.confirm('Clear your ticks, log and photos on this page?')) return;
+      try { localStorage.removeItem(KEY); } catch (e) {}
+      log.value = '';
+      items.forEach(function(li){ li._box.checked = false; });
+      off = [];
+      urls.forEach(URL.revokeObjectURL); urls = [];
+      if (file) file.value = '';
+      showPhotos(); check(true);
+    });
+  })();
 })();
 </script>
 </body>
