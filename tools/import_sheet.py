@@ -115,6 +115,10 @@ def parse_checklist(text, row):
                 item['photo'] = True
             elif tag == 'bonus':
                 item['bonus'] = True
+            elif tag == 'reminder':
+                item['reminder'] = True
+            elif tag == 'alternate':
+                item['alternate'] = True
             elif words:
                 item['words'] = int(words.group(1))
             elif mentions:
@@ -122,6 +126,10 @@ def parse_checklist(text, row):
                 item['mentions'] = list(dict.fromkeys(item.get('mentions', []) + found))
             else:
                 raise SystemExit(f'Row {row}: Checklist tag not understood: [{tag}] in {line!r}')
+        kinds = [k for k in ('bonus', 'reminder', 'alternate') if item.get(k)]
+        if len(kinds) > 1 or (item.get('reminder') and item.get('photo')):
+            raise SystemExit(f'Row {row}: a Checklist line can be only one of bonus, reminder or alternate, '
+                             f'and a reminder takes no [photo]: {line!r}')
         items.append(item)
     return items
 

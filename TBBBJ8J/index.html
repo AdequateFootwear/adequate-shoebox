@@ -267,6 +267,15 @@ a.btn{text-decoration:none}
 .ck-yours:empty{display:none}
 .ck-yours img{width:88px;height:88px;object-fit:cover;border-radius:7px;border:1px solid var(--line);display:block}
 .ck-note{margin:2px 0 0;color:var(--muted);font-size:13px}
+.chip.alt{color:var(--accent);border-color:var(--accent)}
+.rem-h{margin:16px 0 6px}
+.rems{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.rem{
+  display:grid;grid-template-columns:minmax(0,1fr);padding:7px 11px 7px 13px;border-left:3px solid var(--brass);
+  background:var(--surface-2);border-radius:0 6px 6px 0;color:var(--ink-2);font-size:15px;overflow-wrap:anywhere;
+}
+.rem.lit{border-left-color:var(--accent);background:var(--accent-soft)}
+.rem .chips{margin-top:4px}
 
 </style>
 </head>
@@ -332,7 +341,7 @@ a.btn{text-decoration:none}
     <a class="next" href="../TBB3M79/">AdequateFutility →</a>
   </nav>
   <footer>
-    <span>Built from Adequate's collection sheet, as read on November 20, 2026.</span>
+    <span>Built from Adequate's collection sheet, as read on November 22, 2026.</span>
     <span>Log it on its page at geocaching.com once your mission is done.</span>
   </footer>
 </main>
@@ -375,9 +384,10 @@ a.btn{text-decoration:none}
   if (ck) (function(){
     var KEY = 'shoebox.checklist.' + ck.getAttribute('data-tb'), sig = ck.getAttribute('data-sig');
     var items = Array.prototype.slice.call(ck.querySelectorAll('li.ck'));
+    var rems = Array.prototype.slice.call(ck.querySelectorAll('li.rem'));  // reminders: they light, but have no box
     var log = document.getElementById('ck-log'), wordsOut = document.getElementById('ck-words');
     var sum = document.getElementById('ck-sum'), file = document.getElementById('ck-file');
-    var yours = document.getElementById('ck-yours'), urls = [], was = [];
+    var yours = document.getElementById('ck-yours'), urls = [], was = [], off = [];  // off: the cacher unticked it
     function norm(s){
       return s.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
               .replace(/[\u2018\u2019\u02bc\u2032]/g, "'").replace(/[\u2010-\u2015\u2212]/g, '-');
@@ -389,13 +399,18 @@ a.btn{text-decoration:none}
       while ((m = GC.exec(text))) seen[m[1]] = 1;
       return Object.keys(seen).length;
     }
-    items.forEach(function(li){
+    items.concat(rems).forEach(function(li){
       var m = li.getAttribute('data-mentions');
       li._re = m ? JSON.parse(m).map(function(w){
         return new RegExp('(^|[^\\p{L}\\p{N}])' + esc(norm(w).trim()).replace(/\s+/g, '\\s+') + '(?!' + LETTER + ')', 'u');
       }) : null;
       li._box = li.querySelector('input');
     });
+    function light(li, on){
+      var chip = li.querySelector('.chip.lit');
+      if (chip) chip.hidden = !on;
+      li.classList.toggle('lit', on);
+    }
     function lit(li, text, words){
       var any = false;
       if (li.hasAttribute('data-gc')) { if (codes(text) < +li.getAttribute('data-gc')) return false; any = true; }
@@ -407,36 +422,46 @@ a.btn{text-decoration:none}
     function save(){
       try {
         localStorage.setItem(KEY, JSON.stringify({ sig: sig, log: log.value,
-          ticks: items.map(function(li){ return li._box.checked ? 1 : 0; }) }));
+          ticks: items.map(function(li){ return li._box.checked ? 1 : 0; }),
+          off: items.map(function(li, i){ return off[i] ? 1 : 0; }) }));
       } catch (e) {}
     }
     function tally(){
-      var req = 0, reqT = 0, bon = 0, bonT = 0;
+      var n = { req: [0, 0], bonus: [0, 0], alt: [0, 0] };
       items.forEach(function(li){
-        var b = li.classList.contains('bonus'), t = li._box.checked;
-        if (b) { bon++; if (t) bonT++; } else { req++; if (t) reqT++; }
-        li.classList.toggle('done', t);
+        var k = li.classList.contains('bonus') ? 'bonus' : li.classList.contains('alt') ? 'alt' : 'req';
+        n[k][1]++; if (li._box.checked) n[k][0]++;
+        li.classList.toggle('done', li._box.checked);
       });
-      sum.textContent = reqT + ' of ' + req + ' ticked' + (bon ? ' · bonus ' + bonT + ' of ' + bon : '');
+      sum.textContent = n.req[0] + ' of ' + n.req[1] + ' ticked'
+        + (n.bonus[1] ? ' · bonus ' + n.bonus[0] + ' of ' + n.bonus[1] : '')
+        + (n.alt[1] ? ' · alternate ' + n.alt[0] + ' of ' + n.alt[1] : '');
     }
     function check(first){
       var text = norm(log.value), words = (text.match(/[\p{L}\p{N}]+(?:['-][\p{L}\p{N}]+)*/gu) || []).length;
       wordsOut.textContent = words + (words === 1 ? ' word' : ' words');
+      rems.forEach(function(li){ light(li, lit(li, text, words)); });
       items.forEach(function(li, i){
-        var on = lit(li, text, words), chip = li.querySelector('.chip.lit');
-        if (chip) chip.hidden = !on;
-        li.classList.toggle('lit', on);
-        if (on && !was[i] && !first) li._box.checked = true;  // it lights up; it never unticks
+        var on = lit(li, text, words);
+        light(li, on);
+        // it lights up and ticks, never unticks, and never re-ticks a box the cacher unticked
+        if (on && !was[i] && !first && !off[i]) li._box.checked = true;
         was[i] = on;
       });
       tally();
     }
     var st = load();
     if (typeof st.log === 'string') log.value = st.log;
-    if (st.sig === sig && st.ticks) items.forEach(function(li, i){ li._box.checked = !!st.ticks[i]; });
+    if (st.sig === sig && st.ticks) items.forEach(function(li, i){
+      li._box.checked = !!st.ticks[i]; off[i] = !!(st.off && st.off[i]);
+    });
     check(true);
     log.addEventListener('input', function(){ check(false); save(); });
-    ck.addEventListener('change', function(e){ if (e.target.type === 'checkbox') { tally(); save(); } });
+    ck.addEventListener('change', function(e){
+      if (e.target.type !== 'checkbox') return;
+      off[items.indexOf(e.target.closest('li.ck'))] = !e.target.checked;
+      tally(); save();
+    });
     function showPhotos(){
       var imgs = urls.map(function(u){ return '<img src="' + u + '" alt="">'; }).join('');
       if (yours) yours.innerHTML = imgs;
@@ -463,6 +488,7 @@ a.btn{text-decoration:none}
       try { localStorage.removeItem(KEY); } catch (e) {}
       log.value = '';
       items.forEach(function(li){ li._box.checked = false; });
+      off = [];
       urls.forEach(URL.revokeObjectURL); urls = [];
       if (file) file.value = '';
       showPhotos(); check(true);

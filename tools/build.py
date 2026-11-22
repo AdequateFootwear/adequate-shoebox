@@ -134,7 +134,7 @@ def checklist_html(t):
     if not items:
         return ''
     sig = hashlib.sha1(json.dumps(items, ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:12]
-    lis = []
+    lis, rems = [], []
     for n, it in enumerate(items):
         attrs = ''
         if it.get('gc'):
@@ -148,11 +148,18 @@ def checklist_html(t):
         chips = []
         if it.get('bonus'):
             chips.append('<span class="chip bonus">Bonus</span>')
+        if it.get('alternate'):
+            chips.append('<span class="chip alt">Alternate</span>')
         if it.get('photo'):
             chips.append('<span class="chip photo">Photo</span>')
         if attrs.replace(' data-photo="1"', ''):
             chips.append('<span class="chip lit" hidden>In your log</span>')
-        lis.append(f'        <li class="ck{" bonus" if it.get("bonus") else ""}"{attrs}>'
+        if it.get('reminder'):  # no checkbox and no count; it can still light when the log covers it
+            rems.append(f'        <li class="rem"{attrs}><span class="rem-text">{esc(it["text"])}</span>'
+                        + (f'<span class="chips">{"".join(chips)}</span>' if chips else '') + '</li>')
+            continue
+        kind = ' bonus' if it.get('bonus') else ' alt' if it.get('alternate') else ''
+        lis.append(f'        <li class="ck{kind}"{attrs}>'
                    f'<input type="checkbox" id="ck-{n}"><label for="ck-{n}">{esc(it["text"])}</label>'
                    + (f'<span class="chips">{"".join(chips)}</span>' if chips else '')
                    + ('<span class="mine" hidden></span>' if it.get('photo') else '') + '</li>')
@@ -176,6 +183,9 @@ def checklist_html(t):
             '      <div class="ck-list">\n'
             '      <ol class="cks">\n' + '\n'.join(lis) + '\n      </ol>\n'
             '      <p class="ck-sum" id="ck-sum" aria-live="polite"></p>\n'
+            + ('      <h3 class="lbl rem-h" id="rem-h">Reminders</h3>\n'
+               '      <ul class="rems" aria-labelledby="rem-h">\n' + '\n'.join(rems) + '\n      </ul>\n' if rems else '')
+            + 
             '      </div>\n'
             '      <div class="ck-work">\n' + '\n'.join(work) + '\n      </div>\n'
             '    </div>\n'

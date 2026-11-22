@@ -30,8 +30,11 @@ here. Aegis uses **it/its** pronouns.
 - Tags go at the end of a line, and the importer stops on any tag it doesn't know:
   `[GC code]` (the log holds a GC code), `[GC codes: N]` (N different GC codes), `[mentions: a, b]`
   (any of those words or phrases, as whole words, ignoring case and accents), `[words: N]` (the log
-  is at least N words), `[photo]` (never lights; the cacher's own photo shows beside it) and `[bonus]`
-  (optional). A line can carry several; when it has more than one that can light, all must be met.
+  is at least N words), `[photo]` (never lights; the cacher's own photo shows beside it), `[bonus]`
+  (optional), `[alternate]` (another way to do the mission, counted on its own) and `[reminder]` (a
+  rule or tip shown under the checklist with no box and no count; it still lights when the log covers
+  it). A line can carry several, but only one of bonus, alternate and reminder, and a reminder takes no
+  `[photo]`; when a line has more than one tag that can light, all must be met.
 - **Nothing ever marks an item as failing** (Aegis's rule, 2026-11-19). A cacher ticks items
   themselves; when their log newly covers a tagged item, its box lights and ticks, and the page never
   unticks one. Keep it that way: no red, no crosses, no "missing".
