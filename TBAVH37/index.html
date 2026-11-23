@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>AdequateSystem · Adequate's Shoebox</title>
-<meta name="description" content="Spot three things from this marble’s list in the sky (the Moon, a planet, the ISS…), sketch where they were, and put the date, time, and place in your log. S…">
+<meta name="description" content="Spot three things from this marble’s list in the sky (the Moon, a planet, the ISS…), sketch where they were, and attach a photo of your sketch. Put the date,…">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231D4D30'/%3E%3Cpath d='M16 4l4.5 12L16 28l-4.5-12z' fill='%23F4F2E8'/%3E%3Cpath d='M16 4l4.5 12h-9z' fill='%23E8BE66'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -347,11 +347,11 @@ a.btn{text-decoration:none}
     <section class="facts" aria-label="About this trackable">
       <p class="where"><span class="chip where-chip">At home or in the field</span></p><dl class="ids"><dt>TB code</dt><dd><a class="mono" href="https://coord.info/TBAVH37">TBAVH37</a></dd><dt>Tracking code</dt><dd><span class="mono code">SSB4WK</span><button class="btn small copy" type="button" data-code="SSB4WK" aria-label="Copy the tracking code for AdequateSystem">Copy</button></dd><dt>Released</dt><dd><time datetime="2026-01-01">January 1, 2026</time></dd></dl>
       <p class="log"><a class="btn primary" href="https://coord.info/TBAVH37">Open its page on geocaching.com</a> <button class="btn small disc" type="button" data-tb="TBAVH37" aria-pressed="false"><span class="disc-off">Mark as discovered</span><span class="disc-on">Discovered</span></button></p>
-      <div class="block"><span class="lbl">Your mission</span><p class="txt">Spot three things from this marble’s list in the sky (the Moon, a planet, the ISS…), sketch where they were, and put the date, time, and place in your log. Spotting them with Adequate at a night event is a bonus!</p></div>
+      <div class="block"><span class="lbl">Your mission</span><p class="txt">Spot three things from this marble’s list in the sky (the Moon, a planet, the ISS…), sketch where they were, and attach a photo of your sketch. Put the date, time, and place in your log. Spotting them with Adequate at a night event is a bonus!</p></div>
       <div class="about-full"><span class="lbl">About</span><p class="txt">A beautiful solar system marble, featuring depictions of the Sun, Moon, Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto, and space ships Mercury, Gemini, Saturn V, Apollo Command &amp; Lunar Modules, Space Shuttle, Hubble Space Telescope, International Space Station, and Space Launch System Orion.</p></div>
     </section>
   </div>
-  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="TBAVH37" data-sig="5b1df4bbbf82">
+  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="TBAVH37" data-sig="05132063bf7e">
     <h2 id="ck-h">Mission checklist</h2>
     <p class="ck-intro">Tick each item as you do it. Write or paste your log, and items your words cover light up. Tick the rest yourself: a photo can show what words don't.</p>
     <p class="ck-guide">The lights are only a guide. They look for words, not meaning, so one can light up by mistake or miss something you did.</p>
@@ -360,8 +360,9 @@ a.btn{text-decoration:none}
       <ol class="cks">
         <li class="ck" data-mentions="[&quot;moon&quot;, &quot;planet&quot;, &quot;ISS&quot;, &quot;Venus&quot;, &quot;Jupiter&quot;, &quot;Mars&quot;, &quot;Saturn&quot;, &quot;Mercury&quot;]"><input type="checkbox" id="ck-0"><label for="ck-0">Spot three things from this marble&#x27;s list in the sky</label><span class="chips"><span class="chip lit" hidden>In your log</span></span></li>
         <li class="ck"><input type="checkbox" id="ck-1"><label for="ck-1">Sketch where they were</label></li>
-        <li class="ck"><input type="checkbox" id="ck-2"><label for="ck-2">Put the date, time and place in your log</label></li>
-        <li class="ck bonus"><input type="checkbox" id="ck-3"><label for="ck-3">Bonus: spot them with Adequate at a night event</label><span class="chips"><span class="chip bonus">Bonus</span></span></li>
+        <li class="ck" data-photo="1"><input type="checkbox" id="ck-2"><label for="ck-2">Attach a photo of your sketch</label><span class="chips"><span class="chip photo">Photo</span></span><span class="mine" hidden></span></li>
+        <li class="ck"><input type="checkbox" id="ck-3"><label for="ck-3">Put the date, time and place in your log</label></li>
+        <li class="ck bonus"><input type="checkbox" id="ck-4"><label for="ck-4">Bonus: spot them with Adequate at a night event</label><span class="chips"><span class="chip bonus">Bonus</span></span></li>
       </ol>
       <p class="ck-sum" id="ck-sum" aria-live="polite"></p>
       </div>
@@ -369,13 +370,16 @@ a.btn{text-decoration:none}
         <label class="lbl" for="ck-log">Your log</label>
         <textarea id="ck-log" rows="9" spellcheck="true" placeholder="Write or paste your log here"></textarea>
         <div class="ck-row"><span class="ck-words" id="ck-words">0 words</span><button class="btn small" type="button" id="ck-copy">Copy log</button></div>
+        <label class="lbl" for="ck-file">Your photos</label>
+        <input type="file" id="ck-file" accept="image/*" multiple>
+        <div class="ck-yours" id="ck-yours"></div>
         <p class="ck-note">Your log, photos and ticks stay on this device. Nothing is sent anywhere.</p>
         <div class="ck-row"><a class="btn primary" href="https://coord.info/TBAVH37">Log it on geocaching.com</a><button class="btn small" type="button" id="ck-clear">Clear</button></div>
       </div>
     </div>
   </section>
   <nav class="prevnext" aria-label="Other trackables">
-    <a class="prev" href="../TB98VGY/">← AdequateHeadquarters</a>
+    <a class="prev" href="../TBBGX1J/">← AdequateMixtape</a>
     <a class="all" href="../#TBAVH37">All trackables</a>
     <a class="next" href="../TBBAAPC/">AdequateWayfarer →</a>
   </nav>

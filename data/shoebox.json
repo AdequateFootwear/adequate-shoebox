@@ -2,7 +2,7 @@
  "sheet": "AdequateFootwear Trackable Collection and Missions",
  "read": "2026-11-23",
  "notes": [
-  "*AS OF 2026* Your Mission:\n*In 2026, I added logging missions to my trackables. Complete the logging missions in order to discover them! Please note that I may delete trackable logs that have not completed the necessary logging mission.*"
+  "Your Mission:\n*In 2026, I added logging missions to my trackables. Complete the logging missions in order to discover them! Please note that I may delete trackable logs that have not completed the necessary logging mission.*"
  ],
  "groups": [
   {
@@ -240,6 +240,56 @@
      "where": "In the field"
     },
     {
+     "name": "AdequateGuiser",
+     "tb": "TBBGVKB",
+     "tracking": "GSHT6J",
+     "released": "2026-11-23",
+     "mission": "In Scotland, guisers still have to earn their treats: they go door to door in disguise and tell a joke or sing a song before anyone hands over a sweet. Go guising, cache to cache! Find a cache and come up with a party piece about the cache (a joke, a riddle, a short poem, a song), then write it in your log here with the GC code. No spoilers! If you take a treat from the cache, trade even or up, and never leave food in a cache! Bonus points for performing your party piece at GZ; even more bonus points if you do it in disguise!",
+     "goal": "To stay in Adequate's collection, trick-or-treating cache to cache!",
+     "about": "It's the spookiest time of the year, and Signal and Tracker have their costumes back on for a night of caching! On the front of this 2026 Trick-or-Treat geocoin, Signal is a caped hero with an X on his chest and Tracker is his blue-caped sidekick, jack-o'-lantern bucket in paw, in front of a haunted house and a graveyard. On the back, the two of them head down a cobblestone path toward a treasure chest and a sign pointing to Night Caches. Trick-or-treating grew out of older door-to-door customs: from around the 15th century, the poor went \"souling,\" singing prayers for a household's dead in exchange for soul cakes. The phrase itself is Canadian; the earliest known printed examples include \"tricks or treats\" in a Sault Ste. Marie newspaper in 1917.",
+     "photo": "",
+     "checklist": [
+      {
+       "text": "Find a cache and make up a party piece about it"
+      },
+      {
+       "text": "Write your joke, riddle, poem or song in your log",
+       "words": 10
+      },
+      {
+       "text": "Include the GC code",
+       "gc": 1
+      },
+      {
+       "text": "Keep it spoiler-free",
+       "reminder": true
+      },
+      {
+       "text": "If you take a treat from the cache, trade even or up",
+       "reminder": true
+      },
+      {
+       "text": "Never leave food in a cache",
+       "reminder": true
+      },
+      {
+       "text": "Bonus: perform your party piece at GZ",
+       "bonus": true
+      },
+      {
+       "text": "Bonus: perform it in disguise",
+       "bonus": true,
+       "mentions": [
+        "disguise",
+        "disguised",
+        "costume",
+        "mask"
+       ]
+      }
+     ],
+     "where": "In the field"
+    },
+    {
      "name": "AdequateHurrah",
      "tb": "TB8TR50",
      "tracking": "BGAW8A",
@@ -304,6 +354,58 @@
        "mentions": [
         "built"
        ]
+      }
+     ],
+     "where": "In the field"
+    },
+    {
+     "name": "AdequateRaconteur",
+     "tb": "TBBDYTN",
+     "tracking": "CP512F",
+     "released": "2026-11-23",
+     "mission": "Anyone can write TFTC. Find a cache at night (after sunset and before sunrise), then give it a log worth reading: set the scene, tell us about the hunt (the false leads, the night noises, the fox that watched you search), and give it an ending. Copy your story into your log here with the GC code, and attach a photo from the hunt (a flashlight shot counts!). Keep it spoiler-free, and stay safe after dark! Bonus points for a true midnight cache.",
+     "goal": "To stay in Adequate's collection, telling stories by starlight!",
+     "about": "Have you ever done a midnight cache? This Geoswag Coin and Pin Club coin (May 2026) has one on each side. On the front, a fox finds a glowing treasure chest beneath a great tree: Midnight Cache, Find Your Light. On the back, an owl perches on an open cache with its logbook while the stars wheel overhead: Stars Guide the Hunt, Log It & Share the Story. Those circling stars are star trails: in a long-exposure photo, Earth's rotation turns each star into an arc around the celestial pole. Every logbook is a story waiting to be told.",
+     "photo": "",
+     "checklist": [
+      {
+       "text": "Find a cache at night, after sunset and before sunrise",
+       "mentions": [
+        "night",
+        "dark",
+        "midnight",
+        "sunset",
+        "flashlight",
+        "headlamp",
+        "nighttime"
+       ]
+      },
+      {
+       "text": "Copy in your story: set the scene, tell the hunt, end it",
+       "words": 60
+      },
+      {
+       "text": "Include the GC code",
+       "gc": 1
+      },
+      {
+       "text": "Attach a photo from the hunt (a flashlight shot counts)",
+       "photo": true
+      },
+      {
+       "text": "Keep it spoiler-free",
+       "reminder": true
+      },
+      {
+       "text": "Bonus: make it a true midnight cache",
+       "bonus": true,
+       "mentions": [
+        "midnight"
+       ]
+      },
+      {
+       "text": "Stay safe after dark",
+       "reminder": true
       }
      ],
      "where": "In the field"
@@ -711,12 +813,78 @@
       }
      ],
      "where": "At home"
+    },
+    {
+     "name": "AdequateMaillard",
+     "tb": "TBBGWGP",
+     "tracking": "CBPFQR",
+     "released": "2026-11-23",
+     "mission": "Toast is a canvas, and heat is your paint! Make toast art with a spooky or geocaching theme: paint bread with milk tinted with food coloring before you toast it, lay a paper stencil on your toast and dust it with cinnamon sugar, build a picture out of toppings, or piece together a mosaic from slices toasted to different shades. No toaster? A pan or oven works. Attach a photo, then enjoy your art! (No pressure to eat it if it's burnt!) Bonus points for using at least three shades of toast in one picture.",
+     "goal": "To stay in Adequate's collection, toasted to a perfect golden brown!",
+     "about": "Few things are quite as scary as burning your marshmallow! On this 2026 Halloween Cache Buddy travel tag, a ghost sits by a campfire under the full moon, roasting a marshmallow that has burst into flames, and the marshmallow looks just as horrified as the ghost. Toastferatu is done cooking, and ready to travel. Toast gets its golden brown from the Maillard reaction, which French chemist Louis-Camille Maillard described in 1912: heat makes sugars react with amino acids. A roasting marshmallow browns the same way, with the gelatin supplying the amino acids, and at hotter temperatures its sugar caramelizes too. Rush it, though, and it catches fire.",
+     "photo": "",
+     "checklist": [
+      {
+       "text": "Make toast art with a spooky or geocaching theme",
+       "mentions": [
+        "toast"
+       ]
+      },
+      {
+       "text": "Attach a photo",
+       "photo": true
+      },
+      {
+       "text": "Bonus: use at least three shades of toast in one picture",
+       "bonus": true,
+       "mentions": [
+        "shades"
+       ]
+      }
+     ],
+     "where": "At home"
     }
    ]
   },
   {
    "name": "Make Something (Arts & Crafts)",
    "trackables": [
+    {
+     "name": "Adequate-O'-Lantern",
+     "tb": "TBBGWPC",
+     "tracking": "CB6ECK",
+     "released": "2026-11-23",
+     "mission": "In the old Irish story, Stingy Jack tricked the Devil, and when he died, neither heaven nor hell would have him; he was left to wander with only an ember in a carved lantern. Make Jack a new lantern out of anything but a pumpkin: a turnip like the ones carved in Ireland and Scotland, a potato, an orange, a milk jug, a paper bag, a cardboard box. Light it up (an LED or a flashlight is safest) and attach a photo! Bonus points if you take it caching.",
+     "goal": "To stay in Adequate's collection, since heaven and hell both said no!",
+     "about": "Jack is ready to ride! Things are heating up this Halloween season, and tags don't get much badder than this 2026 Halloween Cache Buddy travel tag: a skeleton with a jack-o'-lantern for a head, riding a motorcycle through flames. His name started as 17th-century British slang, when a jack-o'-lantern was a night watchman, or any man carrying a lantern; the name was also given to will-o'-the-wisps, the ghostly lights that hover over marshes. Before pumpkins took over in North America, Halloween lanterns in Ireland and Scotland were carved from turnips.",
+     "photo": "",
+     "checklist": [
+      {
+       "text": "Make Jack a lantern out of anything but a pumpkin",
+       "mentions": [
+        "lantern",
+        "turnip",
+        "potato",
+        "orange",
+        "jug",
+        "bag",
+        "box"
+       ]
+      },
+      {
+       "text": "Light it up (an LED or flashlight is safest)"
+      },
+      {
+       "text": "Attach a photo",
+       "photo": true
+      },
+      {
+       "text": "Bonus: take it caching",
+       "bonus": true
+      }
+     ],
+     "where": "At home"
+    },
     {
      "name": "AdequateAgar",
      "tb": "TBB9AZZ",
@@ -968,6 +1136,44 @@
      "where": "At home"
     },
     {
+     "name": "AdequateHindsight",
+     "tb": "TB9MBY0",
+     "tracking": "GSFBFC",
+     "released": "2026-11-23",
+     "mission": "Hindsight is 20/20, and this coin has 2020 on the back. On the front, REFLECTION is drawn as an ambigram: it reads the same in a mirror. Pick one word for something geocaching has taught you and draw it as an ambigram of your own, one that reads the same in a mirror or upside down. Bending the letters is part of the art, and ambigram generators are fine for inspiration, but the drawing must be yours: decorate it by hand with something simple that fits your word (nothing fancy needed!). Attach a photo, and say in your log what your word means to you and how geocaching taught it to you. Bonus points for ringing it with four related words, the way this coin does!",
+     "goal": "To stay in Adequate's collection, looking back on the trail with 20/20 hindsight!",
+     "about": "\"Reflecting on 20 Years of Geocaching!\", a geocoin by Geoswag designed by Chris Mackey for geocaching's 20th anniversary, in its gold finish. On the front, the word REFLECTION is drawn so it reads the same in a mirror, ringed by Recollect, Cherish, Treasure and Reminisce. On the back, 2020 circles a four-pointed star, ringed by Reflect, Remember, Cogitate and Consider. Geoswag asks the question behind it: \"How has geocaching changed your life?\"",
+     "photo": "",
+     "checklist": [
+      {
+       "text": "Pick a word for something geocaching has taught you"
+      },
+      {
+       "text": "Draw it as an ambigram that reads the same in a mirror or upside down"
+      },
+      {
+       "text": "Decorate it by hand with something simple that fits your word"
+      },
+      {
+       "text": "Attach a photo",
+       "photo": true
+      },
+      {
+       "text": "Say in your log what your word means to you and how geocaching taught it",
+       "words": 15
+      },
+      {
+       "text": "Draw it yourself; generators are fine for inspiration",
+       "reminder": true
+      },
+      {
+       "text": "Bonus: ring it with four related words, like the coin",
+       "bonus": true
+      }
+     ],
+     "where": "At home"
+    },
+    {
      "name": "AdequateLobsters",
      "tb": "TBB1TQ7",
      "tracking": "LSHMN8",
@@ -1012,6 +1218,59 @@
       {
        "text": "Attach a photo",
        "photo": true
+      }
+     ],
+     "where": "At home"
+    },
+    {
+     "name": "AdequateMoirai",
+     "tb": "TBBGZG8",
+     "tracking": "CPCDD6",
+     "released": "2026-11-23",
+     "mission": "The Fates spin, measure, and cut the thread of every journey; now it's your turn. Make something from thread or yarn (strips of an old T-shirt work too): knit it, crochet it, finger-knit or finger-crochet a chain, braid or twist a cord, or weave a friendship bracelet. Beginners welcome! Then play Lachesis and measure it before you snip the last thread like Atropos. Attach a photo and tell us how long your thread of fate turned out to be.",
+     "goal": "To stay in Adequate's collection, weaving the thread that leads Adequate to every geocache!",
+     "about": "A domed Geoswag geocoin shaped like an eyeball: an antique-nickel eye stares out from the front, its lashes radiating like threads. On the back, the three Fates, hooded and blindfolded, spin, measure, and cut the thread of life beneath a ring of moon phases and the words \"The eyes of the Fates see journeys long before feet wander.\" In Greek myth, Clotho spun the thread, Lachesis measured it, and Atropos cut it. The sisters who shared a single eye were actually the Graeae, though Disney's Hercules (1997) famously handed that eye to the Fates.",
+     "photo": "",
+     "checklist": [
+      {
+       "text": "Make something from thread or yarn (T-shirt strips work too)",
+       "mentions": [
+        "thread",
+        "yarn",
+        "knit",
+        "knitted",
+        "crochet",
+        "crocheted",
+        "braid",
+        "braided",
+        "bracelet"
+       ]
+      },
+      {
+       "text": "Measure it before you snip the last thread"
+      },
+      {
+       "text": "Attach a photo",
+       "photo": true
+      },
+      {
+       "text": "Say in your log how long your thread of fate turned out",
+       "mentions": [
+        "cm",
+        "centimeters",
+        "centimetres",
+        "inch",
+        "inches",
+        "foot",
+        "feet",
+        "meter",
+        "meters",
+        "metre",
+        "metres",
+        "mm",
+        "yard",
+        "yards"
+       ]
       }
      ],
      "where": "At home"
@@ -1130,6 +1389,48 @@
       }
      ],
      "where": "At home"
+    },
+    {
+     "name": "AdequateSpellwork",
+     "tb": "TBBBG0V",
+     "tracking": "MMQBYM",
+     "released": "2026-11-23",
+     "mission": "If you have found a container with this code, and you made it, see the last paragraph. Otherwise, leave it be.\n\nThis cauldron is bubbling over with Maker Magic. In many modern witchcraft practices, a spell works through intention, correspondences (items chosen for what they're associated with), an offering, and follow-through. Make a geocaching spell jar: set an intention for your caching (a cache that's beaten you, safe travels, patience with DNFs, a new caching friend), then write it on a log sheet, along with this trackable's code (TBBBG0V / MMQBYM), and seal it in an unused cache container with a few small things that correspond to it, like a key for unlocking a tough puzzle or a bit of string for connection. Take a photo of your completed geocaching spell jar; you may now discover the trackable. Attach this photo to your trackable discovery log, and tell us your intention and what each item stands for.\n\nThen, note the codes on the outside of the jar as well, and in true geocaching fashion, actuate the spell by hiding it! Put it somewhere you're allowed to leave it (your own home or yard, say, and never in or near a real cache) where you will come across it later by chance, or if you prefer, you can hide it more intentionally and look for it again on a specific date. While it is in hiding, make an offering to the caching world (trade up, pick up some trash, write a cache owner a thoughtful log), and then follow through with one real step toward your intention.\n\nWhen the time is right, or when the appointment you set arrives, you will come across your geocaching spell jar again. This likely means it has finished doing its magic. You may do whatever you want with the container and its contents at this point. You may also reflect on the intention you wrote, your offerings, your follow-through, and whether you noticed any difference during the time the spell jar was hidden, in a second discovered log or in a write-note.",
+     "goal": "To stay in Adequate's collection, stirring good intentions into every cache!",
+     "about": "The Maker Magic 2026 travel tag, part of Shop Geocaching's collection for Maker Magic, Geocaching HQ's celebration of creative cache hides. From April 9 to 30, 2026, Maker Magic events showcased cache creation and cache quality, with offerings such as DIY cache-building workshops and talks on puzzle design. The tag shows a black cauldron bubbling over with red potion and golden sparks, with \"Maker Magic\" across its belly.",
+     "photo": "",
+     "checklist": [
+      {
+       "text": "Set an intention for your caching"
+      },
+      {
+       "text": "Write it on a log sheet with this trackable's codes"
+      },
+      {
+       "text": "Seal it in an unused cache container with a few small things that correspond to it"
+      },
+      {
+       "text": "Attach a photo of your spell jar",
+       "photo": true
+      },
+      {
+       "text": "Say in your log your intention and what each item stands for",
+       "words": 15
+      },
+      {
+       "text": "Afterward, label the jar with the codes and hide it where you're allowed to leave it",
+       "reminder": true
+      },
+      {
+       "text": "While it's hidden, make an offering and take one real step toward your intention",
+       "reminder": true
+      },
+      {
+       "text": "When you find it again, reflect in a second log or a note if you like",
+       "reminder": true
+      }
+     ],
+     "where": "Either"
     },
     {
      "name": "AdequateTribute",
@@ -1313,7 +1614,7 @@
      "tb": "TBBA0NR",
      "tracking": "NYNJXA",
      "released": "2026-02-27",
-     "mission": "Find a classical Japanese haiku about a horse (馬, uma) and copy the original version out by hand in tategaki: vertical columns running right to left. Credit the poet! Copying the characters closely is fine; calligraphy is a bonus. Decorate your page with appropriate imagery. AI is acceptable for research. Include a translation in your log (credit any formal translations you provide).",
+     "mission": "Find a classical Japanese haiku about a horse (馬, uma) and copy the original version out by hand in tategaki: vertical columns running right to left. Credit the poet! Copying the characters closely is fine; calligraphy is a bonus. Decorate your page with appropriate imagery, and attach a photo of it. AI is acceptable for research. Include a translation in your log (credit any formal translations you provide).",
      "goal": "",
      "about": "A bright red and gold geocoin featuring a beautiful stalwart horse on the obverse and \"Year of the Horse\" and \"Happy New Year\" in script on the reverse.",
      "photo": "https://s3.amazonaws.com/gs-geo-images/c6272b18-da61-4653-8edb-b3a50a657efd_l.jpg",
@@ -1332,6 +1633,10 @@
       },
       {
        "text": "Decorate your page with fitting imagery"
+      },
+      {
+       "text": "Attach a photo of your page",
+       "photo": true
       },
       {
        "text": "Include a translation in your log, crediting any formal one",
@@ -1397,6 +1702,45 @@
       {
        "text": "Say in your log why it belongs there",
        "words": 15
+      }
+     ],
+     "where": "At home"
+    },
+    {
+     "name": "AdequateNevermore",
+     "tb": "TBBGWAR",
+     "tracking": "CBQ5YA",
+     "released": "2026-11-23",
+     "mission": "Quoth the crow, \"Nevermore!\" Write a stanza about a cache hunt in the meter of Poe's \"The Raven\": trochaic octameter. (Figuring out what that means is part of the mission!) End it with \"nevermore\" or a word that rhymes with it, and copy it into your log with the GC code of the cache it's about (no spoilers!). Bonus points for internal rhyme, like Poe's \"dreary\" and \"weary,\" or for matching his whole stanza pattern, which he described in his 1846 essay \"The Philosophy of Composition.\"",
+     "goal": "To stay in Adequate's collection, and go missing nevermore!",
+     "about": "This may be the spookiest tag of all! Edgar Allan Crow is ready to travel, but will he go missing? Our guess is nevermore... On this 2026 Halloween Cache Buddy travel tag, Edgar perches on a skull. His namesake's bird was a raven, not a crow, but both belong to the genus Corvus, and crows remember faces: in a University of Washington study, wild crows scolded a mask worn by the researchers who had trapped them, and five years later they were still at it, joined by young crows that had picked up the grudge from their parents.",
+     "photo": "",
+     "checklist": [
+      {
+       "text": "Write a stanza about a cache hunt in trochaic octameter",
+       "words": 40
+      },
+      {
+       "text": "End it with \"nevermore\" or a rhyme for it",
+       "mentions": [
+        "nevermore"
+       ]
+      },
+      {
+       "text": "Copy it into your log with the cache's GC code",
+       "gc": 1
+      },
+      {
+       "text": "Keep it spoiler-free",
+       "reminder": true
+      },
+      {
+       "text": "Bonus: use internal rhyme, like Poe's \"dreary\" and \"weary\"",
+       "bonus": true
+      },
+      {
+       "text": "Bonus: match Poe's whole stanza pattern",
+       "bonus": true
       }
      ],
      "where": "At home"
@@ -1581,6 +1925,40 @@
      "where": "At home"
     },
     {
+     "name": "AdequateEntropy",
+     "tb": "TBBA0YD",
+     "tracking": "CP952Z",
+     "released": "2026-11-23",
+     "mission": "Time only runs one way, and the trail is full of evidence. On a caching or other outing, photograph three things that would look wrong if you ran time backward: a fallen tree, rust, a crumbling wall, a rotting log, a dandelion gone to seed. Attach your photos and tell us what you would see if you ran time backwards there. Bonus points for spotting order being built instead, like a nest or a beaver dam: it can happen, but only by spending energy.",
+     "goal": "To stay in Adequate's collection, keeping time and keeping secrets!",
+     "about": "Listen to the whispers of the Owl, for they carry ancient secrets of the night. One side of this Geoswag coin is a clockwork owl with a Roman-numeral clock face in its chest; flip it over and its spread wings are filled with a night forest, with a smaller owl perched against the full moon. Here's one of time's secrets: nearly all the basic laws of physics work just as well run backward, so why does time only go one way? Arthur Eddington named this one-way property \"time's arrow\" in 1928. The leading explanation is entropy: there are vastly more disordered arrangements of things than ordered ones, so disorder tends to grow, and our universe started out in an extraordinarily ordered state. That's why eggs break, trees fall, and iron rusts, and you never see it happen in reverse.\n\nYour GPS runs on time, too. GPS satellites carry atomic clocks, which keep time by locking onto the exact frequency at which atoms jump between two quantum energy levels. Relativity makes those clocks run about 38 microseconds a day fast compared to clocks on the ground; left uncorrected, your position would drift by about 10 kilometers a day.",
+     "photo": "",
+     "checklist": [
+      {
+       "text": "On an outing, photograph three things that would look wrong run backward",
+       "photo": true
+      },
+      {
+       "text": "Say in your log what you'd see there if time ran backward",
+       "mentions": [
+        "backward",
+        "backwards",
+        "reverse",
+        "rewind"
+       ]
+      },
+      {
+       "text": "Bonus: spot order being built instead, like a nest or beaver dam",
+       "bonus": true,
+       "mentions": [
+        "nest",
+        "dam"
+       ]
+      }
+     ],
+     "where": "In the field"
+    },
+    {
      "name": "AdequateHeadquarters",
      "tb": "TB98VGY",
      "tracking": "HQQBAR",
@@ -1601,11 +1979,42 @@
      "where": "Either"
     },
     {
+     "name": "AdequateMixtape",
+     "tb": "TBBGX1J",
+     "tracking": "CBZ3ZX",
+     "released": "2026-11-23",
+     "mission": "Signal made a mixtape; now make yours. Put together a spooky caching mix of real songs (skeletons, witch seasons, good hides, bats, or anything that fits a night on the trail), then design its J-card: the folded paper insert from a cassette case, with your track list and cover art. Attach a photo! Bonus points for a Side A and a Side B with different moods (the hunt and the DNF, maybe).",
+     "goal": "To stay in Adequate's collection, mixing up beats all spooky season!",
+     "about": "Signal is taking a spooky stroll back to the 80s with his favorite Halloween mix, and no cassette player is required! This 2026 Halloween Cache Buddy travel tag is a cassette labeled Signal's Spooky Mix, Side B: Ghosts • Graveyards • Good Hides. Philips introduced its first compact cassette recorder in August 1963, and by the 80s, swapping homemade mixtapes was a pastime of its own.",
+     "photo": "",
+     "checklist": [
+      {
+       "text": "Put together a spooky caching mix of real songs"
+      },
+      {
+       "text": "Design its J-card, with your track list and cover art"
+      },
+      {
+       "text": "Attach a photo",
+       "photo": true
+      },
+      {
+       "text": "Bonus: give Side A and Side B different moods",
+       "bonus": true,
+       "mentions": [
+        "side a",
+        "side b"
+       ]
+      }
+     ],
+     "where": "At home"
+    },
+    {
      "name": "AdequateSystem",
      "tb": "TBAVH37",
      "tracking": "SSB4WK",
      "released": "2026-01-01",
-     "mission": "Spot three things from this marble’s list in the sky (the Moon, a planet, the ISS…), sketch where they were, and put the date, time, and place in your log. Spotting them with Adequate at a night event is a bonus!",
+     "mission": "Spot three things from this marble’s list in the sky (the Moon, a planet, the ISS…), sketch where they were, and attach a photo of your sketch. Put the date, time, and place in your log. Spotting them with Adequate at a night event is a bonus!",
      "goal": "",
      "about": "A beautiful solar system marble, featuring depictions of the Sun, Moon, Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto, and space ships Mercury, Gemini, Saturn V, Apollo Command & Lunar Modules, Space Shuttle, Hubble Space Telescope, International Space Station, and Space Launch System Orion.",
      "photo": "https://s3.amazonaws.com/gs-geo-images/39db15bc-bbf0-412a-b2e8-5f2983f9cf42_l.jpg",
@@ -1625,6 +2034,10 @@
       },
       {
        "text": "Sketch where they were"
+      },
+      {
+       "text": "Attach a photo of your sketch",
+       "photo": true
       },
       {
        "text": "Put the date, time and place in your log"
@@ -1741,6 +2154,38 @@
       }
      ],
      "where": "In the field"
+    },
+    {
+     "name": "AdequateEthernet",
+     "tb": "TBBA1R2",
+     "tracking": "GSPFDF",
+     "released": "2026-11-23",
+     "mission": "Signal still can't get through, so he's sending Ethernet the Frog, who always makes it... as long as he's plugged in. His cord only reaches so far, so mostly he hangs out in the corner and nods along. Make your own Ethernet: a frog with a cord (paper, sculpted, crafted, or plush) whose head nods on a spring from a clicky pen, a coiled pipe cleaner, or a folded paper accordion. Attach a photo of him mid-nod! Bonus points if the nod is electric-powered (batteries, please, not the wall outlet).",
+     "goal": "To stay in Adequate's collection, plugged in and nodding along in the corner!",
+     "about": "A Nod to Signal: a Geoswag geocoin shaped like Signal the Frog, nearly three inches tall, with one arm flung wide and his head mounted on a pivot so it bobs and nods. Signal, the antenna-topped frog, is Geocaching HQ's official mascot. This one belongs to Ethernet the Frog, who can make any event, as long as he's plugged in.",
+     "photo": "",
+     "checklist": [
+      {
+       "text": "Make a frog with a cord whose head nods on a spring",
+       "mentions": [
+        "frog",
+        "Ethernet"
+       ]
+      },
+      {
+       "text": "Attach a photo of him mid-nod",
+       "photo": true
+      },
+      {
+       "text": "Bonus: make the nod battery-powered, not wall-powered",
+       "bonus": true,
+       "mentions": [
+        "battery",
+        "batteries"
+       ]
+      }
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateCroakwork",
@@ -1879,6 +2324,38 @@
       },
       {
        "text": "Attach a photo of the voyage, successful or not",
+       "photo": true
+      }
+     ],
+     "where": "At home"
+    },
+    {
+     "name": "AdequateRibbitual",
+     "tb": "TBADZ9C",
+     "tracking": "CWV2EV",
+     "released": "2026-11-23",
+     "mission": "In Macbeth, the witches' brew calls for \"eye of newt and toe of frog\" (Act 4, Scene 1). Some say those were cryptic folk names for herbs (\"eye of newt\" for mustard seed); the evidence is thin, but plants like hound's tongue really did go by creaturely names in Shakespeare's day. Stella rides out on her broom collecting ingredients for her own brews, but this frog hopped on for the ride instead! Give at least four geocaching things cryptic potion-ingredient names (a bison tube might become \"bone of bison,\" a pair of tweezers \"claw of crab\"), then write a spell for a geocaching potion in rhyming couplets that calls for them. Copy it into your log with a key to what each ingredient really is. Bonus points for the witches' own rhythm (\"Double, double toil and trouble; / Fire burn and cauldron bubble\"), and more bonus points if you mix up a non-edible version from your own supplies and attach a photo.",
+     "goal": "To stay in Adequate's collection, riding along with a frog who'd rather be a passenger than an ingredient!",
+     "about": "The Celestial Witches Geocoin by Geoswag, in its Stella finish: antique gold with glittery berry enamel and a pink gem on her wand. In Geoswag's words, \"Stella and Nebula ride through the night sky on their brooms searching for ingredients to add to their brews,\" and a little orange frog, held on by a magnet, rides on the tip of Stella's broom. The design began as the geocoin for Snag the Tag's 2022 Celestial Witches Cat Hunt game, designed by TheSpecialAgents, in which the coin was the witch and the tag was her cat. Its trackable icon still shows a witch and her cat on a broomstick, and the back of the coin carries the Snag the Tag logo.",
+     "photo": "",
+     "checklist": [
+      {
+       "text": "Give at least four geocaching things cryptic potion-ingredient names"
+      },
+      {
+       "text": "Write a spell in rhyming couplets that calls for them, in your log",
+       "words": 25
+      },
+      {
+       "text": "Say in your log what each ingredient really is"
+      },
+      {
+       "text": "Bonus: use the witches' rhythm, like \"Double, double toil and trouble\"",
+       "bonus": true
+      },
+      {
+       "text": "Bonus: mix up a non-edible version from your own supplies and attach a photo",
+       "bonus": true,
        "photo": true
       }
      ],
@@ -2034,6 +2511,78 @@
       }
      ],
      "where": "At home"
+    },
+    {
+     "name": "AdequateHelm",
+     "tb": "TBBFTW2",
+     "tracking": "ARM5KM",
+     "released": "2026-11-23",
+     "mission": "Not all treasure is silver and gold. On your next caching outing, find a treasure that isn't: a view, a bit of history, a wild animal, a clever container, a new caching friend. Photograph it (no spoilers!), tell us why it's treasure to you, and include the GC code.",
+     "goal": "To stay in Adequate's collection, steering toward treasures that aren't silver or gold!",
+     "about": "The 2026 Ship Wheel Pirate Geocoin from Shop Geocaching, designed by Oakcoins: a heavy, eight-spoked ship's wheel with a skull in an eyepatch and bandana over an anchor and crossed cutlasses on the front. The back marks the four compass points on the wheel and shows pirates gathered around a treasure chest, ringed by \"Not all treasure is silver and gold,\" a line Captain Jack Sparrow delivers in Pirates of the Caribbean: The Curse of the Black Pearl (2003).",
+     "photo": "",
+     "checklist": [
+      {
+       "text": "On your next caching outing, find a treasure that isn't silver or gold"
+      },
+      {
+       "text": "Photograph it, with no spoilers",
+       "photo": true
+      },
+      {
+       "text": "Say in your log why it's treasure to you",
+       "mentions": [
+        "treasure"
+       ]
+      },
+      {
+       "text": "Include the GC code",
+       "gc": 1
+      }
+     ],
+     "where": "In the field"
+    },
+    {
+     "name": "AdequateParley",
+     "tb": "TBBF1JY",
+     "tracking": "AR6025",
+     "released": "2026-11-23",
+     "mission": "Polly wants directions! Like the treasure map on this coin, give us the route to a cache you found recently, entirely in pirate speak and in pirate units: paces, fathoms, cable lengths, leagues, or a cannon's shot. Start from where you dropped anchor (parked) and stop at GZ without giving away the hide, then sign it with a pirate name of your own. Include the GC code, ye scallywag!",
+     "goal": "To stay in Adequate's collection, perched on Adequate's shoulder squawking for treasure!",
+     "about": "The 2026 Parrot Pirate Geocoin from Shop Geocaching, designed by Landsharkz: on one side, a macaw dressed as a pirate captain in a ruffled jabot and epaulettes beneath a skull-and-crossbones hat; on the other, the same parrot in a bicorne, studying a treasure map. The pirate's shoulder parrot owes a lot to Robert Louis Stevenson's Treasure Island (1883), where Long John Silver's parrot, Captain Flint, screeches \"Pieces of eight!\" Need units for your directions? A fathom is six feet, a cable length is about a hundred fathoms, and a league is roughly three miles.",
+     "photo": "",
+     "checklist": [
+      {
+       "text": "Give the route to a recent find entirely in pirate speak"
+      },
+      {
+       "text": "Use pirate units: paces, fathoms, cable lengths, leagues",
+       "mentions": [
+        "paces",
+        "fathom",
+        "fathoms",
+        "cable lengths",
+        "league",
+        "leagues",
+        "cannon shot"
+       ]
+      },
+      {
+       "text": "Start where you dropped anchor (parked) and stop at GZ"
+      },
+      {
+       "text": "Don't give away the hide",
+       "reminder": true
+      },
+      {
+       "text": "Sign it with a pirate name of your own"
+      },
+      {
+       "text": "Include the GC code",
+       "gc": 1
+      }
+     ],
+     "where": "Either"
     }
    ]
   },
@@ -2411,6 +2960,45 @@
      "where": "In the field"
     },
     {
+     "name": "AdequateParks – Central 2026",
+     "tb": "TBBDDTD",
+     "tracking": "PCZFHG",
+     "released": "2026-11-23",
+     "mission": "This coin marks 250 years since 1776. Find a cache near a monument, memorial, plaque, or marker that commemorates something from a round number of years ago, counting back from the year you log: 50, 100, 150, 200, 250 years, or more (in 2026, that's 1976, 1926, 1876, 1826, or 1776). Attach a photo of it showing the date, include the GC code of the nearby cache, and tell us what anniversary it's celebrating this year. Bonus points for 250 years or more!",
+     "goal": "To stay in Adequate's collection, marking 250 years since 1776!",
+     "about": "A circular geocoin from the 2026 Central Region parks geocache challenge, made for the 250th anniversary of 1776: the Oriskany Battlefield Monument under a blue sky, with an American flag flying beside it, surrounded by a ring of text which reads, \"Oriskany Battlefield Monument | 1776 – 2026.\" The Battle of Oriskany was fought on August 6, 1777, when General Nicholas Herkimer's roughly 800 militiamen and their Oneida allies were ambushed by British and Loyalist troops and Indigenous forces led by Joseph Brant. It has been called one of the bloodiest battles of the Revolutionary War. The Oneidas were the only Haudenosaunee nation to side with the Americans. Herkimer was wounded in the leg and died ten days later. The monument was dedicated on the battle's anniversary, August 6, 1884, and the battlefield was designated a National Historic Landmark in 1963.",
+     "photo": "",
+     "checklist": [
+      {
+       "text": "Find a monument, memorial, plaque or marker dated a multiple of 50 years ago"
+      },
+      {
+       "text": "Attach a photo that shows the date",
+       "photo": true
+      },
+      {
+       "text": "Include the GC code of the nearby cache",
+       "gc": 1
+      },
+      {
+       "text": "Say in your log what anniversary it marks this year",
+       "mentions": [
+        "anniversary",
+        "centennial",
+        "bicentennial",
+        "sesquicentennial",
+        "semiquincentennial",
+        "years"
+       ]
+      },
+      {
+       "text": "Bonus: make it 250 years or more",
+       "bonus": true
+      }
+     ],
+     "where": "In the field"
+    },
+    {
      "name": "AdequateParks – SaraCap 2026",
      "tb": "TBBBNFG",
      "tracking": "PC3AYZ",
@@ -2447,6 +3035,47 @@
       },
       {
        "text": "Bonus: someone famous lived, married or stayed there",
+       "bonus": true
+      }
+     ],
+     "where": "In the field"
+    },
+    {
+     "name": "AdequateParks – Taconic 2026",
+     "tb": "TBBBKHE",
+     "tracking": "PCT0QZ",
+     "released": "2026-11-23",
+     "mission": "James Baird State Park is known for its golf course, designed by Robert Trent Jones on James Baird's old farmland and opened in 1948. Stray golf balls turn up in the strangest places, though! Find a golf ball on the ground near a cache in any state or provincial park, and attach a photo of it where you found it. Include the GC code, and Cache In, Trash Out: take the ball with you, unless it's still in play! Stay off fairways and greens while people are playing. Bonus points if the park has no golf course at all; tell us how you think it got there!",
+     "goal": "To stay in Adequate's collection, teeing off from the Taconic Region!",
+     "about": "A circular geocoin from the 2026 Taconic Region parks geocache challenge, featuring James Baird State Park in Pleasant Valley: golfers on a putting green ringed by sand traps, with fairways rolling back to a line of trees, surrounded by a ring of text which reads, \"James Baird State Park | Taconic Region.\" James Baird, a contractor and engineer whose firm helped build the Lincoln Memorial, owned the farmland and donated its 590 acres to New York State in 1939, on the condition that the park bear his name. Work on the park and its golf course began in 1940 and continued on and off through World War II; the 18-hole course, designed by Robert Trent Jones, officially opened in 1948.",
+     "photo": "",
+     "checklist": [
+      {
+       "text": "Find a golf ball on the ground near a cache in a state or provincial park",
+       "mentions": [
+        "golf ball",
+        "golfball",
+        "golf balls"
+       ]
+      },
+      {
+       "text": "Attach a photo of it where you found it",
+       "photo": true
+      },
+      {
+       "text": "Include the GC code",
+       "gc": 1
+      },
+      {
+       "text": "Take the ball with you, unless it's still in play",
+       "reminder": true
+      },
+      {
+       "text": "Stay off fairways and greens while people are playing",
+       "reminder": true
+      },
+      {
+       "text": "Bonus: find it in a park with no golf course, and say how it got there",
        "bonus": true
       }
      ],
@@ -2833,7 +3462,7 @@
    ]
   },
   {
-   "name": "Cachekinz",
+   "name": "Cachekinz and Cache Buddies",
    "trackables": [
     {
      "name": "AdequateKin",
@@ -2893,6 +3522,46 @@
       }
      ],
      "where": "Either"
+    },
+    {
+     "name": "AdequatePurrview",
+     "tb": "TB8A5TK",
+     "tracking": "CBFDHY",
+     "released": "2026-11-23",
+     "mission": "Sophie the Siamese Cat \"may or may not watch you search for your cache,\" says Geoswag. On a caching trip, hide a cat near or on the way to GZ: a toy, a drawing, a paper cutout, or a cat-shaped bit of swag, watching from a branch, a fence post, or behind a rock. Take a photo, then take your cat home with you, and post the photo for other cachers to find—on this trackable page, and if you want, on the cache page! Don't spoil the actual cache, and include the GC code in your trackable log. To what extent you let people know there is something to find on the cache page photo is up to you! Bonus points if your cat is a Siamese, with dark points on her ears, face, paws, and tail.",
+     "goal": "To stay in Adequate's collection, watching you search from somewhere you'd never think to look!",
+     "about": "Sophie the Siamese Cat, one of Geoswag's Cache Buddies: printed aluminum travel tags that are trackable \"just like travel bugs,\" each with its own icon. In Geoswag's words, Sophie is \"an elegant, slim, and stylish cat,\" and \"she may or may not watch you search for your cache.\" Siamese cats get their dark points from a heat-sensitive version of the enzyme that makes pigment: it works less where the body is warm, so color builds up on the cooler ears, face, paws, and tail. That's why Siamese kittens are born white and only develop their points as they grow.",
+     "photo": "",
+     "checklist": [
+      {
+       "text": "Hide a cat near or on the way to GZ: a toy, drawing, cutout or cat-shaped swag"
+      },
+      {
+       "text": "Take a photo and attach it to your log",
+       "photo": true
+      },
+      {
+       "text": "Include the GC code in your log",
+       "gc": 1
+      },
+      {
+       "text": "Take your cat home with you afterward",
+       "reminder": true
+      },
+      {
+       "text": "Don't spoil the actual cache",
+       "reminder": true
+      },
+      {
+       "text": "If you want, post the photo on the cache page too",
+       "bonus": true
+      },
+      {
+       "text": "Bonus: make your cat a Siamese, with dark points",
+       "bonus": true
+      }
+     ],
+     "where": "In the field"
     }
    ]
   }

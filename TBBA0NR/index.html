@@ -347,11 +347,11 @@ a.btn{text-decoration:none}
     <section class="facts" aria-label="About this trackable">
       <p class="where"><span class="chip where-chip">At home</span></p><dl class="ids"><dt>TB code</dt><dd><a class="mono" href="https://coord.info/TBBA0NR">TBBA0NR</a></dd><dt>Tracking code</dt><dd><span class="mono code">NYNJXA</span><button class="btn small copy" type="button" data-code="NYNJXA" aria-label="Copy the tracking code for 合適的馬 (AdequateEquine)">Copy</button></dd><dt>Released</dt><dd><time datetime="2026-02-27">February 27, 2026</time></dd></dl>
       <p class="log"><a class="btn primary" href="https://coord.info/TBBA0NR">Open its page on geocaching.com</a> <button class="btn small disc" type="button" data-tb="TBBA0NR" aria-pressed="false"><span class="disc-off">Mark as discovered</span><span class="disc-on">Discovered</span></button></p>
-      <div class="block"><span class="lbl">Your mission</span><p class="txt">Find a classical Japanese haiku about a horse (馬, uma) and copy the original version out by hand in tategaki: vertical columns running right to left. Credit the poet! Copying the characters closely is fine; calligraphy is a bonus. Decorate your page with appropriate imagery. AI is acceptable for research. Include a translation in your log (credit any formal translations you provide).</p></div>
+      <div class="block"><span class="lbl">Your mission</span><p class="txt">Find a classical Japanese haiku about a horse (馬, uma) and copy the original version out by hand in tategaki: vertical columns running right to left. Credit the poet! Copying the characters closely is fine; calligraphy is a bonus. Decorate your page with appropriate imagery, and attach a photo of it. AI is acceptable for research. Include a translation in your log (credit any formal translations you provide).</p></div>
       <div class="about-full"><span class="lbl">About</span><p class="txt">A bright red and gold geocoin featuring a beautiful stalwart horse on the obverse and &quot;Year of the Horse&quot; and &quot;Happy New Year&quot; in script on the reverse.</p></div>
     </section>
   </div>
-  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="TBBA0NR" data-sig="a870fd50fc82">
+  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="TBBA0NR" data-sig="7efb85ffd81e">
     <h2 id="ck-h">Mission checklist</h2>
     <p class="ck-intro">Tick each item as you do it. Write or paste your log, and items your words cover light up. Tick the rest yourself: a photo can show what words don't.</p>
     <p class="ck-guide">The lights are only a guide. They look for words, not meaning, so one can light up by mistake or miss something you did.</p>
@@ -362,8 +362,9 @@ a.btn{text-decoration:none}
         <li class="ck"><input type="checkbox" id="ck-1"><label for="ck-1">Copy the original out by hand in tategaki (vertical, right to left)</label></li>
         <li class="ck"><input type="checkbox" id="ck-2"><label for="ck-2">Credit the poet</label></li>
         <li class="ck"><input type="checkbox" id="ck-3"><label for="ck-3">Decorate your page with fitting imagery</label></li>
-        <li class="ck" data-words="10"><input type="checkbox" id="ck-4"><label for="ck-4">Include a translation in your log, crediting any formal one</label><span class="chips"><span class="chip lit" hidden>In your log</span></span></li>
-        <li class="ck bonus"><input type="checkbox" id="ck-5"><label for="ck-5">Bonus: write it in calligraphy</label><span class="chips"><span class="chip bonus">Bonus</span></span></li>
+        <li class="ck" data-photo="1"><input type="checkbox" id="ck-4"><label for="ck-4">Attach a photo of your page</label><span class="chips"><span class="chip photo">Photo</span></span><span class="mine" hidden></span></li>
+        <li class="ck" data-words="10"><input type="checkbox" id="ck-5"><label for="ck-5">Include a translation in your log, crediting any formal one</label><span class="chips"><span class="chip lit" hidden>In your log</span></span></li>
+        <li class="ck bonus"><input type="checkbox" id="ck-6"><label for="ck-6">Bonus: write it in calligraphy</label><span class="chips"><span class="chip bonus">Bonus</span></span></li>
       </ol>
       <p class="ck-sum" id="ck-sum" aria-live="polite"></p>
       </div>
@@ -371,6 +372,9 @@ a.btn{text-decoration:none}
         <label class="lbl" for="ck-log">Your log</label>
         <textarea id="ck-log" rows="9" spellcheck="true" placeholder="Write or paste your log here"></textarea>
         <div class="ck-row"><span class="ck-words" id="ck-words">0 words</span><button class="btn small" type="button" id="ck-copy">Copy log</button></div>
+        <label class="lbl" for="ck-file">Your photos</label>
+        <input type="file" id="ck-file" accept="image/*" multiple>
+        <div class="ck-yours" id="ck-yours"></div>
         <p class="ck-note">Your log, photos and ticks stay on this device. Nothing is sent anywhere.</p>
         <div class="ck-row"><a class="btn primary" href="https://coord.info/TBBA0NR">Log it on geocaching.com</a><button class="btn small" type="button" id="ck-clear">Clear</button></div>
       </div>
