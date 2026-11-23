@@ -87,10 +87,13 @@
     try { mine = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { mine = {}; }
     if (typeof mine !== 'object') mine = {};
     var btns = Array.prototype.slice.call(document.querySelectorAll('button.disc'));
+    function reload(){ try { mine = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { mine = {}; } }
     function paint(){ btns.forEach(function(b){ b.setAttribute('aria-pressed', mine[b.getAttribute('data-tb')] ? 'true' : 'false'); }); }
+    window.addEventListener('storage', function(e){ if (e.key === KEY || e.key === null) { reload(); paint(); } });
+    window.addEventListener('pageshow', function(e){ if (e.persisted) { reload(); paint(); } });
     btns.forEach(function(b){
       b.addEventListener('click', function(){
-        try { mine = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) {}
+        reload();  // another tab or page may have changed the list
         var tb = b.getAttribute('data-tb');
         if (mine[tb]) delete mine[tb]; else mine[tb] = new Date().toISOString().slice(0, 10);
         try { localStorage.setItem(KEY, JSON.stringify(mine)); } catch (e) {}

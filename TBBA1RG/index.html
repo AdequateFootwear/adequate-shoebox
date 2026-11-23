@@ -305,13 +305,22 @@ a.btn{text-decoration:none}
 .btn.disc[aria-pressed="true"]::before{content:"\2713";margin-right:2px}
 .tb.found{border-color:var(--accent)}
 .facts .log{display:flex;gap:8px 10px;flex-wrap:wrap;align-items:center}
-.mine{margin-top:30px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
-.mine h2{
+.disc-panel{display:block;margin-top:30px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.disc-panel h2{
   margin:0 0 6px;font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:22px;line-height:1;
   text-transform:uppercase;letter-spacing:.02em;
 }
-.mine p{margin:0 0 8px}
-.mine .fnote{display:block;margin:0 0 10px}
+.disc-panel p{margin:0 0 8px}
+.disc-panel .fnote{display:block;margin:0 0 10px}
+.disc-link{display:flex;flex-direction:column;gap:3px}
+.disc-link label{
+  font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:12px;letter-spacing:.12em;
+  color:var(--brass);text-transform:uppercase;
+}
+.disc-link input{
+  width:100%;font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--ink);background:var(--surface-2);
+  border:1px solid var(--line-strong);border-radius:6px;padding:7px 9px;
+}
 
 </style>
 </head>
@@ -340,7 +349,7 @@ a.btn{text-decoration:none}
       </ul>
     </section>
     <section class="facts" aria-label="About this trackable">
-      <dl class="ids"><dt>TB code</dt><dd><a class="mono" href="https://coord.info/TBBA1RG">TBBA1RG</a></dd><dt>Tracking code</dt><dd><span class="mono code">GS4XVV</span><button class="btn small copy" type="button" data-code="GS4XVV" aria-label="Copy the tracking code for AdequateBearings">Copy</button></dd><dt>Released</dt><dd><time datetime="2026-10-09">October 9, 2026</time></dd></dl>
+      <p class="where"><span class="chip where-chip">At home</span></p><dl class="ids"><dt>TB code</dt><dd><a class="mono" href="https://coord.info/TBBA1RG">TBBA1RG</a></dd><dt>Tracking code</dt><dd><span class="mono code">GS4XVV</span><button class="btn small copy" type="button" data-code="GS4XVV" aria-label="Copy the tracking code for AdequateBearings">Copy</button></dd><dt>Released</dt><dd><time datetime="2026-10-09">October 9, 2026</time></dd></dl>
       <p class="log"><a class="btn primary" href="https://coord.info/TBBA1RG">Open its page on geocaching.com</a> <button class="btn small disc" type="button" data-tb="TBBA1RG" aria-pressed="false"><span class="disc-off">Mark as discovered</span><span class="disc-on">Discovered</span></button></p>
       <div class="block"><span class="lbl">Your mission</span><p class="txt">This coin is a “double exposure”: a bear whose silhouette holds a whole wilderness. Make your own! Fill the outline of an animal with a landscape from somewhere you’ve gone caching: draw it, paint it, collage it, or print out and layer two of your own photos. Attach a picture and name the place in your scene. Bonus points for hiding a smaller animal in the landscape, like the little black bear on this coin! AI permitted for inspiration, but a photoshopped image alone will not suffice.</p></div><div class="block"><span class="lbl">Its goal</span><p class="txt">To stay in Adequate&#x27;s collection and never lose its bearings, even in the wilderness!</p></div>
       <div class="about-full"><span class="lbl">About</span><p class="txt">Spirit of the Wilderness, the November 2019 coin from the Geoswag C&amp;P Club. On the front, a big bear’s silhouette holds a whole wilderness: a purple-to-gold sunset, a leafy branch, a stand of evergreens, a winding river, and one small black bear out for a walk. On the back, the same bear is done in antique copper with flowing, carved-look swirls.</p></div>
@@ -382,7 +391,7 @@ a.btn{text-decoration:none}
     <a class="next" href="../TBBABMW/">AdequateCoats →</a>
   </nav>
   <footer>
-    <span>Built from Adequate's collection sheet, as read on November 22, 2026.</span>
+    <span>Built from Adequate's collection sheet, as read on November 23, 2026.</span>
     <span>Log it on its page at geocaching.com once your mission is done.</span>
   </footer>
 </main>
@@ -426,10 +435,13 @@ a.btn{text-decoration:none}
     try { mine = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { mine = {}; }
     if (typeof mine !== 'object') mine = {};
     var btns = Array.prototype.slice.call(document.querySelectorAll('button.disc'));
+    function reload(){ try { mine = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { mine = {}; } }
     function paint(){ btns.forEach(function(b){ b.setAttribute('aria-pressed', mine[b.getAttribute('data-tb')] ? 'true' : 'false'); }); }
+    window.addEventListener('storage', function(e){ if (e.key === KEY || e.key === null) { reload(); paint(); } });
+    window.addEventListener('pageshow', function(e){ if (e.persisted) { reload(); paint(); } });
     btns.forEach(function(b){
       b.addEventListener('click', function(){
-        try { mine = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) {}
+        reload();  // another tab or page may have changed the list
         var tb = b.getAttribute('data-tb');
         if (mine[tb]) delete mine[tb]; else mine[tb] = new Date().toISOString().slice(0, 10);
         try { localStorage.setItem(KEY, JSON.stringify(mine)); } catch (e) {}

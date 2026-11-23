@@ -305,13 +305,22 @@ a.btn{text-decoration:none}
 .btn.disc[aria-pressed="true"]::before{content:"\2713";margin-right:2px}
 .tb.found{border-color:var(--accent)}
 .facts .log{display:flex;gap:8px 10px;flex-wrap:wrap;align-items:center}
-.mine{margin-top:30px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
-.mine h2{
+.disc-panel{display:block;margin-top:30px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.disc-panel h2{
   margin:0 0 6px;font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:22px;line-height:1;
   text-transform:uppercase;letter-spacing:.02em;
 }
-.mine p{margin:0 0 8px}
-.mine .fnote{display:block;margin:0 0 10px}
+.disc-panel p{margin:0 0 8px}
+.disc-panel .fnote{display:block;margin:0 0 10px}
+.disc-link{display:flex;flex-direction:column;gap:3px}
+.disc-link label{
+  font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:12px;letter-spacing:.12em;
+  color:var(--brass);text-transform:uppercase;
+}
+.disc-link input{
+  width:100%;font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--ink);background:var(--surface-2);
+  border:1px solid var(--line-strong);border-radius:6px;padding:7px 9px;
+}
 
 </style>
 </head>
@@ -336,7 +345,7 @@ a.btn{text-decoration:none}
       <figure class="main"><img id="ph-main" src="../photos/tbbegtq-tbbeg7a-tbbehcd-tbbeh0x-tbbehv3.jpg" width="1400" height="666" alt="AdequateStegosaurus"></figure>
     </section>
     <section class="facts" aria-label="About this trackable">
-      <dl class="ids"><dt>TB code</dt><dd><a class="mono" href="https://coord.info/TBBEHV3">TBBEHV3</a></dd><dt>Tracking code</dt><dd><span class="mono code">ECTQ77</span><button class="btn small copy" type="button" data-code="ECTQ77" aria-label="Copy the tracking code for AdequateStegosaurus">Copy</button></dd><dt>Released</dt><dd><time datetime="2026-10-09">October 9, 2026</time></dd></dl>
+      <p class="where"><span class="chip where-chip">In the field</span></p><dl class="ids"><dt>TB code</dt><dd><a class="mono" href="https://coord.info/TBBEHV3">TBBEHV3</a></dd><dt>Tracking code</dt><dd><span class="mono code">ECTQ77</span><button class="btn small copy" type="button" data-code="ECTQ77" aria-label="Copy the tracking code for AdequateStegosaurus">Copy</button></dd><dt>Released</dt><dd><time datetime="2026-10-09">October 9, 2026</time></dd></dl>
       <p class="log"><a class="btn primary" href="https://coord.info/TBBEHV3">Open its page on geocaching.com</a> <button class="btn small disc" type="button" data-tb="TBBEHV3" aria-pressed="false"><span class="disc-off">Mark as discovered</span><span class="disc-on">Discovered</span></button></p>
       <div class="block"><span class="lbl">Your mission</span><p class="txt">Stegosaurus lived about 150 million years ago, so long ago that T. rex lived closer in time to us than to Stegosaurus. Do an earthcache, find out roughly how old its rocks or features are, and tell us: older or younger than Stegosaurus? Identify the EC and provide a photo! AI permitted for research.</p></div><div class="block"><span class="lbl">Its goal</span><p class="txt">To stay in AdequateFootwear&#x27;s inventory as a relic from times past!</p></div>
       <div class="about-full"><span class="lbl">About</span><p class="txt">A Stegosaurus fossil tag. Stegosaurus, the &quot;roof lizard,&quot; was a plant-eating dinosaur of the Late Jurassic, about 150 million years ago, in what is now western North America. It is famous for the plates along its back and its spiked tail, which paleontologists nicknamed the &quot;thagomizer&quot; after a Far Side cartoon.</p></div>
@@ -374,7 +383,7 @@ a.btn{text-decoration:none}
     <a class="next" href="../TB5FWHV/">AdequateKin →</a>
   </nav>
   <footer>
-    <span>Built from Adequate's collection sheet, as read on November 22, 2026.</span>
+    <span>Built from Adequate's collection sheet, as read on November 23, 2026.</span>
     <span>Log it on its page at geocaching.com once your mission is done.</span>
   </footer>
 </main>
@@ -418,10 +427,13 @@ a.btn{text-decoration:none}
     try { mine = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { mine = {}; }
     if (typeof mine !== 'object') mine = {};
     var btns = Array.prototype.slice.call(document.querySelectorAll('button.disc'));
+    function reload(){ try { mine = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { mine = {}; } }
     function paint(){ btns.forEach(function(b){ b.setAttribute('aria-pressed', mine[b.getAttribute('data-tb')] ? 'true' : 'false'); }); }
+    window.addEventListener('storage', function(e){ if (e.key === KEY || e.key === null) { reload(); paint(); } });
+    window.addEventListener('pageshow', function(e){ if (e.persisted) { reload(); paint(); } });
     btns.forEach(function(b){
       b.addEventListener('click', function(){
-        try { mine = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) {}
+        reload();  // another tab or page may have changed the list
         var tb = b.getAttribute('data-tb');
         if (mine[tb]) delete mine[tb]; else mine[tb] = new Date().toISOString().slice(0, 10);
         try { localStorage.setItem(KEY, JSON.stringify(mine)); } catch (e) {}

@@ -305,13 +305,22 @@ a.btn{text-decoration:none}
 .btn.disc[aria-pressed="true"]::before{content:"\2713";margin-right:2px}
 .tb.found{border-color:var(--accent)}
 .facts .log{display:flex;gap:8px 10px;flex-wrap:wrap;align-items:center}
-.mine{margin-top:30px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
-.mine h2{
+.disc-panel{display:block;margin-top:30px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.disc-panel h2{
   margin:0 0 6px;font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:22px;line-height:1;
   text-transform:uppercase;letter-spacing:.02em;
 }
-.mine p{margin:0 0 8px}
-.mine .fnote{display:block;margin:0 0 10px}
+.disc-panel p{margin:0 0 8px}
+.disc-panel .fnote{display:block;margin:0 0 10px}
+.disc-link{display:flex;flex-direction:column;gap:3px}
+.disc-link label{
+  font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:12px;letter-spacing:.12em;
+  color:var(--brass);text-transform:uppercase;
+}
+.disc-link input{
+  width:100%;font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--ink);background:var(--surface-2);
+  border:1px solid var(--line-strong);border-radius:6px;padding:7px 9px;
+}
 
 </style>
 </head>
@@ -336,7 +345,7 @@ a.btn{text-decoration:none}
       <figure class="main"><img id="ph-main" src="../photos/tb93hy6.jpg" width="1400" height="471" alt="AdequateIinang"></figure>
     </section>
     <section class="facts" aria-label="About this trackable">
-      <dl class="ids"><dt>TB code</dt><dd><a class="mono" href="https://coord.info/TB93HY6">TB93HY6</a></dd><dt>Tracking code</dt><dd><span class="mono code">GSR7V7</span><button class="btn small copy" type="button" data-code="GSR7V7" aria-label="Copy the tracking code for AdequateIinang">Copy</button></dd><dt>Released</dt><dd><time datetime="2026-10-09">October 9, 2026</time></dd></dl>
+      <p class="where"><span class="chip where-chip">At home</span></p><dl class="ids"><dt>TB code</dt><dd><a class="mono" href="https://coord.info/TB93HY6">TB93HY6</a></dd><dt>Tracking code</dt><dd><span class="mono code">GSR7V7</span><button class="btn small copy" type="button" data-code="GSR7V7" aria-label="Copy the tracking code for AdequateIinang">Copy</button></dd><dt>Released</dt><dd><time datetime="2026-10-09">October 9, 2026</time></dd></dl>
       <p class="log"><a class="btn primary" href="https://coord.info/TB93HY6">Open its page on geocaching.com</a> <button class="btn small disc" type="button" data-tb="TB93HY6" aria-pressed="false"><span class="disc-off">Mark as discovered</span><span class="disc-on">Discovered</span></button></p>
       <div class="block"><span class="lbl">Your mission</span><p class="txt">Iinang is the Haida word for herring, and it also means &quot;plentiful.&quot; On the Northwest Coast, plenty is tied to respect: many peoples, including the Haida, follow ancestral rules for treating salmon well, like returning salmon bones to the water, so that the salmon keep coming back. Two of the Haida guiding principles are Isda ad dii gii isda, &quot;giving and receiving,&quot; and Yahguudang, &quot;respect.&quot; People work much the same way: they come back when they&#x27;re treated with respect. In a few sentences, describe one thing you do consistently to show respect to others in the geocaching community and help keep it going, and tell us about a time you did it. Those adjacent to the community count too: landowners, park staff, neighbors near GZ, or the curious non-cacher wondering what you&#x27;re doing! No AI for this one.</p></div><div class="block"><span class="lbl">Its goal</span><p class="txt">To stay in Adequate&#x27;s collection. This salmon has already swum home!</p></div>
       <div class="about-full"><span class="lbl">About</span><p class="txt">Native Salmon Geocoin, a 3D geocoin from Geoswag in antique gold, shaped like a salmon with the hooked jaw a male grows on his way upstream to spawn. Its design is inspired by northern Northwest Coast formline art, the tradition of the Haida, Tlingit, Tsimshian, Nisga&#x27;a, Gitxsan, Haisla, and Heiltsuk peoples. Across the Northwest Coast, salmon are honored as relatives who return each year to feed the people, a return that depends on respect: in Haida practice, for one, salmon bones are given back to the river so that the salmon will come back.</p></div>
@@ -373,7 +382,7 @@ a.btn{text-decoration:none}
     <a class="next" href="../TBBEY85/">AdequateRespite →</a>
   </nav>
   <footer>
-    <span>Built from Adequate's collection sheet, as read on November 22, 2026.</span>
+    <span>Built from Adequate's collection sheet, as read on November 23, 2026.</span>
     <span>Log it on its page at geocaching.com once your mission is done.</span>
   </footer>
 </main>
@@ -417,10 +426,13 @@ a.btn{text-decoration:none}
     try { mine = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { mine = {}; }
     if (typeof mine !== 'object') mine = {};
     var btns = Array.prototype.slice.call(document.querySelectorAll('button.disc'));
+    function reload(){ try { mine = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { mine = {}; } }
     function paint(){ btns.forEach(function(b){ b.setAttribute('aria-pressed', mine[b.getAttribute('data-tb')] ? 'true' : 'false'); }); }
+    window.addEventListener('storage', function(e){ if (e.key === KEY || e.key === null) { reload(); paint(); } });
+    window.addEventListener('pageshow', function(e){ if (e.persisted) { reload(); paint(); } });
     btns.forEach(function(b){
       b.addEventListener('click', function(){
-        try { mine = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) {}
+        reload();  // another tab or page may have changed the list
         var tb = b.getAttribute('data-tb');
         if (mine[tb]) delete mine[tb]; else mine[tb] = new Date().toISOString().slice(0, 10);
         try { localStorage.setItem(KEY, JSON.stringify(mine)); } catch (e) {}

@@ -292,10 +292,19 @@ a.btn{text-decoration:none}
 .btn.disc[aria-pressed="true"]::before{content:"\2713";margin-right:2px}
 .tb.found{border-color:var(--accent)}
 .facts .log{display:flex;gap:8px 10px;flex-wrap:wrap;align-items:center}
-.mine{margin-top:30px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
-.mine h2{
+.disc-panel{display:block;margin-top:30px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.disc-panel h2{
   margin:0 0 6px;font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:22px;line-height:1;
   text-transform:uppercase;letter-spacing:.02em;
 }
-.mine p{margin:0 0 8px}
-.mine .fnote{display:block;margin:0 0 10px}
+.disc-panel p{margin:0 0 8px}
+.disc-panel .fnote{display:block;margin:0 0 10px}
+.disc-link{display:flex;flex-direction:column;gap:3px}
+.disc-link label{
+  font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:12px;letter-spacing:.12em;
+  color:var(--brass);text-transform:uppercase;
+}
+.disc-link input{
+  width:100%;font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--ink);background:var(--surface-2);
+  border:1px solid var(--line-strong);border-radius:6px;padding:7px 9px;
+}

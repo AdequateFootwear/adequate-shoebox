@@ -305,13 +305,22 @@ a.btn{text-decoration:none}
 .btn.disc[aria-pressed="true"]::before{content:"\2713";margin-right:2px}
 .tb.found{border-color:var(--accent)}
 .facts .log{display:flex;gap:8px 10px;flex-wrap:wrap;align-items:center}
-.mine{margin-top:30px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
-.mine h2{
+.disc-panel{display:block;margin-top:30px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.disc-panel h2{
   margin:0 0 6px;font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:22px;line-height:1;
   text-transform:uppercase;letter-spacing:.02em;
 }
-.mine p{margin:0 0 8px}
-.mine .fnote{display:block;margin:0 0 10px}
+.disc-panel p{margin:0 0 8px}
+.disc-panel .fnote{display:block;margin:0 0 10px}
+.disc-link{display:flex;flex-direction:column;gap:3px}
+.disc-link label{
+  font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:12px;letter-spacing:.12em;
+  color:var(--brass);text-transform:uppercase;
+}
+.disc-link input{
+  width:100%;font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--ink);background:var(--surface-2);
+  border:1px solid var(--line-strong);border-radius:6px;padding:7px 9px;
+}
 
 </style>
 </head>
@@ -336,7 +345,7 @@ a.btn{text-decoration:none}
       <figure class="main"><img id="ph-main" src="../photos/tb9t1mw-with-the-algonquin-regiment-monument.jpg" width="480" height="640" alt="AdequateRemembrance"></figure>
     </section>
     <section class="facts" aria-label="About this trackable">
-      <dl class="ids"><dt>TB code</dt><dd><a class="mono" href="https://coord.info/TB9T1MW">TB9T1MW</a></dd><dt>Tracking code</dt><dd><span class="mono code">PHF12H</span><button class="btn small copy" type="button" data-code="PHF12H" aria-label="Copy the tracking code for AdequateRemembrance">Copy</button></dd><dt>Released</dt><dd><time datetime="2025-07-03">July 3, 2025</time></dd></dl>
+      <p class="where"><span class="chip where-chip">At home</span></p><dl class="ids"><dt>TB code</dt><dd><a class="mono" href="https://coord.info/TB9T1MW">TB9T1MW</a></dd><dt>Tracking code</dt><dd><span class="mono code">PHF12H</span><button class="btn small copy" type="button" data-code="PHF12H" aria-label="Copy the tracking code for AdequateRemembrance">Copy</button></dd><dt>Released</dt><dd><time datetime="2025-07-03">July 3, 2025</time></dd></dl>
       <p class="log"><a class="btn primary" href="https://coord.info/TB9T1MW">Open its page on geocaching.com</a> <button class="btn small disc" type="button" data-tb="TB9T1MW" aria-pressed="false"><span class="disc-off">Mark as discovered</span><span class="disc-on">Discovered</span></button></p>
       <div class="block"><span class="lbl">Your mission</span><p class="txt">Share one fact about the friendship between Canada and the Netherlands (the TB page gives you a head start), ideally one recent logs haven&#x27;t mentioned. Attach a tulip with it: drawn, photographed, or folded.</p></div><div class="block"><span class="lbl">Its goal</span><p class="txt">To stay in AdequateFootwear&#x27;s inventory as a reminder of some very interesting and meaningful Canadian history, and to be discovered by caching friends, hopefully passing along that history.</p></div>
       <div class="about-full"><span class="lbl">About</span><p class="txt">This coin was acquired at the Maritime Mega VI Block Party in Nova Scotia. We learned some very cool Canadian history behind it that we had not heard before, considering we grew up in the States:
@@ -376,7 +385,7 @@ During the war, the queen of the Netherlands was staying in Ottawa for safety. S
     <a class="next" href="../TBAYBTK/">AdequateBlue →</a>
   </nav>
   <footer>
-    <span>Built from Adequate's collection sheet, as read on November 22, 2026.</span>
+    <span>Built from Adequate's collection sheet, as read on November 23, 2026.</span>
     <span>Log it on its page at geocaching.com once your mission is done.</span>
   </footer>
 </main>
@@ -420,10 +429,13 @@ During the war, the queen of the Netherlands was staying in Ottawa for safety. S
     try { mine = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { mine = {}; }
     if (typeof mine !== 'object') mine = {};
     var btns = Array.prototype.slice.call(document.querySelectorAll('button.disc'));
+    function reload(){ try { mine = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { mine = {}; } }
     function paint(){ btns.forEach(function(b){ b.setAttribute('aria-pressed', mine[b.getAttribute('data-tb')] ? 'true' : 'false'); }); }
+    window.addEventListener('storage', function(e){ if (e.key === KEY || e.key === null) { reload(); paint(); } });
+    window.addEventListener('pageshow', function(e){ if (e.persisted) { reload(); paint(); } });
     btns.forEach(function(b){
       b.addEventListener('click', function(){
-        try { mine = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) {}
+        reload();  // another tab or page may have changed the list
         var tb = b.getAttribute('data-tb');
         if (mine[tb]) delete mine[tb]; else mine[tb] = new Date().toISOString().slice(0, 10);
         try { localStorage.setItem(KEY, JSON.stringify(mine)); } catch (e) {}
