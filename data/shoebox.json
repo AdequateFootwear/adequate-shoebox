@@ -1,6 +1,6 @@
 {
  "sheet": "AdequateFootwear Trackable Collection and Missions",
- "read": "2026-11-22",
+ "read": "2026-11-23",
  "notes": [
   "*AS OF 2026* Your Mission:\n*In 2026, I added logging missions to my trackables. Complete the logging missions in order to discover them! Please note that I may delete trackable logs that have not completed the necessary logging mission.*"
  ],
@@ -32,7 +32,8 @@
         "name tag"
        ]
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateSelf-Referentiality",
@@ -47,7 +48,8 @@
       {
        "text": "Discover one of the trackables in Adequate's collection (this one counts!)"
       }
-     ]
+     ],
+     "where": "Either"
     },
     {
      "name": "AdequateEndpin",
@@ -67,7 +69,8 @@
        "text": "Bonus: sing it for Adequate in person",
        "bonus": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateFabric",
@@ -98,7 +101,8 @@
       {
        "text": "Say in your log whether it's ever saved a find"
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateTires",
@@ -113,7 +117,8 @@
       {
        "text": "Find Adequate's car"
       }
-     ]
+     ],
+     "where": "In the field"
     }
    ]
   },
@@ -146,7 +151,8 @@
        "text": "Include the GC code of the cache where you found it",
        "gc": 1
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateAutumn",
@@ -162,7 +168,8 @@
        "text": "Attach a photo or screenshot of your next or latest milestone find screen",
        "photo": true
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateBuckaroo",
@@ -198,7 +205,8 @@
        "text": "Bonus: make it a real horse, seen from a respectful distance",
        "bonus": true
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateFootprints",
@@ -228,7 +236,8 @@
         "Ontario"
        ]
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateHurrah",
@@ -255,7 +264,8 @@
        "text": "Say in your log what your Hurrah! Moment was",
        "words": 15
       }
-     ]
+     ],
+     "where": "Either"
     },
     {
      "name": "AdequatePassage",
@@ -289,13 +299,14 @@
        "gc": 1
       },
       {
-       "text": "Bonus: tell us who built your gate and why",
+       "text": "Bonus: say in your log who built your gate and why",
        "bonus": true,
        "mentions": [
         "built"
        ]
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateTandem",
@@ -343,7 +354,8 @@
         "piggy back"
        ]
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequatelyHip",
@@ -378,7 +390,8 @@
         "Wawa"
        ]
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "SufficiēnsScotia",
@@ -397,7 +410,8 @@
        "text": "Put both GC codes in your log",
        "gc": 2
       }
-     ]
+     ],
+     "where": "In the field"
     }
    ]
   },
@@ -442,7 +456,8 @@
        "text": "Include the GC code of a cache you found there",
        "gc": 1
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateComrades",
@@ -464,7 +479,8 @@
       {
        "text": "Name them and the hobby in your log"
       }
-     ]
+     ],
+     "where": "Either"
     },
     {
      "name": "AdequateIinang",
@@ -487,7 +503,8 @@
        "text": "Write it yourself: no AI for this one",
        "reminder": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateRespite",
@@ -528,7 +545,8 @@
       {
        "text": "Then keep it moving"
       }
-     ]
+     ],
+     "where": "Either"
     },
     {
      "name": "AdequateVolunteerism",
@@ -558,7 +576,8 @@
        "photo": true,
        "bonus": true
       }
-     ]
+     ],
+     "where": "Either"
     }
    ]
   },
@@ -586,7 +605,8 @@
        "text": "Attach a photo of your creation",
        "photo": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateBrews",
@@ -629,7 +649,8 @@
         "cauldron"
        ]
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateCookie",
@@ -656,7 +677,8 @@
        "text": "Bonus: share it with a fellow cacher for bragging rights",
        "bonus": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateGriddles",
@@ -687,7 +709,8 @@
        "text": "Bonus: serve them to caching friends",
        "bonus": true
       }
-     ]
+     ],
+     "where": "At home"
     }
    ]
   },
@@ -708,7 +731,7 @@
        "text": "Design a geocaching gummy candy: draw, paint or sculpt it"
       },
       {
-       "text": "Name it and tell us the flavor",
+       "text": "Name it and say its flavor in your log",
        "mentions": [
         "flavor",
         "flavour"
@@ -724,7 +747,8 @@
         "ingredients"
        ]
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateAnniversary",
@@ -749,7 +773,8 @@
        "text": "Attach a photo",
        "photo": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateBearings",
@@ -779,7 +804,8 @@
        "text": "Bonus: hide a smaller animal in the landscape",
        "bonus": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateCoats",
@@ -808,7 +834,8 @@
        "text": "Drive the design yourself, even if AI helps",
        "reminder": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateEstuary",
@@ -840,7 +867,8 @@
        "text": "Come up with the name yourself and help drive the design",
        "reminder": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateFacets / FacettesAdéquates",
@@ -876,7 +904,8 @@
        "text": "Bonus: hide more than one symbol",
        "bonus": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateFlap",
@@ -911,7 +940,8 @@
         "hider"
        ]
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateFutility",
@@ -934,7 +964,8 @@
        "text": "Drive the idea yourself, even if AI helps",
        "reminder": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateLobsters",
@@ -956,7 +987,8 @@
        "text": "Attach a photo",
        "photo": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateMaple",
@@ -981,7 +1013,8 @@
        "text": "Attach a photo",
        "photo": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequatePride",
@@ -1008,7 +1041,8 @@
        "text": "Use whatever \"pride\" and \"progress\" mean to you",
        "reminder": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateProgress",
@@ -1038,7 +1072,8 @@
        "text": "Say in your log what you added and why",
        "words": 15
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateRails",
@@ -1070,7 +1105,8 @@
         "cargo"
        ]
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateSleeper",
@@ -1092,7 +1128,8 @@
        "text": "Attach a photo",
        "photo": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateTribute",
@@ -1122,7 +1159,8 @@
        "text": "No need to purchase the coin you design, unless you want to",
        "reminder": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateWhereabouts",
@@ -1152,7 +1190,8 @@
        "text": "Use any scale you want, from cosmic to microbiological",
        "reminder": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateWicker",
@@ -1177,7 +1216,8 @@
        "text": "Attach a photo",
        "photo": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "SlyBoots!",
@@ -1204,7 +1244,8 @@
        "photo": true,
        "alternate": true
       }
-     ]
+     ],
+     "where": "Either"
     }
    ]
   },
@@ -1234,7 +1275,8 @@
       {
        "text": "Post it in your log"
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateChants",
@@ -1263,7 +1305,8 @@
        "text": "Or sing it for Adequate in person instead",
        "alternate": true
       }
-     ]
+     ],
+     "where": "Either"
     },
     {
      "name": "合適的馬 (AdequateEquine)",
@@ -1298,7 +1341,8 @@
        "text": "Bonus: write it in calligraphy",
        "bonus": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateHemoglobin",
@@ -1328,7 +1372,8 @@
        "text": "Bonus: give the molecule a Corporeal Positioning System device",
        "bonus": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateMorals",
@@ -1353,7 +1398,8 @@
        "text": "Say in your log why it belongs there",
        "words": 15
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateNewYorkers",
@@ -1385,7 +1431,8 @@
        "text": "Say in your log what your research turned up, and whether it confirmed it",
        "words": 30
       }
-     ]
+     ],
+     "where": "Either"
     },
     {
      "name": "AdequateOphidian",
@@ -1425,7 +1472,8 @@
        "text": "Attach your art",
        "photo": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateReduction",
@@ -1473,7 +1521,8 @@
         "regulation"
        ]
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateRemembrance",
@@ -1497,7 +1546,8 @@
        "text": "Attach a tulip: drawn, photographed or folded",
        "photo": true
       }
-     ]
+     ],
+     "where": "At home"
     }
    ]
   },
@@ -1527,7 +1577,8 @@
         "borrowed"
        ]
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateHeadquarters",
@@ -1546,7 +1597,8 @@
       {
        "text": "Pose it with a printed, on-screen or hand-drawn HQ (or post a real visit)"
       }
-     ]
+     ],
+     "where": "Either"
     },
     {
      "name": "AdequateSystem",
@@ -1581,7 +1633,8 @@
        "text": "Bonus: spot them with Adequate at a night event",
        "bonus": true
       }
-     ]
+     ],
+     "where": "Either"
     },
     {
      "name": "AdequateWayfarer",
@@ -1621,7 +1674,8 @@
        "text": "Stay safe after dark",
        "reminder": true
       }
-     ]
+     ],
+     "where": "In the field"
     }
    ]
   },
@@ -1649,7 +1703,8 @@
        "text": "Photograph it with your hand giving a thumbs-up",
        "photo": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateProxy",
@@ -1684,7 +1739,8 @@
        "text": "Afterward, put his parts back where you found them",
        "reminder": true
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateCroakwork",
@@ -1706,7 +1762,8 @@
        "text": "Attach a photo",
        "photo": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateHareloom",
@@ -1743,7 +1800,8 @@
         "frame"
        ]
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateHopamine",
@@ -1769,7 +1827,8 @@
        "text": "Attach a photo",
        "photo": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateLicks",
@@ -1796,7 +1855,8 @@
        "text": "Draw, paint, sculpt or make a homemade lollipop with a rectangular mold: how you do it is up to you",
        "reminder": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateMaritimes",
@@ -1821,7 +1881,8 @@
        "text": "Attach a photo of the voyage, successful or not",
        "photo": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateShag",
@@ -1848,7 +1909,8 @@
        "text": "Attach a photo",
        "photo": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateSlippers",
@@ -1872,7 +1934,8 @@
        "text": "Attach a photo",
        "photo": true
       }
-     ]
+     ],
+     "where": "Either"
     },
     {
      "name": "BoreāsSufficiēns",
@@ -1916,7 +1979,8 @@
        "bonus": true,
        "gc": 1
       }
-     ]
+     ],
+     "where": "At home"
     }
    ]
   },
@@ -1968,7 +2032,8 @@
        "text": "Bonus: land a shot in an empty cache container",
        "bonus": true
       }
-     ]
+     ],
+     "where": "At home"
     }
    ]
   },
@@ -1996,7 +2061,8 @@
        "text": "Attach a photo",
        "photo": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateLitha",
@@ -2022,7 +2088,8 @@
        "text": "Say in your log what your longest or most prolific caching day was",
        "words": 15
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateMabon",
@@ -2050,7 +2117,8 @@
         "gratitude"
        ]
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateYule",
@@ -2076,7 +2144,8 @@
        "text": "Attach a photo",
        "photo": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateMigration",
@@ -2105,7 +2174,8 @@
        "text": "Say in your log one thing you learned about its trip",
        "words": 10
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateFernBlossom",
@@ -2152,7 +2222,8 @@
        "text": "Bring a good light or a buddy",
        "reminder": true
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateJumis",
@@ -2188,7 +2259,8 @@
        "photo": true,
        "alternate": true
       }
-     ]
+     ],
+     "where": "Either"
     }
    ]
   },
@@ -2220,7 +2292,8 @@
        "text": "Bonus: make it a Central New York park",
        "bonus": true
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateParks – Central 2025",
@@ -2246,7 +2319,8 @@
        "text": "Don't spoil any caches!",
        "reminder": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateParks – SaraCap 2025",
@@ -2278,7 +2352,8 @@
       {
        "text": "Name the park in your log"
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateParks – Taconic 2025",
@@ -2305,7 +2380,8 @@
        "text": "Attach a photo of the view, or a sketch of it",
        "photo": true
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateParks – Thous Is 2025",
@@ -2331,7 +2407,8 @@
       {
        "text": "Name the island in your log"
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateParks – SaraCap 2026",
@@ -2372,7 +2449,8 @@
        "text": "Bonus: someone famous lived, married or stayed there",
        "bonus": true
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateParks – Thous Is 2026",
@@ -2396,14 +2474,15 @@
        "photo": true
       },
       {
-       "text": "Bonus: tell us one thing you learned from your visit",
+       "text": "Bonus: say in your log one thing you learned from your visit",
        "bonus": true,
        "mentions": [
         "learned",
         "learnt"
        ]
       }
-     ]
+     ],
+     "where": "In the field"
     }
    ]
   },
@@ -2442,7 +2521,8 @@
        "text": "Look, don't take: leave every rock where you found it",
        "reminder": true
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateCalcite",
@@ -2483,7 +2563,8 @@
        "text": "Look, don't take: leave every rock where you found it",
        "reminder": true
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateLabradorite",
@@ -2523,7 +2604,8 @@
        "text": "Look, don't take: leave every rock where you found it",
        "reminder": true
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateMica",
@@ -2559,7 +2641,8 @@
        "text": "Look, don't take: no splitting rocks to prove it",
        "reminder": true
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateOlivine",
@@ -2597,7 +2680,8 @@
        "text": "Look, don't take: leave every rock where you found it",
        "reminder": true
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateArchaeopteryx",
@@ -2617,7 +2701,8 @@
        "text": "Photograph a bird you see there, or a feather (left where it lies)",
        "photo": true
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateDilophosaurus",
@@ -2648,7 +2733,8 @@
        "text": "Photograph your footprint",
        "photo": true
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateIchthyosaur",
@@ -2685,7 +2771,8 @@
        "text": "Bonus: name what we now call that former body of water",
        "bonus": true
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateMeganisoptera",
@@ -2705,7 +2792,8 @@
        "text": "Take a forced-perspective photo that makes something small look giant",
        "photo": true
       }
-     ]
+     ],
+     "where": "In the field"
     },
     {
      "name": "AdequateStegosaurus",
@@ -2739,7 +2827,8 @@
        "text": "Attach a photo",
        "photo": true
       }
-     ]
+     ],
+     "where": "In the field"
     }
    ]
   },
@@ -2774,7 +2863,8 @@
        "photo": true,
        "alternate": true
       }
-     ]
+     ],
+     "where": "At home"
     },
     {
      "name": "AdequateLepidoptera",
@@ -2801,7 +2891,8 @@
        "text": "Don't spoil any hides",
        "reminder": true
       }
-     ]
+     ],
+     "where": "Either"
     }
    ]
   }

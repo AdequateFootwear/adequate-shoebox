@@ -5,7 +5,7 @@ The snapshot is what the Google Sheets connector's get_spreadsheet returns for
 the sheet "AdequateFootwear Trackable Collection and Missions" (its address
 is in the collection handoff) with
   includeGridData: true
-  ranges: ["A1:L300"]
+  ranges: ["A1:M300"]
   fields: ["sheets.data.rowMetadata.hiddenByUser",
            "sheets.data.rowData.values.userEnteredValue",
            "sheets.data.rowData.values.formattedValue"]
@@ -44,6 +44,9 @@ COLS = {
     'released': ('K', lambda h: h == 'Released'),
     'checklist': ('L', lambda h: h == 'Checklist'),
 }
+# Optional column M, "Where": where a mission can be done. Blank cells are fine.
+WHERE_COL, WHERE_HEADER = 'M', 'Where'
+WHERE_VALUES = ('In the field', 'At home', 'Either')
 TB_RE = re.compile(r'TB[0-9A-Z]{4,7}')
 PHOTO_RE = re.compile(r'=IMAGE\(\s*"(https://s3\.amazonaws\.com/gs-geo-images/[0-9a-f-]{36}_l\.(?:jpe?g|png|gif))"\s*\)', re.I)
 
@@ -166,6 +169,18 @@ def main():
             raise SystemExit(f'Column {letter} should be the {key} column, but its header is {h!r}. '
                              'The sheet changed: update COLS in tools/import_sheet.py.')
 
+    where_h = cell_text(header[col(WHERE_COL)]).strip() if len(header) > col(WHERE_COL) else ''
+    if where_h not in ('', WHERE_HEADER):
+        raise SystemExit(f'Column {WHERE_COL} should be the Where column (or empty), but its header is {where_h!r}.')
+
+    def where(r, row):
+        if not where_h:
+            return ''
+        v = clean(cell_text(r[col(WHERE_COL)] if len(r) > col(WHERE_COL) else {}))
+        if v not in ('',) + WHERE_VALUES:
+            raise SystemExit(f'Row {row}: Where should be one of {", ".join(WHERE_VALUES)} (or blank), not {v!r}')
+        return v
+
     # A row counts as an item only if it is visible: a hidden row never shapes or reaches the page.
     has_item = [bool(clean(cell_text(get(r, 'name')))) and not hidden[i] for i, r in enumerate(rows)]
     groups, notes = [], []
@@ -206,6 +221,7 @@ def main():
             'about': clean(cell_text(get(r, 'about'))),
             'photo': m.group(1) if m else '',
             'checklist': parse_checklist(cell_text(get(r, 'checklist')), i + 1),
+            'where': where(r, i + 1),
         })
     if current['trackables']:
         groups.append(current)

@@ -10,6 +10,10 @@ log there, and the items it covers light up (your log, photos and ticks stay on 
 trackable's page is at its TB code:
 `https://adequatefootwear.github.io/adequate-shoebox/TBBE9T1/`.
 
+On the main page you can search any word, including the checklists, and filter by group, by whether a
+mission asks for a photo, a GC code or a word minimum, and by the ones you've marked as discovered. Your
+discovered list stays in your own browser; the page gives you a backup link to bookmark.
+
 ## How it's made
 The pages are built from Adequate's collection sheet and Adequate's own photos, never edited by hand:
 `tools/import_sheet.py` reads a snapshot of the sheet into `data/shoebox.json`, `tools/import_photos.py`

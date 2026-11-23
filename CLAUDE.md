@@ -40,7 +40,26 @@ here. Aegis uses **it/its** pronouns.
   themselves; when their log newly covers a tagged item, its box lights and ticks, and the page never
   unticks one. Keep it that way: no red, no crosses, no "missing".
 - The cacher's ticks and draft log stay in their own browser (`localStorage`, one key per trackable);
-  photos they add are shown from their device and never stored or sent. Nothing else is kept.
+  photos they add are shown from their device and never stored or sent.
+
+## Finding and keeping track
+- The main page's search covers every word on the cards and the checklists. Its filters are by
+  group, by where a mission is done, and by whether its required checklist items (not bonuses,
+  alternates or reminders) ask for a photo (`[photo]`), a GC code (`[GC code]`/`[GC codes: N]`) or a
+  word minimum (`[words: N]`; `[mentions: …]` doesn't count, since nearly every mission has one).
+  Those three are worked out from the checklist's tags, so they change only when the sheet does.
+- **Where** is column M, "Where": `In the field`, `At home` or `Either` (or blank), drafted by the
+  research chat and approved by Aegis like the checklist. The importer stops on any other value. A
+  mission marked Either shows under both "at home" and "in the field". The filter stays hidden until
+  the column has values.
+- **Your discoveries:** a visitor can mark a trackable as discovered, on its card or its page. The
+  list (TB codes and the day marked) stays in their browser (`localStorage`, key
+  `shoebox.discovered`), and the page says plainly that clearing browsing data, a private window or
+  Safari's week-long limit can erase it. "Copy backup link" puts the list in the page address
+  (`…/adequate-shoebox/#discovered=TB…,TB…`) for them to bookmark. Opening that link only adds to
+  their list, after asking, and never removes anything. Nothing is ever sent anywhere, and nothing
+  reads geocaching.com to find their discoveries.
+- Nothing else is kept in the visitor's browser.
 
 ## What stays off the page
 - Hidden rows (drafts for coins not yet in hand) and rows with no TB code (not yet activated).
@@ -48,8 +67,8 @@ here. Aegis uses **it/its** pronouns.
   it back by TB code (`WITHHELD_TRACKING`); never publish it anywhere in this repository.
 - Every other tracking code is public on purpose (Aegis's decision, 2026-11-13): the mission is what
   a discover costs, and Aegis deletes discover logs that fall short of it.
-- No tracking, no analytics, no sign-in, and nothing collected from visitors (the checklist keeps a
-  cacher's own ticks and draft log in their browser, nowhere else). The only thing the
+- No tracking, no analytics, no sign-in, and nothing collected from visitors (the checklist and the
+  discovered list stay in the visitor's own browser, nowhere else). The only thing the
   pages load from elsewhere is Google Fonts; TB codes link to `https://coord.info/<TB code>`.
 - **Never read geocaching.com automatically.** Its Terms of Use forbid using "any robot, spider,
   scraper, or other means to access, display, or collect data from our services without our express

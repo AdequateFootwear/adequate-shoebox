@@ -81,6 +81,32 @@
     } else { fallback(); }
   });
 
+  // ---------- your discoveries: the same list as the main page's, kept only in this browser ----------
+  (function(){
+    // If the browser won't store anything, the list lives in memory until the page closes.
+    var KEY = 'shoebox.discovered', mine = {}, broken = false;
+    var btns = Array.prototype.slice.call(document.querySelectorAll('button.disc'));
+    function reload(){
+      if (broken) return;
+      try { var o = JSON.parse(localStorage.getItem(KEY)); mine = o && typeof o === 'object' ? o : {}; }
+      catch (e) { broken = true; }
+    }
+    reload();
+    function paint(){ btns.forEach(function(b){ b.setAttribute('aria-pressed', mine[b.getAttribute('data-tb')] ? 'true' : 'false'); }); }
+    window.addEventListener('storage', function(e){ if (e.key === KEY || e.key === null) { reload(); paint(); } });
+    window.addEventListener('pageshow', function(e){ if (e.persisted) { reload(); paint(); } });
+    btns.forEach(function(b){
+      b.addEventListener('click', function(){
+        reload();  // another tab or page may have changed the list
+        var tb = b.getAttribute('data-tb');
+        if (mine[tb]) delete mine[tb]; else mine[tb] = new Date().toISOString().slice(0, 10);
+        try { localStorage.setItem(KEY, JSON.stringify(mine)); } catch (e) { broken = true; }
+        paint(); say(mine[tb] ? 'Marked as discovered' : 'No longer marked as discovered');
+      });
+    });
+    paint();
+  })();
+
   // ---------- mission checklist: ticks are the cacher's; a log only ever lights items, never fails one ----------
   var ck = document.getElementById('checklist');
   if (ck) (function(){

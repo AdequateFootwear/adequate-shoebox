@@ -34,14 +34,23 @@
 {{NOTES}}
   <div class="finder" role="search">
     <label for="q">Find</label>
-    <input id="q" type="search" placeholder="Name or code" autocomplete="off" spellcheck="false">
+    <input id="q" type="search" placeholder="Name, code, word or checklist item" autocomplete="off" spellcheck="false">
     <span class="count" id="count" aria-live="polite"></span>
   </div>
   <nav class="jump" aria-label="Groups">
 {{JUMP}}
   </nav>
+{{FILTERS}}
 {{GROUPS}}
-  <p class="empty" id="empty" hidden>No trackable matches that search.</p>
+  <p class="empty" id="empty" hidden>No trackable matches that search and those filters.</p>
+  <section class="disc-panel" id="mine" aria-labelledby="mine-h">
+    <h2 id="mine-h">Your discoveries</h2>
+    <p id="mine-count">Mark a trackable as discovered on its card or its page, and it's counted here.</p>
+    <p class="fnote">Your list stays in this browser on this device, and nothing is sent anywhere. Clearing your browsing data or using a private window erases it, and Safari can erase it after about a week without a visit. Keep a backup link: bookmark it or save it somewhere, and open it to bring your list back.</p>
+    <p><button class="btn small" type="button" id="mine-backup">Copy backup link</button></p>
+    <p class="disc-link" id="mine-link-row" hidden><label for="mine-link">Your backup link</label>
+      <input type="text" id="mine-link" readonly spellcheck="false"></p>
+  </section>
   <footer>
     <span>Built from Adequate's collection sheet, as read on {{READ}}.</span>
     <span>Tap a TB code to open the trackable's page on geocaching.com.</span>
@@ -52,51 +61,115 @@
 <script>
 (function(){
   'use strict';
-  var q = document.getElementById('q');
-  var count = document.getElementById('count');
-  var empty = document.getElementById('empty');
-  var toast = document.getElementById('toast');
+  var $ = function(id){ return document.getElementById(id); };
+  var q = $('q'), count = $('count'), empty = $('empty'), toast = $('toast'), fcount = $('fcount');
   var cards = Array.prototype.slice.call(document.querySelectorAll('.tb'));
   var groups = Array.prototype.slice.call(document.querySelectorAll('.group'));
   var jumps = Array.prototype.slice.call(document.querySelectorAll('.jump a')).map(function(a){
     return [a, document.getElementById(a.getAttribute('href').slice(1))];
   });
-  function norm(s){ return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
+  var sel = { group: $('f-group'), where: $('f-where'), photo: $('f-photo'), gc: $('f-gc'), words: $('f-words'), disc: $('f-disc') };
+  function norm(s){ return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
   var keys = cards.map(function(c){ return norm(c.getAttribute('data-s') || ''); });
+
+  // ---- your discoveries: kept only in this browser ----
+  var KEY = 'shoebox.discovered', TB = /^TB[0-9A-Z]{4,7}$/;
+  // If the browser won't store anything, the list lives in memory until the page closes.
+  var broken = false;
+  function load(){
+    try { var o = JSON.parse(localStorage.getItem(KEY)); return o && typeof o === 'object' ? o : {}; }
+    catch (e) { broken = true; return null; }
+  }
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify(mine)); } catch (e) { broken = true; } }
+  function refresh(){ if (!broken) { var o = load(); if (o) mine = o; } }  // pick up changes from other tabs
+  var mine = load() || {}, known = {};
+  cards.forEach(function(c){ known[c.id] = true; });
+  function today(){ return new Date().toISOString().slice(0, 10); }
+  function paint(){
+    Array.prototype.forEach.call(document.querySelectorAll('button.disc'), function(b){
+      var on = !!mine[b.getAttribute('data-tb')];
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      b.closest('.tb') && b.closest('.tb').classList.toggle('found', on);
+    });
+    var n = cards.filter(function(c){ return mine[c.id]; }).length;
+    $('mine-count').textContent = n ? 'You have marked ' + n + ' of ' + cards.length + ' trackables as discovered.'
+      : 'Mark a trackable as discovered on its card or its page, and it\'s counted here.';
+  }
+
   function apply(){
-    var terms = norm(q.value).split(/\s+/).filter(Boolean);
-    var shown = 0;
+    var terms = norm(q.value).split(/\s+/).filter(Boolean), active = 0, shown = 0;
+    Object.keys(sel).forEach(function(k){ if (sel[k] && sel[k].value) active++; });
     cards.forEach(function(c, i){
       var ok = terms.every(function(t){ return keys[i].indexOf(t) !== -1; });
+      var g = sel.group.value, w = sel.where.value, wh = c.getAttribute('data-where');
+      if (ok && g) ok = c.getAttribute('data-group') === g;
+      if (ok && w) ok = wh === 'Either' || wh === (w === 'home' ? 'At home' : 'In the field');
+      ['photo', 'gc', 'words'].forEach(function(k){ if (ok && sel[k].value) ok = c.getAttribute('data-' + k) === sel[k].value; });
+      if (ok && sel.disc.value) ok = (!!mine[c.id]) === (sel.disc.value === '1');
       c.hidden = !ok; if (ok) shown++;
     });
     groups.forEach(function(g){ g.hidden = !g.querySelector('.tb:not([hidden])'); });
     jumps.forEach(function(j){ j[0].hidden = !!(j[1] && j[1].hidden); });
-    count.textContent = terms.length ? shown + ' of ' + cards.length : cards.length + ' trackables';
+    count.textContent = (terms.length || active) ? shown + ' of ' + cards.length : cards.length + ' trackables';
+    fcount.textContent = active ? active + ' on' : '';
     empty.hidden = shown > 0;
   }
   q.addEventListener('input', apply);
-  apply();
+  Object.keys(sel).forEach(function(k){ if (sel[k]) sel[k].addEventListener('change', apply); });
+  $('f-clear').addEventListener('click', function(){
+    Object.keys(sel).forEach(function(k){ if (sel[k]) sel[k].value = ''; }); apply();
+  });
 
   var timer;
   function say(msg){
     toast.textContent = msg; toast.classList.add('on');
-    clearTimeout(timer); timer = setTimeout(function(){ toast.classList.remove('on'); }, 1600);
+    clearTimeout(timer); timer = setTimeout(function(){ toast.classList.remove('on'); }, 2200);
   }
-  document.addEventListener('click', function(e){
-    var b = e.target.closest ? e.target.closest('button.copy') : null;
-    if (!b) return;
-    var code = b.getAttribute('data-code');
-    function fallback(){
-      var el = b.parentNode.querySelector('.code');
-      var r = document.createRange(); r.selectNodeContents(el);
-      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+  function copy(text, done, el){
+    function pick(){
+      if (el && el.select) { el.select(); } else if (el) {
+        var r = document.createRange(); r.selectNodeContents(el);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      }
       say('Selected: copy it from your menu');
     }
-    if (navigator.clipboard && window.isSecureContext) {
-      navigator.clipboard.writeText(code).then(function(){ say('Copied ' + code); }, fallback);
-    } else { fallback(); }
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(function(){ say(done); }, pick);
+    else pick();
+  }
+  document.addEventListener('click', function(e){
+    var d = e.target.closest ? e.target.closest('button.disc') : null;
+    if (d) {
+      var tb = d.getAttribute('data-tb');
+      refresh();  // another tab or page may have changed the list
+      if (mine[tb]) delete mine[tb]; else mine[tb] = today();
+      save(); paint(); apply(); return;
+    }
+    var b = e.target.closest ? e.target.closest('button.copy') : null;
+    if (b) copy(b.getAttribute('data-code'), 'Copied ' + b.getAttribute('data-code'), b.parentNode.querySelector('.code'));
   });
+  $('mine-backup').addEventListener('click', function(){
+    refresh();
+    var codes = Object.keys(mine).filter(function(k){ return TB.test(k); }).sort();
+    if (!codes.length) { say('Nothing to back up yet'); return; }
+    var url = location.href.split('#')[0] + '#discovered=' + codes.join(',');
+    var box = $('mine-link'); box.value = url; $('mine-link-row').hidden = false;
+    copy(url, 'Backup link copied: bookmark it or save it', box);
+  });
+
+  // Opening a backup link adds its trackables to the list (it never removes any).
+  var m = /^#discovered=(.*)$/i.exec(location.hash);
+  if (m) {
+    var raw; try { raw = decodeURIComponent(m[1]); } catch (e) { raw = m[1]; }
+    var add = raw.toUpperCase().split(',').map(function(k){ return k.trim(); })
+      .filter(function(k, i, a){ return TB.test(k) && known[k] && !mine[k] && a.indexOf(k) === i; });
+    if (add.length && window.confirm('Add ' + add.length + ' trackable' + (add.length === 1 ? '' : 's') + ' from this backup link to your discovered list?')) {
+      add.forEach(function(k){ mine[k] = today(); }); save();
+    }
+    try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+  }
+  window.addEventListener('storage', function(e){ if (e.key === KEY || e.key === null) { refresh(); paint(); apply(); } });
+  window.addEventListener('pageshow', function(e){ if (e.persisted) { refresh(); paint(); apply(); } });
+  paint(); apply();
 })();
 </script>
 </body>

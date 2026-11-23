@@ -264,3 +264,47 @@ a.btn{text-decoration:none}
 }
 .rem.lit{border-left-color:var(--accent);background:var(--accent-soft)}
 .rem .chips{margin-top:4px}
+
+/* ---------- filters and your discoveries ---------- */
+.filters{background:var(--surface);border:1px solid var(--line);border-radius:10px;margin:0 0 14px;padding:0 14px}
+.filters summary{cursor:pointer;padding:10px 0;list-style-position:inside}
+.filters[open] summary{border-bottom:1px solid var(--line);margin-bottom:10px}
+.fcount{color:var(--accent);font-size:14px;font-weight:600}
+.filts{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px 14px}
+.filt{display:flex;flex-direction:column;gap:3px;min-width:0}
+.filt label{
+  font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:12px;letter-spacing:.12em;
+  color:var(--brass);text-transform:uppercase;
+}
+.filt select{
+  font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line-strong);
+  border-radius:6px;padding:7px 9px;max-width:100%;
+}
+.filt select:hover{border-color:var(--accent)}
+.fnote{color:var(--muted);font-size:13px;margin:12px 0 12px;display:flex;gap:8px 12px;flex-wrap:wrap;align-items:center}
+.where{margin:0 0 10px}
+.chip.where-chip{color:var(--accent);border-color:var(--accent)}
+.disc-row{margin:12px 0 0}
+.btn.disc .disc-on{display:none}
+.btn.disc[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.disc[aria-pressed="true"] .disc-on{display:inline}
+.btn.disc[aria-pressed="true"] .disc-off{display:none}
+.btn.disc[aria-pressed="true"]::before{content:"\2713";margin-right:2px}
+.tb.found{border-color:var(--accent)}
+.facts .log{display:flex;gap:8px 10px;flex-wrap:wrap;align-items:center}
+.disc-panel{display:block;margin-top:30px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.disc-panel h2{
+  margin:0 0 6px;font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:22px;line-height:1;
+  text-transform:uppercase;letter-spacing:.02em;
+}
+.disc-panel p{margin:0 0 8px}
+.disc-panel .fnote{display:block;margin:0 0 10px}
+.disc-link{display:flex;flex-direction:column;gap:3px}
+.disc-link label{
+  font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:12px;letter-spacing:.12em;
+  color:var(--brass);text-transform:uppercase;
+}
+.disc-link input{
+  width:100%;font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--ink);background:var(--surface-2);
+  border:1px solid var(--line-strong);border-radius:6px;padding:7px 9px;
+}

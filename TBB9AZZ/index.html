@@ -278,6 +278,50 @@ a.btn{text-decoration:none}
 .rem.lit{border-left-color:var(--accent);background:var(--accent-soft)}
 .rem .chips{margin-top:4px}
 
+/* ---------- filters and your discoveries ---------- */
+.filters{background:var(--surface);border:1px solid var(--line);border-radius:10px;margin:0 0 14px;padding:0 14px}
+.filters summary{cursor:pointer;padding:10px 0;list-style-position:inside}
+.filters[open] summary{border-bottom:1px solid var(--line);margin-bottom:10px}
+.fcount{color:var(--accent);font-size:14px;font-weight:600}
+.filts{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px 14px}
+.filt{display:flex;flex-direction:column;gap:3px;min-width:0}
+.filt label{
+  font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:12px;letter-spacing:.12em;
+  color:var(--brass);text-transform:uppercase;
+}
+.filt select{
+  font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line-strong);
+  border-radius:6px;padding:7px 9px;max-width:100%;
+}
+.filt select:hover{border-color:var(--accent)}
+.fnote{color:var(--muted);font-size:13px;margin:12px 0 12px;display:flex;gap:8px 12px;flex-wrap:wrap;align-items:center}
+.where{margin:0 0 10px}
+.chip.where-chip{color:var(--accent);border-color:var(--accent)}
+.disc-row{margin:12px 0 0}
+.btn.disc .disc-on{display:none}
+.btn.disc[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.disc[aria-pressed="true"] .disc-on{display:inline}
+.btn.disc[aria-pressed="true"] .disc-off{display:none}
+.btn.disc[aria-pressed="true"]::before{content:"\2713";margin-right:2px}
+.tb.found{border-color:var(--accent)}
+.facts .log{display:flex;gap:8px 10px;flex-wrap:wrap;align-items:center}
+.disc-panel{display:block;margin-top:30px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.disc-panel h2{
+  margin:0 0 6px;font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:22px;line-height:1;
+  text-transform:uppercase;letter-spacing:.02em;
+}
+.disc-panel p{margin:0 0 8px}
+.disc-panel .fnote{display:block;margin:0 0 10px}
+.disc-link{display:flex;flex-direction:column;gap:3px}
+.disc-link label{
+  font-family:"Barlow Condensed","Barlow",sans-serif;font-weight:700;font-size:12px;letter-spacing:.12em;
+  color:var(--brass);text-transform:uppercase;
+}
+.disc-link input{
+  width:100%;font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--ink);background:var(--surface-2);
+  border:1px solid var(--line-strong);border-radius:6px;padding:7px 9px;
+}
+
 </style>
 </head>
 <body>
@@ -301,13 +345,13 @@ a.btn{text-decoration:none}
       <figure class="main"><img id="ph-main" src="../photos/tbb9azz.jpg" width="1400" height="1399" alt="AdequateAgar"></figure>
     </section>
     <section class="facts" aria-label="About this trackable">
-      <dl class="ids"><dt>TB code</dt><dd><a class="mono" href="https://coord.info/TBB9AZZ">TBB9AZZ</a></dd><dt>Tracking code</dt><dd><span class="mono code">CA9ANG</span><button class="btn small copy" type="button" data-code="CA9ANG" aria-label="Copy the tracking code for AdequateAgar">Copy</button></dd><dt>Released</dt><dd><time datetime="2026-01-07">January 7, 2026</time></dd></dl>
-      <p class="log"><a class="btn primary" href="https://coord.info/TBB9AZZ">Open its page on geocaching.com</a></p>
+      <p class="where"><span class="chip where-chip">At home</span></p><dl class="ids"><dt>TB code</dt><dd><a class="mono" href="https://coord.info/TBB9AZZ">TBB9AZZ</a></dd><dt>Tracking code</dt><dd><span class="mono code">CA9ANG</span><button class="btn small copy" type="button" data-code="CA9ANG" aria-label="Copy the tracking code for AdequateAgar">Copy</button></dd><dt>Released</dt><dd><time datetime="2026-01-07">January 7, 2026</time></dd></dl>
+      <p class="log"><a class="btn primary" href="https://coord.info/TBB9AZZ">Open its page on geocaching.com</a> <button class="btn small disc" type="button" data-tb="TBB9AZZ" aria-pressed="false"><span class="disc-off">Mark as discovered</span><span class="disc-on">Discovered</span></button></p>
       <div class="block"><span class="lbl">Your mission</span><p class="txt">Agar is the vegetarian gelatin that makes vegetarian gummy bears possible. Design a geocaching gummy candy: draw, paint, or sculpt it (clay, fondant, or a real homemade gummy all count), name it, and tell us the flavor. Attach a photo! Include a fake and potentially absurd ingredients list (GeoAgar, Ammo Canola Oil, TOTTs, SWAG, flavoring...?)</p></div>
       <div class="about-full"><span class="lbl">About</span><p class="txt">A red micro gummy bear coin. Agar is a vegetarian gelatin substitute. Agar is also used as a base for growing bacteria cultures. Yum!</p></div>
     </section>
   </div>
-  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="TBB9AZZ" data-sig="9d70deecbc19">
+  <section class="check" id="checklist" aria-labelledby="ck-h" data-tb="TBB9AZZ" data-sig="48fde652c294">
     <h2 id="ck-h">Mission checklist</h2>
     <p class="ck-intro">Tick each item as you do it. Write or paste your log, and items your words cover light up. Tick the rest yourself: a photo can show what words don't.</p>
     <p class="ck-guide">The lights are only a guide. They look for words, not meaning, so one can light up by mistake or miss something you did.</p>
@@ -315,7 +359,7 @@ a.btn{text-decoration:none}
       <div class="ck-list">
       <ol class="cks">
         <li class="ck"><input type="checkbox" id="ck-0"><label for="ck-0">Design a geocaching gummy candy: draw, paint or sculpt it</label></li>
-        <li class="ck" data-mentions="[&quot;flavor&quot;, &quot;flavour&quot;]"><input type="checkbox" id="ck-1"><label for="ck-1">Name it and tell us the flavor</label><span class="chips"><span class="chip lit" hidden>In your log</span></span></li>
+        <li class="ck" data-mentions="[&quot;flavor&quot;, &quot;flavour&quot;]"><input type="checkbox" id="ck-1"><label for="ck-1">Name it and say its flavor in your log</label><span class="chips"><span class="chip lit" hidden>In your log</span></span></li>
         <li class="ck" data-photo="1"><input type="checkbox" id="ck-2"><label for="ck-2">Attach a photo</label><span class="chips"><span class="chip photo">Photo</span></span><span class="mine" hidden></span></li>
         <li class="ck" data-mentions="[&quot;ingredients&quot;]"><input type="checkbox" id="ck-3"><label for="ck-3">Include a fake (and possibly absurd) ingredients list</label><span class="chips"><span class="chip lit" hidden>In your log</span></span></li>
       </ol>
@@ -339,7 +383,7 @@ a.btn{text-decoration:none}
     <a class="next" href="../TBB1ZK0/">AdequateAnniversary →</a>
   </nav>
   <footer>
-    <span>Built from Adequate's collection sheet, as read on November 22, 2026.</span>
+    <span>Built from Adequate's collection sheet, as read on November 23, 2026.</span>
     <span>Log it on its page at geocaching.com once your mission is done.</span>
   </footer>
 </main>
@@ -376,6 +420,32 @@ a.btn{text-decoration:none}
       navigator.clipboard.writeText(code).then(function(){ say('Copied ' + code); }, fallback);
     } else { fallback(); }
   });
+
+  // ---------- your discoveries: the same list as the main page's, kept only in this browser ----------
+  (function(){
+    // If the browser won't store anything, the list lives in memory until the page closes.
+    var KEY = 'shoebox.discovered', mine = {}, broken = false;
+    var btns = Array.prototype.slice.call(document.querySelectorAll('button.disc'));
+    function reload(){
+      if (broken) return;
+      try { var o = JSON.parse(localStorage.getItem(KEY)); mine = o && typeof o === 'object' ? o : {}; }
+      catch (e) { broken = true; }
+    }
+    reload();
+    function paint(){ btns.forEach(function(b){ b.setAttribute('aria-pressed', mine[b.getAttribute('data-tb')] ? 'true' : 'false'); }); }
+    window.addEventListener('storage', function(e){ if (e.key === KEY || e.key === null) { reload(); paint(); } });
+    window.addEventListener('pageshow', function(e){ if (e.persisted) { reload(); paint(); } });
+    btns.forEach(function(b){
+      b.addEventListener('click', function(){
+        reload();  // another tab or page may have changed the list
+        var tb = b.getAttribute('data-tb');
+        if (mine[tb]) delete mine[tb]; else mine[tb] = new Date().toISOString().slice(0, 10);
+        try { localStorage.setItem(KEY, JSON.stringify(mine)); } catch (e) { broken = true; }
+        paint(); say(mine[tb] ? 'Marked as discovered' : 'No longer marked as discovered');
+      });
+    });
+    paint();
+  })();
 
   // ---------- mission checklist: ticks are the cacher's; a log only ever lights items, never fails one ----------
   var ck = document.getElementById('checklist');

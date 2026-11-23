@@ -83,8 +83,31 @@ def blocks_html(t):
     return ''.join(out)
 
 
-def card(t, group, photos):
-    s = ' '.join(x for x in (t['name'], t['tb'], t['tracking'], group, t['mission'], t['goal'], t['about']) if x)
+WHERE_LABEL = {'In the field': 'In the field', 'At home': 'At home', 'Either': 'At home or in the field'}
+
+
+def facets(t):
+    """What the mission's required checklist items ask for (bonus, alternate and reminder lines don't count)."""
+    req = [i for i in t.get('checklist') or [] if not (i.get('bonus') or i.get('reminder') or i.get('alternate'))]
+    return {'photo': any(i.get('photo') for i in req), 'gc': any(i.get('gc') for i in req),
+            'words': any(i.get('words') for i in req)}
+
+
+def where_html(t):
+    w = t.get('where') or ''
+    return f'<p class="where"><span class="chip where-chip">{esc(WHERE_LABEL[w])}</span></p>' if w else ''
+
+
+def disc_button(tb):
+    return (f'<button class="btn small disc" type="button" data-tb="{esc(tb)}" aria-pressed="false">'
+            f'<span class="disc-off">Mark as discovered</span><span class="disc-on">Discovered</span></button>')
+
+
+def card(t, group, photos, gid):
+    words = [i['text'] for i in t.get('checklist') or []]
+    where = WHERE_LABEL.get(t.get('where') or '', '')
+    s = ' '.join(x for x in [t['name'], t['tb'], t['tracking'], group, where, t['mission'], t['goal'], t['about']] + words if x)
+    f = facets(t)
     if photos:
         p = photos[0]
         ph = (f'<figure class="ph"><img src="photos/{esc(p["card"])}" width="{p["cw"]}" height="{p["ch"]}" '
@@ -93,14 +116,40 @@ def card(t, group, photos):
         ph = '<div class="ph none"><span>No photo yet</span></div>'
     about = (f'\n      <details class="about"><summary class="lbl">About</summary><p class="txt">{esc(t["about"])}</p></details>'
              if t['about'] else '')
-    return (f'    <article class="tb" id="{esc(t["tb"])}" data-s="{esc(s)}">\n'
+    attrs = (f' data-group="{gid}" data-where="{esc(t.get("where") or "")}"'
+             + ''.join(f' data-{k}="{int(v)}"' for k, v in f.items()))
+    return (f'    <article class="tb" id="{esc(t["tb"])}" data-s="{esc(s)}"{attrs}>\n'
             f'      {ph}\n'
             f'      <div class="body">\n'
             f'      <h3><a href="{esc(t["tb"])}/">{esc(t["name"])}</a></h3>\n'
-            f'      {ids_html(t)}\n'
+            f'      {where_html(t)}{ids_html(t)}\n'
             f'      {blocks_html(t)}{about}\n'
+            f'      <p class="disc-row">{disc_button(t["tb"])}</p>\n'
             f'      </div>\n'
             f'    </article>')
+
+
+def filters_html(groups_ids, any_where):
+    opts = ''.join(f'<option value="{gid}">{esc(name)}</option>' for name, gid in groups_ids)
+    def sel(id_, label, options, hidden=False):
+        o = ''.join(f'<option value="{v}">{esc(l)}</option>' for v, l in options)
+        return (f'      <div class="filt"{" hidden" if hidden else ""}><label for="{id_}">{label}</label>'
+                f'<select id="{id_}">{o}</select></div>')
+    rows = [
+        f'      <div class="filt"><label for="f-group">Group</label><select id="f-group"><option value="">All groups</option>{opts}</select></div>',
+        sel('f-where', 'Where it\'s done', [('', 'Anywhere'), ('home', 'Can be done at home'), ('field', 'Can be done in the field')],
+            hidden=not any_where),
+        sel('f-photo', 'Photo', [('', 'Either way'), ('1', 'Asks for a photo'), ('0', 'No photo needed')]),
+        sel('f-gc', 'GC code', [('', 'Either way'), ('1', 'Asks for a GC code'), ('0', 'No GC code needed')]),
+        sel('f-words', 'Writing', [('', 'Either way'), ('1', 'Word minimum'), ('0', 'No word minimum')]),
+        sel('f-disc', 'Your discoveries', [('', 'All trackables'), ('0', 'Not discovered yet'), ('1', 'Discovered')]),
+    ]
+    return ('  <details class="filters" id="filters">\n'
+            '    <summary><span class="lbl">Filters</span> <span class="fcount" id="fcount"></span></summary>\n'
+            '    <div class="filts">\n' + '\n'.join(rows) + '\n    </div>\n'
+            '    <p class="fnote">Photo, GC code and Writing count the mission\'s required items, not its bonuses, alternates or reminders.'
+            ' <button class="btn small" type="button" id="f-clear">Clear filters</button></p>\n'
+            '  </details>')
 
 
 def gallery(t, photos):
@@ -120,8 +169,8 @@ def gallery(t, photos):
 
 
 def facts(t):
-    out = [f'      {ids_html(t)}',
-           f'      <p class="log"><a class="btn primary" href="https://coord.info/{esc(t["tb"])}">Open its page on geocaching.com</a></p>',
+    out = [f'      {where_html(t)}{ids_html(t)}',
+           f'      <p class="log"><a class="btn primary" href="https://coord.info/{esc(t["tb"])}">Open its page on geocaching.com</a> {disc_button(t["tb"])}</p>',
            f'      {blocks_html(t)}']
     if t['about']:
         out.append(f'      <div class="about-full"><span class="lbl">About</span><p class="txt">{esc(t["about"])}</p></div>')
@@ -203,14 +252,15 @@ def main():
     n = len(order)
 
     # the main page
-    used, parts, jumps = set(), [], []
+    used, parts, jumps, gids = set(), [], [], []
     for g in groups:
         gid = slug(g['name'])
         while gid in used:
             gid += '-'
         used.add(gid)
         jumps.append(f'    <a href="#{gid}">{esc(g["name"])}</a>')
-        cards = '\n'.join(card(t, g['name'], photos.get(t['tb'], [])) for t in g['trackables'])
+        gids.append((g['name'], gid))
+        cards = '\n'.join(card(t, g['name'], photos.get(t['tb'], []), gid) for t in g['trackables'])
         parts.append(f'  <section class="group" id="{gid}" aria-labelledby="{gid}-h">\n'
                      f'    <h2 id="{gid}-h">{esc(g["name"])} <span class="n">{len(g["trackables"])}</span></h2>\n'
                      f'    <div class="cards">\n{cards}\n    </div>\n'
@@ -221,6 +271,7 @@ def main():
         '{{STATS}}': f'{n} trackables · {len(groups)} groups',
         '{{NOTES}}': notes.rstrip('\n'),
         '{{JUMP}}': '\n'.join(jumps),
+        '{{FILTERS}}': filters_html(gids, any(t.get('where') for t, _ in order)),
         '{{GROUPS}}': '\n'.join(parts),
         '{{READ}}': read_on,
     }, 'tools/page.html')
