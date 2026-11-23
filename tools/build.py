@@ -141,13 +141,13 @@ def filters_html(groups_ids, any_where):
             hidden=not any_where),
         sel('f-photo', 'Photo', [('', 'Either way'), ('1', 'Asks for a photo'), ('0', 'No photo needed')]),
         sel('f-gc', 'GC code', [('', 'Either way'), ('1', 'Asks for a GC code'), ('0', 'No GC code needed')]),
-        sel('f-words', 'Writing', [('', 'Either way'), ('1', 'Asks for some writing'), ('0', 'No writing asked for')]),
+        sel('f-words', 'Writing', [('', 'Either way'), ('1', 'Word minimum'), ('0', 'No word minimum')]),
         sel('f-disc', 'Your discoveries', [('', 'All trackables'), ('0', 'Not discovered yet'), ('1', 'Discovered')]),
     ]
     return ('  <details class="filters" id="filters">\n'
             '    <summary><span class="lbl">Filters</span> <span class="fcount" id="fcount"></span></summary>\n'
             '    <div class="filts">\n' + '\n'.join(rows) + '\n    </div>\n'
-            '    <p class="fnote">"Asks for" counts the mission\'s required items, not its bonuses or alternates.'
+            '    <p class="fnote">Photo, GC code and Writing count the mission\'s required items, not its bonuses, alternates or reminders.'
             ' <button class="btn small" type="button" id="f-clear">Clear filters</button></p>\n'
             '  </details>')
 

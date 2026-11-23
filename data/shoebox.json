@@ -299,7 +299,7 @@
        "gc": 1
       },
       {
-       "text": "Bonus: tell us who built your gate and why",
+       "text": "Bonus: say in your log who built your gate and why",
        "bonus": true,
        "mentions": [
         "built"
@@ -731,7 +731,7 @@
        "text": "Design a geocaching gummy candy: draw, paint or sculpt it"
       },
       {
-       "text": "Name it and tell us the flavor",
+       "text": "Name it and say its flavor in your log",
        "mentions": [
         "flavor",
         "flavour"
@@ -2474,7 +2474,7 @@
        "photo": true
       },
       {
-       "text": "Bonus: tell us one thing you learned from your visit",
+       "text": "Bonus: say in your log one thing you learned from your visit",
        "bonus": true,
        "mentions": [
         "learned",

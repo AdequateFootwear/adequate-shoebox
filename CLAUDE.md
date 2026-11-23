@@ -45,8 +45,9 @@ here. Aegis uses **it/its** pronouns.
 ## Finding and keeping track
 - The main page's search covers every word on the cards and the checklists. Its filters are by
   group, by where a mission is done, and by whether its required checklist items (not bonuses,
-  alternates or reminders) ask for a photo, a GC code or some writing. Those last three are worked
-  out from the checklist's tags, so they change only when the sheet does.
+  alternates or reminders) ask for a photo (`[photo]`), a GC code (`[GC code]`/`[GC codes: N]`) or a
+  word minimum (`[words: N]`; `[mentions: …]` doesn't count, since nearly every mission has one).
+  Those three are worked out from the checklist's tags, so they change only when the sheet does.
 - **Where** is column M, "Where": `In the field`, `At home` or `Either` (or blank), drafted by the
   research chat and approved by Aegis like the checklist. The importer stops on any other value. A
   mission marked Either shows under both "at home" and "in the field". The filter stays hidden until
