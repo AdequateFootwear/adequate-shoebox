@@ -105,7 +105,8 @@ def disc_button(tb):
 
 def card(t, group, photos, gid):
     words = [i['text'] for i in t.get('checklist') or []]
-    s = ' '.join(x for x in [t['name'], t['tb'], t['tracking'], group, t['mission'], t['goal'], t['about']] + words if x)
+    where = WHERE_LABEL.get(t.get('where') or '', '')
+    s = ' '.join(x for x in [t['name'], t['tb'], t['tracking'], group, where, t['mission'], t['goal'], t['about']] + words if x)
     f = facets(t)
     if photos:
         p = photos[0]

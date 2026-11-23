@@ -74,9 +74,15 @@
 
   // ---- your discoveries: kept only in this browser ----
   var KEY = 'shoebox.discovered', TB = /^TB[0-9A-Z]{4,7}$/;
-  function load(){ try { var o = JSON.parse(localStorage.getItem(KEY)); return o && typeof o === 'object' ? o : {}; } catch (e) { return {}; } }
-  function save(){ try { localStorage.setItem(KEY, JSON.stringify(mine)); } catch (e) {} }
-  var mine = load(), known = {};
+  // If the browser won't store anything, the list lives in memory until the page closes.
+  var broken = false;
+  function load(){
+    try { var o = JSON.parse(localStorage.getItem(KEY)); return o && typeof o === 'object' ? o : {}; }
+    catch (e) { broken = true; return null; }
+  }
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify(mine)); } catch (e) { broken = true; } }
+  function refresh(){ if (!broken) { var o = load(); if (o) mine = o; } }  // pick up changes from other tabs
+  var mine = load() || {}, known = {};
   cards.forEach(function(c){ known[c.id] = true; });
   function today(){ return new Date().toISOString().slice(0, 10); }
   function paint(){
@@ -134,7 +140,7 @@
     var d = e.target.closest ? e.target.closest('button.disc') : null;
     if (d) {
       var tb = d.getAttribute('data-tb');
-      mine = load();  // another tab or page may have changed the list
+      refresh();  // another tab or page may have changed the list
       if (mine[tb]) delete mine[tb]; else mine[tb] = today();
       save(); paint(); apply(); return;
     }
@@ -142,7 +148,7 @@
     if (b) copy(b.getAttribute('data-code'), 'Copied ' + b.getAttribute('data-code'), b.parentNode.querySelector('.code'));
   });
   $('mine-backup').addEventListener('click', function(){
-    mine = load();
+    refresh();
     var codes = Object.keys(mine).filter(function(k){ return TB.test(k); }).sort();
     if (!codes.length) { say('Nothing to back up yet'); return; }
     var url = location.href.split('#')[0] + '#discovered=' + codes.join(',');
@@ -161,8 +167,8 @@
     }
     try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
   }
-  window.addEventListener('storage', function(e){ if (e.key === KEY || e.key === null) { mine = load(); paint(); apply(); } });
-  window.addEventListener('pageshow', function(e){ if (e.persisted) { mine = load(); paint(); apply(); } });
+  window.addEventListener('storage', function(e){ if (e.key === KEY || e.key === null) { refresh(); paint(); apply(); } });
+  window.addEventListener('pageshow', function(e){ if (e.persisted) { refresh(); paint(); apply(); } });
   paint(); apply();
 })();
 </script>

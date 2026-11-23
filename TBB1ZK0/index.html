@@ -434,11 +434,15 @@ Then make a small geocaching item or design from that material: a paper ammo can
 
   // ---------- your discoveries: the same list as the main page's, kept only in this browser ----------
   (function(){
-    var KEY = 'shoebox.discovered', mine;
-    try { mine = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { mine = {}; }
-    if (typeof mine !== 'object') mine = {};
+    // If the browser won't store anything, the list lives in memory until the page closes.
+    var KEY = 'shoebox.discovered', mine = {}, broken = false;
     var btns = Array.prototype.slice.call(document.querySelectorAll('button.disc'));
-    function reload(){ try { mine = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { mine = {}; } }
+    function reload(){
+      if (broken) return;
+      try { var o = JSON.parse(localStorage.getItem(KEY)); mine = o && typeof o === 'object' ? o : {}; }
+      catch (e) { broken = true; }
+    }
+    reload();
     function paint(){ btns.forEach(function(b){ b.setAttribute('aria-pressed', mine[b.getAttribute('data-tb')] ? 'true' : 'false'); }); }
     window.addEventListener('storage', function(e){ if (e.key === KEY || e.key === null) { reload(); paint(); } });
     window.addEventListener('pageshow', function(e){ if (e.persisted) { reload(); paint(); } });
@@ -447,7 +451,7 @@ Then make a small geocaching item or design from that material: a paper ammo can
         reload();  // another tab or page may have changed the list
         var tb = b.getAttribute('data-tb');
         if (mine[tb]) delete mine[tb]; else mine[tb] = new Date().toISOString().slice(0, 10);
-        try { localStorage.setItem(KEY, JSON.stringify(mine)); } catch (e) {}
+        try { localStorage.setItem(KEY, JSON.stringify(mine)); } catch (e) { broken = true; }
         paint(); say(mine[tb] ? 'Marked as discovered' : 'No longer marked as discovered');
       });
     });
