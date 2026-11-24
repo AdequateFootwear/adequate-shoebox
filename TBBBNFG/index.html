@@ -101,13 +101,17 @@ a{color:var(--accent)}
 .btn:hover{background:var(--surface-2)}
 .btn.small{padding:4px 8px;font-size:13px}
 
-/* ---------- note from the sheet ---------- */
-.note{
+/* ---------- opening text and the key ---------- */
+.intro{
   background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;
   box-shadow:var(--shadow);padding:14px 16px;margin:0 0 18px;
 }
-.note p{margin:0}
-.note p + p{margin-top:6px}
+.intro p{margin:0}
+.intro h2.lbl{margin:12px 0 4px;padding-top:10px;border-top:1px solid var(--line)}
+.key{margin:0}
+.key dt{font-weight:600}
+.key dd{margin:0 0 6px;color:var(--ink-2)}
+.key dd:last-child{margin-bottom:0}
 
 /* ---------- find + jump ---------- */
 .finder{
@@ -342,7 +346,11 @@ a.btn{text-decoration:none}
 <main class="wrap">
   <div class="tbgrid">
     <section class="gallery" aria-label="Photos">
-      <div class="main none"><span>No photo yet</span></div>
+      <figure class="main"><img id="ph-main" src="../photos/tbbbnfg.jpg" width="1050" height="1400" alt="AdequateParks – SaraCap 2026"></figure>
+      <ul class="thumbs">
+        <li><a href="../photos/tbbbnfg.jpg" data-w="1050" data-h="1400" aria-current="true" aria-label="Photo 1 of 2"><img src="../photos/cards/tbbbnfg.jpg" alt="" loading="lazy" decoding="async"></a></li>
+        <li><a href="../photos/tbbddtd-tbbbnfg-tbbbkhe-tbbaytc.jpg" data-w="1400" data-h="1275" aria-current="false" aria-label="Photo 2 of 2"><img src="../photos/cards/tbbddtd-tbbbnfg-tbbbkhe-tbbaytc.jpg" alt="" loading="lazy" decoding="async"></a></li>
+      </ul>
     </section>
     <section class="facts" aria-label="About this trackable">
       <p class="where"><span class="chip where-chip">In the field</span></p><dl class="ids"><dt>TB code</dt><dd><a class="mono" href="https://coord.info/TBBBNFG">TBBBNFG</a></dd><dt>Tracking code</dt><dd><span class="mono code">PC3AYZ</span><button class="btn small copy" type="button" data-code="PC3AYZ" aria-label="Copy the tracking code for AdequateParks – SaraCap 2026">Copy</button></dd><dt>Released</dt><dd><time datetime="2026-10-13">October 13, 2026</time></dd></dl>
@@ -379,9 +387,9 @@ a.btn{text-decoration:none}
     </div>
   </section>
   <nav class="prevnext" aria-label="Other trackables">
-    <a class="prev" href="../TBB3WT5/">← AdequateParks – Thous Is 2025</a>
+    <a class="prev" href="../TBBDDTD/">← AdequateParks – Central 2026</a>
     <a class="all" href="../#TBBBNFG">All trackables</a>
-    <a class="next" href="../TBBAYTC/">AdequateParks – Thous Is 2026 →</a>
+    <a class="next" href="../TBBBKHE/">AdequateParks – Taconic 2026 →</a>
   </nav>
   <footer>
     <span>Built from Adequate's collection sheet, as read on November 23, 2026.</span>

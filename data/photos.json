@@ -41,6 +41,17 @@
    "source": "TB6850C.jpg"
   }
  ],
+ "TB8A5TK": [
+  {
+   "file": "tb8a5tk.jpg",
+   "w": 657,
+   "h": 1400,
+   "card": "cards/tb8a5tk.jpg",
+   "cw": 300,
+   "ch": 640,
+   "source": "TB8A5TK.jpg"
+  }
+ ],
  "TB8AEB8": [
   {
    "file": "tb8aeb8.jpg",
@@ -213,7 +224,36 @@
    "source": "TB9BGZ9_TBB554R.jpg"
   }
  ],
+ "TB9MBY0": [
+  {
+   "file": "tb9mby0.jpg",
+   "w": 1400,
+   "h": 1325,
+   "card": "cards/tb9mby0.jpg",
+   "cw": 640,
+   "ch": 606,
+   "source": "TB9MBY0.jpg"
+  },
+  {
+   "file": "tb9mby0-back.jpg",
+   "w": 1400,
+   "h": 1340,
+   "card": "cards/tb9mby0-back.jpg",
+   "cw": 640,
+   "ch": 613,
+   "source": "TB9MBY0-back.jpg"
+  }
+ ],
  "TB9T1MW": [
+  {
+   "file": "tb9t1mw.jpg",
+   "w": 1400,
+   "h": 1050,
+   "card": "cards/tb9t1mw.jpg",
+   "cw": 640,
+   "ch": 480,
+   "source": "TB9T1MW.jpg"
+  },
   {
    "file": "tb9t1mw-with-the-algonquin-regiment-monument.jpg",
    "w": 480,
@@ -222,6 +262,15 @@
    "cw": 480,
    "ch": 640,
    "source": "TB9T1MW with The Algonquin Regiment Monument.jpeg"
+  },
+  {
+   "file": "tb9t1mw-back.jpg",
+   "w": 1400,
+   "h": 932,
+   "card": "cards/tb9t1mw-back.jpg",
+   "cw": 640,
+   "ch": 426,
+   "source": "TB9T1MW-back.jpg"
   }
  ],
  "TBA5TG4": [
@@ -233,6 +282,26 @@
    "cw": 640,
    "ch": 640,
    "source": "TBA5TG4.jpg"
+  }
+ ],
+ "TBADZ9C": [
+  {
+   "file": "tbadz9c.jpg",
+   "w": 1400,
+   "h": 1048,
+   "card": "cards/tbadz9c.jpg",
+   "cw": 640,
+   "ch": 479,
+   "source": "TBADZ9C.jpg"
+  },
+  {
+   "file": "tbadz9c-back.jpg",
+   "w": 1400,
+   "h": 945,
+   "card": "cards/tbadz9c-back.jpg",
+   "cw": 640,
+   "ch": 432,
+   "source": "TBADZ9C-back.jpg"
   }
  ],
  "TBAHTFH": [
@@ -708,6 +777,46 @@
    "source": "TBBA0NR.jpg"
   }
  ],
+ "TBBA0YD": [
+  {
+   "file": "tbba0yd.jpg",
+   "w": 1400,
+   "h": 912,
+   "card": "cards/tbba0yd.jpg",
+   "cw": 640,
+   "ch": 417,
+   "source": "TBBA0YD.jpg"
+  },
+  {
+   "file": "tbba0yd-back.jpg",
+   "w": 1400,
+   "h": 1048,
+   "card": "cards/tbba0yd-back.jpg",
+   "cw": 640,
+   "ch": 479,
+   "source": "TBBA0YD-back.jpg"
+  }
+ ],
+ "TBBA1R2": [
+  {
+   "file": "tbba1r2.jpg",
+   "w": 1400,
+   "h": 1393,
+   "card": "cards/tbba1r2.jpg",
+   "cw": 640,
+   "ch": 637,
+   "source": "TBBA1R2.jpg"
+  },
+  {
+   "file": "tbba1r2-nod.jpg",
+   "w": 1050,
+   "h": 1400,
+   "card": "cards/tbba1r2-nod.jpg",
+   "cw": 480,
+   "ch": 640,
+   "source": "TBBA1R2-nod.jpg"
+  }
+ ],
  "TBBA1RG": [
   {
    "file": "tbba1rg.jpg",
@@ -810,6 +919,26 @@
    "cw": 640,
    "ch": 628,
    "source": "TBBAYTC.jpg"
+  },
+  {
+   "file": "tbbddtd-tbbbnfg-tbbbkhe-tbbaytc.jpg",
+   "w": 1400,
+   "h": 1275,
+   "card": "cards/tbbddtd-tbbbnfg-tbbbkhe-tbbaytc.jpg",
+   "cw": 640,
+   "ch": 583,
+   "source": "TBBDDTD_TBBBNFG_TBBBKHE_TBBAYTC.jpg"
+  }
+ ],
+ "TBBBG0V": [
+  {
+   "file": "tbbbg0v.jpg",
+   "w": 1058,
+   "h": 1400,
+   "card": "cards/tbbbg0v.jpg",
+   "cw": 484,
+   "ch": 640,
+   "source": "TBBBG0V.jpg"
   }
  ],
  "TBBBJ8J": [
@@ -832,6 +961,26 @@
    "source": "TBBBJ8J-back.jpg"
   }
  ],
+ "TBBBKHE": [
+  {
+   "file": "tbbbkhe.jpg",
+   "w": 1400,
+   "h": 1331,
+   "card": "cards/tbbbkhe.jpg",
+   "cw": 640,
+   "ch": 608,
+   "source": "TBBBKHE.jpg"
+  },
+  {
+   "file": "tbbddtd-tbbbnfg-tbbbkhe-tbbaytc.jpg",
+   "w": 1400,
+   "h": 1275,
+   "card": "cards/tbbddtd-tbbbnfg-tbbbkhe-tbbaytc.jpg",
+   "cw": 640,
+   "ch": 583,
+   "source": "TBBDDTD_TBBBNFG_TBBBKHE_TBBAYTC.jpg"
+  }
+ ],
  "TBBBKQB": [
   {
    "file": "tbbbkqb.jpg",
@@ -850,6 +999,26 @@
    "cw": 640,
    "ch": 507,
    "source": "TBBBKQB-back.jpg"
+  }
+ ],
+ "TBBBNFG": [
+  {
+   "file": "tbbbnfg.jpg",
+   "w": 1050,
+   "h": 1400,
+   "card": "cards/tbbbnfg.jpg",
+   "cw": 480,
+   "ch": 640,
+   "source": "TBBBNFG.jpg"
+  },
+  {
+   "file": "tbbddtd-tbbbnfg-tbbbkhe-tbbaytc.jpg",
+   "w": 1400,
+   "h": 1275,
+   "card": "cards/tbbddtd-tbbbnfg-tbbbkhe-tbbaytc.jpg",
+   "cw": 640,
+   "ch": 583,
+   "source": "TBBDDTD_TBBBNFG_TBBBKHE_TBBAYTC.jpg"
   }
  ],
  "TBBD57F": [
@@ -872,6 +1041,26 @@
    "source": "TBBD57F-back.jpg"
   }
  ],
+ "TBBDDTD": [
+  {
+   "file": "tbbddtd.jpg",
+   "w": 1400,
+   "h": 1050,
+   "card": "cards/tbbddtd.jpg",
+   "cw": 640,
+   "ch": 480,
+   "source": "TBBDDTD.jpg"
+  },
+  {
+   "file": "tbbddtd-tbbbnfg-tbbbkhe-tbbaytc.jpg",
+   "w": 1400,
+   "h": 1275,
+   "card": "cards/tbbddtd-tbbbnfg-tbbbkhe-tbbaytc.jpg",
+   "cw": 640,
+   "ch": 583,
+   "source": "TBBDDTD_TBBBNFG_TBBBKHE_TBBAYTC.jpg"
+  }
+ ],
  "TBBDXXF": [
   {
    "file": "tbbdxxf.jpg",
@@ -890,6 +1079,26 @@
    "cw": 640,
    "ch": 582,
    "source": "TBBDXXF-back.jpg"
+  }
+ ],
+ "TBBDYTN": [
+  {
+   "file": "tbbdytn.jpg",
+   "w": 1400,
+   "h": 1050,
+   "card": "cards/tbbdytn.jpg",
+   "cw": 640,
+   "ch": 480,
+   "source": "TBBDYTN.jpg"
+  },
+  {
+   "file": "tbbdytn-back.jpg",
+   "w": 1400,
+   "h": 1050,
+   "card": "cards/tbbdytn-back.jpg",
+   "cw": 640,
+   "ch": 480,
+   "source": "TBBDYTN-back.jpg"
   }
  ],
  "TBBE29C": [
@@ -1049,6 +1258,46 @@
    "source": "TBBF166-back.jpg"
   }
  ],
+ "TBBF1JY": [
+  {
+   "file": "tbbf1jy.jpg",
+   "w": 1400,
+   "h": 1050,
+   "card": "cards/tbbf1jy.jpg",
+   "cw": 640,
+   "ch": 480,
+   "source": "TBBF1JY.jpg"
+  },
+  {
+   "file": "tbbf1jy-back.jpg",
+   "w": 1400,
+   "h": 1050,
+   "card": "cards/tbbf1jy-back.jpg",
+   "cw": 640,
+   "ch": 480,
+   "source": "TBBF1JY-back.jpg"
+  }
+ ],
+ "TBBFTW2": [
+  {
+   "file": "tbbftw2.jpg",
+   "w": 1400,
+   "h": 1195,
+   "card": "cards/tbbftw2.jpg",
+   "cw": 640,
+   "ch": 546,
+   "source": "TBBFTW2.jpg"
+  },
+  {
+   "file": "tbbftw2-back.jpg",
+   "w": 1400,
+   "h": 1155,
+   "card": "cards/tbbftw2-back.jpg",
+   "cw": 640,
+   "ch": 528,
+   "source": "TBBFTW2-back.jpg"
+  }
+ ],
  "TBBFY5B": [
   {
    "file": "tbbfy5b.jpg",
@@ -1120,6 +1369,126 @@
    "cw": 613,
    "ch": 640,
    "source": "TBBG7XC.jpg"
+  }
+ ],
+ "TBBGVKB": [
+  {
+   "file": "tbbgvkb.jpg",
+   "w": 1400,
+   "h": 1034,
+   "card": "cards/tbbgvkb.jpg",
+   "cw": 640,
+   "ch": 473,
+   "source": "TBBGVKB.jpg"
+  },
+  {
+   "file": "tbbgvkb-back.jpg",
+   "w": 1400,
+   "h": 1050,
+   "card": "cards/tbbgvkb-back.jpg",
+   "cw": 640,
+   "ch": 480,
+   "source": "TBBGVKB-back.jpg"
+  }
+ ],
+ "TBBGWAR": [
+  {
+   "file": "tbbgwar.jpg",
+   "w": 954,
+   "h": 1400,
+   "card": "cards/tbbgwar.jpg",
+   "cw": 436,
+   "ch": 640,
+   "source": "TBBGWAR.jpg"
+  },
+  {
+   "file": "tbbgx1j-tbbgwpc-tbbgwgp-tbbgwar.jpg",
+   "w": 1228,
+   "h": 1400,
+   "card": "cards/tbbgx1j-tbbgwpc-tbbgwgp-tbbgwar.jpg",
+   "cw": 561,
+   "ch": 640,
+   "source": "TBBGX1J_TBBGWPC_TBBGWGP_TBBGWAR.jpg"
+  }
+ ],
+ "TBBGWGP": [
+  {
+   "file": "tbbgwgp.jpg",
+   "w": 1400,
+   "h": 1224,
+   "card": "cards/tbbgwgp.jpg",
+   "cw": 640,
+   "ch": 560,
+   "source": "TBBGWGP.jpg"
+  },
+  {
+   "file": "tbbgx1j-tbbgwpc-tbbgwgp-tbbgwar.jpg",
+   "w": 1228,
+   "h": 1400,
+   "card": "cards/tbbgx1j-tbbgwpc-tbbgwgp-tbbgwar.jpg",
+   "cw": 561,
+   "ch": 640,
+   "source": "TBBGX1J_TBBGWPC_TBBGWGP_TBBGWAR.jpg"
+  }
+ ],
+ "TBBGWPC": [
+  {
+   "file": "tbbgwpc.jpg",
+   "w": 1050,
+   "h": 1400,
+   "card": "cards/tbbgwpc.jpg",
+   "cw": 480,
+   "ch": 640,
+   "source": "TBBGWPC.jpg"
+  },
+  {
+   "file": "tbbgx1j-tbbgwpc-tbbgwgp-tbbgwar.jpg",
+   "w": 1228,
+   "h": 1400,
+   "card": "cards/tbbgx1j-tbbgwpc-tbbgwgp-tbbgwar.jpg",
+   "cw": 561,
+   "ch": 640,
+   "source": "TBBGX1J_TBBGWPC_TBBGWGP_TBBGWAR.jpg"
+  }
+ ],
+ "TBBGX1J": [
+  {
+   "file": "tbbgx1j.jpg",
+   "w": 1050,
+   "h": 1400,
+   "card": "cards/tbbgx1j.jpg",
+   "cw": 480,
+   "ch": 640,
+   "source": "TBBGX1J.jpg"
+  },
+  {
+   "file": "tbbgx1j-tbbgwpc-tbbgwgp-tbbgwar.jpg",
+   "w": 1228,
+   "h": 1400,
+   "card": "cards/tbbgx1j-tbbgwpc-tbbgwgp-tbbgwar.jpg",
+   "cw": 561,
+   "ch": 640,
+   "source": "TBBGX1J_TBBGWPC_TBBGWGP_TBBGWAR.jpg"
+  }
+ ],
+ "TBBGZG8": [
+  {
+   "file": "tbbgzg8.jpg",
+   "w": 1400,
+   "h": 1050,
+   "card": "cards/tbbgzg8.jpg",
+   "cw": 640,
+   "ch": 480,
+   "source": "TBBGZG8.jpg"
+  },
+  {
+   "file": "tbbgzg8-back.jpg",
+   "w": 1400,
+   "h": 922,
+   "card": "cards/tbbgzg8-back.jpg",
+   "cw": 640,
+   "ch": 422,
+   "source": "TBBGZG8-back.jpg"
   }
  ]
 }

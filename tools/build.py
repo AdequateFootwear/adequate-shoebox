@@ -45,15 +45,6 @@ def slug(s):
     return 'group-' + (s or 'x')
 
 
-def note_html(text):
-    """The sheet's note, with *starred* words in italics, as the sheet shows them."""
-    out = []
-    for p in (x.strip() for x in text.split('\n')):
-        if p:
-            out.append('<p>' + re.sub(r'\*([^*\n]+)\*', r'<em>\1</em>', esc(p)) + '</p>')
-    return '\n'.join(out)
-
-
 def fill(page, fills, what):
     for k, v in fills.items():
         if page.count(k) != 1:
@@ -265,11 +256,9 @@ def main():
                      f'    <h2 id="{gid}-h">{esc(g["name"])} <span class="n">{len(g["trackables"])}</span></h2>\n'
                      f'    <div class="cards">\n{cards}\n    </div>\n'
                      f'  </section>')
-    notes = ''.join(f'  <div class="note">{note_html(x)}</div>\n' for x in data.get('notes', []))
     page = fill(read('page.html'), {
         '{{STYLE}}': style, '{{TOPO}}': topo,
         '{{STATS}}': f'{n} trackables · {len(groups)} groups',
-        '{{NOTES}}': notes.rstrip('\n'),
         '{{JUMP}}': '\n'.join(jumps),
         '{{FILTERS}}': filters_html(gids, any(t.get('where') for t, _ in order)),
         '{{GROUPS}}': '\n'.join(parts),

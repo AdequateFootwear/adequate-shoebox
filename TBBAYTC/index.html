@@ -101,13 +101,17 @@ a{color:var(--accent)}
 .btn:hover{background:var(--surface-2)}
 .btn.small{padding:4px 8px;font-size:13px}
 
-/* ---------- note from the sheet ---------- */
-.note{
+/* ---------- opening text and the key ---------- */
+.intro{
   background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;
   box-shadow:var(--shadow);padding:14px 16px;margin:0 0 18px;
 }
-.note p{margin:0}
-.note p + p{margin-top:6px}
+.intro p{margin:0}
+.intro h2.lbl{margin:12px 0 4px;padding-top:10px;border-top:1px solid var(--line)}
+.key{margin:0}
+.key dt{font-weight:600}
+.key dd{margin:0 0 6px;color:var(--ink-2)}
+.key dd:last-child{margin-bottom:0}
 
 /* ---------- find + jump ---------- */
 .finder{
@@ -343,6 +347,10 @@ a.btn{text-decoration:none}
   <div class="tbgrid">
     <section class="gallery" aria-label="Photos">
       <figure class="main"><img id="ph-main" src="../photos/tbbaytc.jpg" width="1400" height="1373" alt="AdequateParks – Thous Is 2026"></figure>
+      <ul class="thumbs">
+        <li><a href="../photos/tbbaytc.jpg" data-w="1400" data-h="1373" aria-current="true" aria-label="Photo 1 of 2"><img src="../photos/cards/tbbaytc.jpg" alt="" loading="lazy" decoding="async"></a></li>
+        <li><a href="../photos/tbbddtd-tbbbnfg-tbbbkhe-tbbaytc.jpg" data-w="1400" data-h="1275" aria-current="false" aria-label="Photo 2 of 2"><img src="../photos/cards/tbbddtd-tbbbnfg-tbbbkhe-tbbaytc.jpg" alt="" loading="lazy" decoding="async"></a></li>
+      </ul>
     </section>
     <section class="facts" aria-label="About this trackable">
       <p class="where"><span class="chip where-chip">In the field</span></p><dl class="ids"><dt>TB code</dt><dd><a class="mono" href="https://coord.info/TBBAYTC">TBBAYTC</a></dd><dt>Tracking code</dt><dd><span class="mono code">TICPV8</span><button class="btn small copy" type="button" data-code="TICPV8" aria-label="Copy the tracking code for AdequateParks – Thous Is 2026">Copy</button></dd><dt>Released</dt><dd><time datetime="2026-10-09">October 9, 2026</time></dd></dl>
@@ -377,7 +385,7 @@ a.btn{text-decoration:none}
     </div>
   </section>
   <nav class="prevnext" aria-label="Other trackables">
-    <a class="prev" href="../TBBBNFG/">← AdequateParks – SaraCap 2026</a>
+    <a class="prev" href="../TBBBKHE/">← AdequateParks – Taconic 2026</a>
     <a class="all" href="../#TBBAYTC">All trackables</a>
     <a class="next" href="../TBAXKHE/">AdequateAmethyst →</a>
   </nav>
