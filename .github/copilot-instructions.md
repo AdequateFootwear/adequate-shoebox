@@ -36,4 +36,5 @@ For the generated files, check only that they match what the tools would produce
 from the lines above slipped in. Mark anything that crosses a line above as blocking. Otherwise
 report real, reproducible problems (wrong or missing data, broken layout at phone or desktop width,
 accessibility, contrast, security, or a broken rule in `CLAUDE.md`), with the evidence. The trackables'
-wording comes from Aegis's sheet: don't suggest rewording it. Skip pure style preferences.
+wording comes from Aegis's sheet, and the main page's opening text and "Good to know" key are Aegis's
+own words: don't suggest rewording any of them. Skip pure style preferences.

@@ -101,13 +101,17 @@ a{color:var(--accent)}
 .btn:hover{background:var(--surface-2)}
 .btn.small{padding:4px 8px;font-size:13px}
 
-/* ---------- note from the sheet ---------- */
-.note{
+/* ---------- opening text and the key ---------- */
+.intro{
   background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;
   box-shadow:var(--shadow);padding:14px 16px;margin:0 0 18px;
 }
-.note p{margin:0}
-.note p + p{margin-top:6px}
+.intro p{margin:0}
+.intro h2.lbl{margin:12px 0 4px;padding-top:10px;border-top:1px solid var(--line)}
+.key{margin:0}
+.key dt{font-weight:600}
+.key dd{margin:0 0 6px;color:var(--ink-2)}
+.key dd:last-child{margin-bottom:0}
 
 /* ---------- find + jump ---------- */
 .finder{
@@ -341,8 +345,14 @@ a.btn{text-decoration:none}
 </header>
 
 <main class="wrap">
-  <div class="note"><p>Your Mission:</p>
-<p><em>In 2026, I added logging missions to my trackables. Complete the logging missions in order to discover them! Please note that I may delete trackable logs that have not completed the necessary logging mission.</em></p></div>
+  <section class="intro" aria-label="About the missions">
+    <p>In 2026, I added logging missions to my trackables! They are free for anyone to discover from the codes on this site, as long as you show in your log that you completed the associated mission. Note that I reserve the right to delete trackable logs that have not completed the mission. Work towards completing all of them, or pick and choose your favorites!</p>
+    <h2 class="lbl">Good to know</h2>
+    <dl class="key">
+      <dt>“Near a cache”</dt>
+      <dd>Includes anywhere on the way to one. There is no maximum distance.</dd>
+    </dl>
+  </section>
   <div class="finder" role="search">
     <label for="q">Find</label>
     <input id="q" type="search" placeholder="Name, code, word or checklist item" autocomplete="off" spellcheck="false">

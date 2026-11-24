@@ -17,6 +17,9 @@ here. Aegis uses **it/its** pronouns.
   Never edit any of those outputs by hand: change the sheet or the photos, then rebuild. The pages'
   own labels, layout and script live in `tools/page.html`, `tools/trackable.html`, `tools/style.css`
   and `tools/topo.svg`.
+- **The main page's opening text and its "Good to know" key** are Aegis's own words, kept in
+  `tools/page.html`; change them only to words Aegis gives. Text in the sheet below the last trackable
+  is for copying onto geocaching.com: the importer reports those rows and never puts them on a page.
 - **Photos** are Aegis's own files from Drive's Upload-ready folder (Claude › Projects › Geocaching ›
   Trackable Collection Missions › Photos › Upload-ready), where tracking numbers are already blurred.
   A file belongs to every trackable whose TB code is in its name. The importer strips all metadata

@@ -183,9 +183,9 @@ def main():
 
     # A row counts as an item only if it is visible: a hidden row never shapes or reaches the page.
     has_item = [bool(clean(cell_text(get(r, 'name')))) and not hidden[i] for i, r in enumerate(rows)]
-    groups, notes = [], []
+    groups = []
     current = {'name': FIRST_GROUP, 'trackables': []}
-    left_out = {'hidden': [], 'not_activated': []}
+    left_out = {'hidden': [], 'not_activated': [], 'notes_below_the_list': []}
     for i, r in enumerate(rows[1:], start=1):
         name = clean(cell_text(get(r, 'name')))
         label = clean(cell_text(get(r, 'tracking')))
@@ -197,8 +197,8 @@ def main():
                 if current['trackables']:
                     groups.append(current)
                 current = {'name': label, 'trackables': []}
-            elif label:
-                notes.append(label)
+            elif label:  # text below the last trackable: notes for copying, never shown on the page
+                left_out['notes_below_the_list'].append(f'row {i + 1}')
             continue
         tb = clean(cell_text(get(r, 'tb'))).upper()
         if not tb:
@@ -226,7 +226,7 @@ def main():
     if current['trackables']:
         groups.append(current)
 
-    out = {'sheet': SHEET_NAME, 'read': a.read, 'notes': notes, 'groups': groups}
+    out = {'sheet': SHEET_NAME, 'read': a.read, 'groups': groups}
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, 'w', encoding='utf-8') as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
